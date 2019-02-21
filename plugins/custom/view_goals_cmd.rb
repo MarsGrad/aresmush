@@ -20,6 +20,7 @@ module AresMUSH
           template = BorderedDisplayTemplate.new model.goals, "#{model.name}'s Goals"
           client.emit template.render
         end
+      end
     end
   end
 end
