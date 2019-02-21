@@ -9,7 +9,12 @@ module AresMUSH
       end
       
       def handle
-        client.emit_success "Done!"
+        result = ClassTargetFinder.find("Celestial Heavens", Room, enactor)
+        if (result.found)
+            client.emit_success "Found #{result.target}"
+        else
+            client.emit_failure "#{result.error}"
+        end
       end
 
     end
