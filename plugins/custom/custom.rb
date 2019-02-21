@@ -5,12 +5,21 @@ module AresMUSH
     def self.plugin_dir
       File.dirname(__FILE__)
     end
- 
+
     def self.shortcuts
       Global.read_config("custom", "shortcuts")
     end
- 
-    def self.get_cmd_handler(client, cmd, enactor)      
+
+    def self.get_cmd_handler(client, cmd, enactor)
+      case cmd.root
+      when "goals"
+        case cmd.switch
+        when "set"
+          return SetGoalsCmd
+        else
+          return ViewGoalsCmd
+        end
+      end
       return nil
     end
   end
