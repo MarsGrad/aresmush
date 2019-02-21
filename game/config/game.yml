@@ -1,0 +1,12 @@
+game:
+    name: "City of Lies"
+
+    category: Fantasy
+    
+    description: "An L5R game set in Ryoko Owari"
+    
+    website: ""
+        
+    public_game: false
+    
+    game_status: In Development
