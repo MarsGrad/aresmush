@@ -1,0 +1,32 @@
+                        AAAAAAAAAAA                                            
+                      AAAAAAAAAAAAAAAAA                                         
+                   AAAAAA    OOOOOOOAAAAAA                                      
+                  AAAAo    OOO         AAAA                                     
+                 AAAo   OOO              AAA                                    
+                AAOO    O   OOOOO          AA                                   
+               AAOOO   O   O  ,  O          AA                                  
+              AAOO O   O   \oo~   OOOOO      AA                                 
+              AAOO O   O        gO     OO    AA                                 
+              AA O  O   OO    ggO {  ,   O   AA                                 
+              AA O  OOO   OOOOOOO{ `oO   O   AA                                 
+              AA  OO   OOO  /~oOo \   ,  O   AA                                 
+               AA   OOO O  O o  OO ~~~ OO   AA                                  
+                AA     OOO  ~  O  OOOOO    AA                                   
+                 AA       OOOOO           AA                                    
+                  AAAA                 AAAA                                     
+                   AAAAA            AAAAAA                                      
+                      AAAAAAAAAAAAAAAAA                                         
+                         AAAAAAAAAAA
+
+       __| _)  |                   _|    |    _)            
+      (     |   _|  |  |     _ \   _|    |     |   -_) (_-< 
+     \___| _| \__| \_, |   \___/ _|     ____| _| \___| ___/ 
+                   ___/                                       
+------------------------------------------------------------------------------
+  "connect <name> <password>" connects you to an existing character.
+  "tour" connects you to a guest account if one is prepared.
+  "create <name> <password>" creates a new character.
+
+  "WHO" tells you who is logged in to the game (case sensitive).
+  "QUIT" exits the game and saves your character.
+------------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+%xn        
+%xn                         AAAAAAAAAAA                                            
+%xn                      AAAAAAAAAAAAAAAAA                                         
+%xn                   AAAAAA           AAAAAA                                      
+%xn                  AAAA                 AAAA                                     
+%xn                 AAA     OOOOOOOOOOO     AAA                                    
+%xn                AA     OOOOOo %xbOOOOO%xn OO     AA                                   
+%xn               AA    OOO%xbOOO%xnOOo %xbOOOOOO%xn o     AA                                  
+%xn              AA    OO%xbOOOOO%xn oOo%xbOOO%xnOOo%xbO%xn o     AA                                 
+%xn              AA   O%xbOOOO OOO%xn O%xbOOO%xnoO  ooo     AA                                 
+%xn              AA  O%xbOO%xnOO%xbOOOOO%xn %xboooOO%xno   o      AA                                 
+%xn              AA OOO%xbOooOOOOO%xnO   ooo       OO%xbO%xnAA                                 
+%xn[space(2)]            AA%xbO%xnOO%xbO%xn       OO    O      OO%xbOOO%xnAA                                 
+%xn               AAO%xbO%xn   %xboo oOoO%xnOO      OO%xbOO OO%xnAA                                  
+%xn                AA%xbOO%xn  %xbOOOOOO OO%xnOOOOOO%xbOO%xn  %xbOO%xnAA                                   
+%xn                 AA%xbOO%xn   %xbOOOOOOOOOOOOOOO OO%xnAA                                    
+%xn                  AAAA%xbO            OOOO%xnAAAA                                     
+%xn                   AAAAA%xbOOOOOOOOOOOO%xnAAAAAA                                      
+%xn                      AAAAAAAAAAAAAAAAA                                         
+%xn                         AAAAAAAAAAA                                
+%xn                                                                               
+[space(7)]%xb__| _)[space(2)]|[space(19)]_|[space(4)]|[space(4)]_)[space(12)]
+[space(6)]([space(5)]|[space(3)]_|[space(2)]|[space(2)]|[space(5)]_ %\[space(3)]_|[space(4)]|[space(5)]|[space(3)]-_) (_-< 
+[space(5)]%\___| _| %\__| %\_, |[space(3)]%\___/ _|[space(5)]____| _| %\___| ___/ 
+[space(19)]___/ [space(36)]%xn[space(2)]
+------------------------------------------------------------------------------
+[space(2)]"connect <name> <password>" connects you to an existing character.
+[space(2)]"tour" connects you to a guest account if one is prepared.
+[space(2)]"create <name> <password>" creates a new character.
+
+[space(2)]"WHO" tells you who is logged in to the game (case sensitive).
+[space(2)]"QUIT" exits the game and saves your character.
+------------------------------------------------------------------------------
