@@ -11,7 +11,7 @@ demographics:
   - physique
   - fullname
   - gender
-  - age
+  - birthdate
   nickname_field: nickname
   nickname_format: "%{name} (%{nickname})"
   disable_auto_shortcuts: false
@@ -30,7 +30,7 @@ demographics:
   - physique
   - fullname
   - gender
-  - age
+  - birthdate
   groups:
     Clan:
       desc: Great Clans.
@@ -92,6 +92,7 @@ demographics:
         Geisha: "Prized for their ability to offer entertainment and companionship, they are afforded fame and respect despite their low position in society."
         Bonge: "The common people of Rokugan can fill a variety of roles, from farmer to budoka, the armed retainers of the samurai."
   shortcuts:
+    birthday: birthdate
     groups: group
     demographics: demographic
   help_text:
@@ -101,7 +102,7 @@ demographics:
     hair: "%xchair <hair color>%xn"
     eyes: "%xceyes <eye color>%xn"
     skin: "%xcskin <complexion>%xn"
-    age: "%xcage <years>%xn"
+    birthdate: "%xcbirthdate <mm/dd/yyy>%xn or %xcage <years>%xn"
   census_fields:
   - field: name
     width: 28
