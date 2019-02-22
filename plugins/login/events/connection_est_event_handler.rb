@@ -5,7 +5,7 @@ module AresMUSH
         client = event.client
 
         # Connect screen ansi
-        filename = File.join(AresMUSH.game_path, 'text', "#{[connect1.txt, connect2.txt, connect3.txt, connect4.txt, connect5.txt].sample}")
+        filename = File.join(AresMUSH.game_path, 'text', "#{['connect1.txt', 'connect2.txt', 'connect3.txt', 'connect4.txt', 'connect5.txt'].sample}")
 
         if (File.exist?(filename))
           client.emit File.read(filename, :encoding => "UTF-8")
@@ -19,5 +19,3 @@ module AresMUSH
     end
   end
 end
-
-    
