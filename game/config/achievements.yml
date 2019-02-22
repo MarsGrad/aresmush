@@ -1,6 +1,6 @@
 ---
 achievements:
-  announce_channel: Chat
+  announce_channel: ''
   custom_achievements: {}
   shortcuts:
     achievements: achievement

@@ -1,0 +1,31 @@
+ 	            AAAAA         AAAAA                                         
+                  AAAAAA           AAAAAA                                       
+                AAAA                   AAAA                                     
+               AAA       %xh%xxAAAAAAAAA%xn       AAA                                    
+              AA      %xh%xxAAAAAAAAAAAAAAA%xn      AA                                   
+             AA     %xh%xxAAAAAAAAAAAAAAAAAAA%xn     AA                                  
+            AA     %xh%xxAAAAAA  OOOOO  %xh%xxAAAAAA%xn     AA                                 
+            AA    %xh%xxAAAA    OOOOOOO    %xh%xxAAAA%xn    AA                                 
+            AA    %xh%xxAA     OOOOOOOOO     %xh%xxAA%xn    AA                                 
+            AA   %xh%xxAA       OOOOOOO       %xh%xxAA%xn   AA                                 
+            AA   %xh%xxAA       %xnA%xh%xxOOOOO%xnA       %xh%xxAA%xn   AA                                 
+             AA  %xh%xxAA      %xnA       A      %xh%xxAA%xn  AA                                  
+              AA  %xh%xxAA    %xnA         A    %xh%xxAA%xn  AA                                   
+               AAAA%xh%xxAA   %xnA         A  %xh%xxAA%xnAAAAA                                    
+                AAAAA%xh%xxAA %xnA         A %xh%xxAA%xnAAAAA                                     
+                  AAAA%xh%xxAA%xnAOA     AOA%xh%xxAA%xnAAAA                                       
+                    AAAAAAAOOOOOAAAAAAA                                         
+                        AAAAAAAAAAA                                                      
+                                                                                
+      %xh%xx __| _)  |                   _|    |    _)            
+      (     |   _|  |  |     _ \   _|    |     |   -_) (_-< 
+     \___| _| \__| \_, |   \___/ _|     ____| _| \___| ___/ 
+                   ___/                                       
+%xn------------------------------------------------------------------------------
+  "connect <name> <password>" connects you to an existing character.
+  "tour" connects you to a guest account if one is prepared.
+  "create <name> <password>" creates a new character.
+
+  "WHO" tells you who is logged in to the game (case sensitive).
+  "QUIT" exits the game and saves your character.
+------------------------------------------------------------------------------
