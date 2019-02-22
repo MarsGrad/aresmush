@@ -1,19 +1,32 @@
-           |\                     /)
-         /\_\\__               (_//
-         |   `>\-`     _._       //`)  %xr     \ %xn
-          \ /` \\  _.-`   `-._  //     %xr    _ \    __| _ \  __|%xn
-           `    \|\     \     /|/      %xr   ___ \  |    __/\__ \ %xn
-                 |     / \\    |       %xr _/    _\_|  \___|____/%xn
-                 |   //----\   |
-                 | //--    -\\ |       %xr  \  | |   |  ___|  |   |%xn
-                 */-          \*       %xr |\/ | |   |\___ \  |   |%xn
-                 \             /       %xr |   | |   |      | ___ |%xn
-                  \           /        %xr_|  _|\___/ _____/ _|  _|%xn
-                   `-.     .-'
-                    //`:::`\\          +-------------------------+
-                   //   '   \\         | Still in Development    |
-                  |/         \\        |                         |
-                                       |                         |
-                                       |                         |
-                                       | http://www.aresmush.com |
-          %xx%xhASCII Art modified from jgs%xn  +-------------------------+
+                        AAAAAAAAAAA                                            
+                      AAAAAAAAAAAAAAAAA                                         
+                   AAAAAA    OOOOOOOAAAAAA                                      
+                  AAAAo    OOO         AAAA                                     
+                 AAAo   OOO              AAA                                    
+                AAOO    O   OOOOO          AA                                   
+               AAOOO   O   O  ,  O          AA                                  
+              AAOO O   O   \oo~   OOOOO      AA                                 
+              AAOO O   O        gO     OO    AA                                 
+              AA O  O   OO    ggO {  ,   O   AA                                 
+              AA O  OOO   OOOOOOO{ `oO   O   AA                                 
+              AA  OO   OOO  /~oOo \   ,  O   AA                                 
+               AA   OOO O  O o  OO ~~~ OO   AA                                  
+                AA     OOO  ~  O  OOOOO    AA                                   
+                 AA       OOOOO           AA                                    
+                  AAAA                 AAAA                                     
+                   AAAAA            AAAAAA                                      
+                      AAAAAAAAAAAAAAAAA                                         
+                         AAAAAAAAAAA
+
+       __| _)  |                   _|    |    _)            
+      (     |   _|  |  |     _ \   _|    |     |   -_) (_-< 
+     \___| _| \__| \_, |   \___/ _|     ____| _| \___| ___/ 
+                   ___/                                       
+------------------------------------------------------------------------------
+  "connect <name> <password>" connects you to an existing character.
+  "tour" connects you to a guest account if one is prepared.
+  "create <name> <password>" creates a new character.
+
+  "WHO" tells you who is logged in to the game (case sensitive).
+  "QUIT" exits the game and saves your character.
+------------------------------------------------------------------------------
