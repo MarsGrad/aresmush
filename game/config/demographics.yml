@@ -11,8 +11,8 @@ demographics:
   - physique
   - fullname
   - gender
-  - birthdate
-  nickname_field: callsign
+  - age
+  nickname_field: nickname
   nickname_format: "%{name} (%{nickname})"
   disable_auto_shortcuts: false
   editable_properties:
@@ -30,59 +30,70 @@ demographics:
   - physique
   - fullname
   - gender
-  - birthdate
-  - callsign
+  - age
   groups:
-    Faction:
-      desc: Military faction.
+    Clan:
+      desc: Great Clans.
       values:
-        Navy: Join the fleet, see the worlds.
-        Marines: Semper fi.
-    Department:
-      desc: The ship is divided into several departments.  See the wiki for details.
+        Crab: 'Strong and brutally practical.'
+        Crane: 'Graceful, beautiful, and politically ruthless.'
+        Dragon: 'Enigmatic and mysterious. Strong similarities to monks.'
+        Lion: 'Ferocious and capable warriors.'
+        Mantis: 'Adaptable, sea-faring, upstarts.'
+        Phoenix: 'Intelligent and magically powerful.'
+        Scorpion: 'Reviled, dishonorable, and extremely cunning.'
+        Unicorn: 'Skillful horsemasters regarded as outsiders and barbarians.'
+    Family:
+      desc: The various families that form the Great Clans.
       values:
-        Air Wing: Viper and Raptor crews and deckhands. (Officers and Enlisted)
-        Marines: Boots on the ground. (Enlisted only)
-        Support: Support personnel - Deck crew, medical. (Officers and Enlisted)
-    Colony:
-      desc: Your character's home world.
+        Hida: 'Among the largest and most powerful samurai in all the empire.'
+        Hiruma: 'Silent and deadly, the Hiruma are the scouts and yojimbo of the Crab.'
+        Kaiu: 'The industrious Kaiu are responsible for the most impressive feats of engineering in the Empire.'
+        Kuni: 'Sinister in appearance and deed, the Kuni are amongst the most feared shugenja families in the Empire.'
+        Toritaka: 'The tiny Toritaka are highly knowledgeable about ghosts and spirits of all sorts.'
+        Yasuki: 'The Yasuki are slight of build and devious of mind, at departure from most Crab families.'
+        Asahina: 'The monastic Asahina are quiet, serene, and largely pacifistic.'
+        Daidoji: "The so-called Iron Crane are the enforcers of the Doji and Kakita's will"
+        Doji: 'Lords of the Crane Clan, the Doji are the unquestioned masters of culture and politics in the Empire.'
+        Kakita: "Cousins of the Doji, the Kakita believe in excelling at one's chosen task, no matter what it is."
+        Kitsuki: "The ever-perceptive Kitsuki are invaluable magistrates, though their methods are considered unorthadox in the Empire."
+        Mirumoto: "The Mirumoto rule the Dragon Clan in all but name, overseeing most of the day to day operations."
+        Tamori: "Likely the most militant shugenja family in the Empire, the Tamori embrace unique magical styles."
+        Togashi: "A monastic order rather than a true family, the Togashi use mystical tattoos that grant them incredible abilities."
+        Akodo: "The lords of the Lion Clan, the Akodo are the unquestioned masters of battle throughout the Empire."
+        Ikoma: "The voice of the Lion Clan, the Ikoma speak on behalf of the clan in court and in the annals of history."
+        Kitsu: "Quiet and reserved, the Kitsu family of shugenja are descended from the union of men and ancient kitsu creatures."
+        Matsu: "The Matsu are fiery in nature, quick to anger, and eager for battle at all times."
+        Kitsune: "The Kitsune are a simple, quiet people who prefer to commune with the spirits of nature in the forest."
+        Moshi: "An extremely devout and matriarchal people, the Moshi shugenja are considered masters of the weather."
+        Tsuruchi: "The Tsuruchi are without question the greatest archers in the Empire and are generally perceptive and athletic."
+        Yoritomo: "The unquestioned masters of the seas, the Yoritomo are a hardy and industrious people."
+        Agasha: "The Agasha are highly experimental and curious, always pushing the boundaries of what can be safely attempted when dealing with magic."
+        Asako: "The quiet, reclusive Asako are a very monastic family and comprise the majority of the Phoenix Clan courtiers."
+        Isawa: "The Isawa are unquestionably the most knowledgeable, most powerful, and most numerous shugenja family in the Empire."
+        Shiba: "The Shiba are among the most scholarly and least aggressive of all bushi families, they will nonetheless never retreat from battle."
+        Bayushi: "Ruthless and deceitful, the Bayushi are the lords of the Scorpion Clan and possess many sinister talents."
+        Shosuro: "The Shosuro dwell in shadows, rarely being seen but always having an influence on those around them."
+        Soshi: "The Soshi are the main shugenja family of the Scorpion Clan and specialize in using magic for political and manipulative means."
+        Yogo: "No family amongst the Great Clans is more feared or reviled than the Yogo shugenja who use their powerful magic in service of the Scorpion."
+        Horiuchi: "The tiny Horiuchi family are a branch of the Iuchi family that specialize in defensive and protective magic."
+        Ide: "The public face of the Unicorn, the Ide have worked tirelessly to combat the image of the Unicorn as barbarians."
+        Iuchi: "With the exception of the Tamori, the Iuchi is probably the most militant shugenja family in the Empire."
+        Moto: "The short and squat Moto exemplify the stereotype of the Unicorn as barbarians with their boisterous and brusque demeanor."
+        Shinjo: "The Shinjo are an affable, industrious family whose members adapt easily to almost any task set before them."
+        Utaku: "The matriarchal Utaku family are rigidly honorable and pious individuals who generally train their women to serve with the most elite cavalry units in the world."
+    Vocation:
+      desc: Your character's calling.
       values:
-        Aerilon: Bread basket of the colonies.
-        Aquaria: Cold, harsh world popular with tourists.
-        Canceron: Crowded and hot, a developing nation.
-        Caprica: Rich center of colonial culture and industry.
-        Gemenon: Fundamentalist religion and isolationist people.
-        Leonis: Old imperialist empire in decline, still known for culture and fashion.
-        Libran: Neutral colony renowned for fostering inter-colonial cooperation.
-        Picon: Water world famous for its beaches and strong navy.
-        Sagittaron: Poor colony, oft-exploited, now carved into several protectorates.
-        Scorpia: Lush jungles and bitter clan warfare. Home to shipyards constructing
-          the Battlestars.
-        Tauron: An up-and-coming socialist republic with a strong agricultural base
-          and developing industries.
-        Virgon: A monarchy in decline, clinging to old traditions.
-    Position:
-      desc: Job.
-      values:
-        Viper Pilot: Navy Viper pilot.
-        Raptor Pilot: Navy Raptor pilot.
-        Raptor ECO: Navy Raptor Electronic Countermeasures Officer
-        Rifleman: Marine rifleman.
-        Gunner: Marine support/heavy weapons specialist.
-        Combat Engineer: Marine demolitions, construction, maintenance.
-        Recon: Marine scout.
-        Combat Medic: Marine medic.
-        Doctor: Navy doc.
-        Nurse: Navy nurse.
-        Corpsman: Navy medic.
-        Medical Support: Other medical personnel.
-        Deck Crew: Air wing support/maintenance personnel.
-        Other: Any other position.
+        Bushi: "The physical warriors of the samurai caste who wield weapons of war with surprising skill."
+        Shugenja: "The mystical priests of Rokugan who specialize in magic and knowledge moreso than martial skill."
+        Courtier: "The courtly representatives of the Clans and families who specialize in intrigue and diplomacy."
+        Monk: "Upholders of the Empire's religious traditions. Though they are not samurai, they are afforded a great amount of respect."
+        Geisha: "Prized for their ability to offer entertainment and companionship, they are afforded fame and respect despite their low position in society."
+        Bonge: "The common people of Rokugan can fill a variety of roles, from farmer to budoka, the armed retainers of the samurai."
   shortcuts:
     groups: group
-    colonies: group colony
     demographics: demographic
-    birthday: birthdate
   help_text:
     actor: "%xcactor <actor>%xn - See 'help actors'."
     physique: "%xcphysique <build/body type>%xn - athletic, wiry, slim, pudgy, etc."
@@ -90,8 +101,7 @@ demographics:
     hair: "%xchair <hair color>%xn"
     eyes: "%xceyes <eye color>%xn"
     skin: "%xcskin <complexion>%xn"
-    birthdate: "%xcbirthdate <mm/dd/yyy>%xn or %xcage <years>%xn"
-    callsign: "%xccallsign <callsign>%xn - Non-pilots may leave blank or enter a nickname."
+    age: "%xcage <years>%xn"
   census_fields:
   - field: name
     width: 28
@@ -102,10 +112,10 @@ demographics:
     value: gender
   - field: group
     width: 20
-    title: Faction
-    value: Faction
+    title: Clan
+    value: Clan
   - field: group
     width: 20
-    title: Position
-    value: Position
+    title: Vocation
+    value: Vocation
   private_properties: []
