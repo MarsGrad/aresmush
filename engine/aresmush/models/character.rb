@@ -38,7 +38,7 @@ module AresMUSH
         return find_any_by_id(name_or_id)
       end
 
-      find(name_upcase: name_or_id.upcase).union(alias_upcase: name_or_id.upcase).to_a
+      find(name_upcase: name_or_id.upcase).union(alias_upcase: name_or_id.upcase).union(admin_name_upcase: name_or_id.upcase).to_a
     end
 
     def self.find_one_by_name(name_or_id)
@@ -112,6 +112,7 @@ module AresMUSH
     def save_upcase
       self.name_upcase = self.name ? self.name.upcase : nil
       self.alias_upcase = self.alias ? self.alias.upcase : nil
+      self.admin_name_upcase = self.admin_name ? self.admin_name.upcase : nil
     end
 
     def name_and_alias
