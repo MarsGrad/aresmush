@@ -17,7 +17,7 @@ module AresMUSH
       end
 
       def check_can_set
-        return t('dispatcher.not_allowed') if !enactor.has_role?(admin)
+        return t('dispatcher.not_allowed') if !enactor.has_role?('admin')
         return nil
       end
 

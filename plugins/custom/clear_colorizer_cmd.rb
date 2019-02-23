@@ -4,7 +4,7 @@ module AresMUSH
       include CommandHandler
 
       def check_can_clear
-        return t('dispatcher.not_allowed') if !enactor.has_role?(admin)
+        return t('dispatcher.not_allowed') if !enactor.has_role?('admin')
         return nil
       end
 
