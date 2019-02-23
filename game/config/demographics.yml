@@ -1,25 +1,26 @@
 ---
 demographics:
-  min_age: 18
-  max_age: 65
-  required_properties:
-  - actor
-  - hair
-  - eyes
-  - skin
-  - height
-  - physique
-  - fullname
-  - gender
-  - birthdate
-  nickname_field: nickname
-  nickname_format: "%{name} (%{nickname})"
-  disable_auto_shortcuts: false
+  census_fields:
+  - field: name
+    width: 28
+    title: Name
+  - field: demographic
+    width: 10
+    title: Gender
+    value: gender
+  - field: group
+    width: 20
+    title: Clan
+    value: Clan
+  - field: group
+    width: 20
+    title: Vocation
+    value: Vocation
+  disable_auto_shortcuts: true
   editable_properties:
   - fullname
   - hair
   - physique
-  - callsign
   - gender
   demographics:
   - actor
@@ -103,20 +104,18 @@ demographics:
     eyes: "%xceyes <eye color>%xn"
     skin: "%xcskin <complexion>%xn"
     birthdate: "%xcbirthdate <mm/dd/yyy>%xn or %xcage <years>%xn"
-  census_fields:
-  - field: name
-    width: 28
-    title: Name
-  - field: demographic
-    width: 10
-    title: Gender
-    value: gender
-  - field: group
-    width: 20
-    title: Clan
-    value: Clan
-  - field: group
-    width: 20
-    title: Vocation
-    value: Vocation
+  max_age: 65
+  min_age: 18
+  nickname_field: fullname
+  nickname_format: "%{name} (%{nickname})"
   private_properties: []
+  required_properties:
+  - actor
+  - hair
+  - eyes
+  - skin
+  - height
+  - physique
+  - fullname
+  - gender
+  - birthdate

@@ -1,9 +1,28 @@
 ---
 ictime:
-  year_offset: 0
+  day_names:
+  - Jin
+  - Yu
+  - Rei
+  - Chugo
+  - Gi
+  - Meyo
+  - Makoto
   day_offset: 0
-  day_names: []
-  month_names: []
-  time_ratio: 1
   game_start_date: ''
   hour_offset: 0
+  month_names:
+  - Month of the Rat
+  - Month of the Ox
+  - Month of the Tiger
+  - Month of the Hare
+  - Month of the Dragon
+  - Month of the Serpent
+  - Month of the Horse
+  - Month of the Goat
+  - Month of the Monkey
+  - Month of the Rooster
+  - Month of the Dog
+  - Month of the Boar
+  time_ratio: 1
+  year_offset: -906
