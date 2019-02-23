@@ -7,6 +7,8 @@ module AresMUSH
     attribute :name_upcase
     attribute :alias
     attribute :alias_upcase
+    attribute :admin_name
+    attribute :admin_name_upcase
     attribute :fansi_on, :default => true
     attribute :is_statue
     attribute :password_hash
@@ -15,6 +17,7 @@ module AresMUSH
 
     index :name_upcase
     index :alias_upcase
+    index :admin_name_upcase
 
     reference :room, "AresMUSH::Room"
     reference :handle, "AresMUSH::Handle"
