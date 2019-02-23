@@ -19,6 +19,13 @@ module AresMUSH
         else
           return ViewGoalsCmd
         end
+      when "colorizer"
+        case cmd.switch
+        when "set"
+          return SetColorizerCmd
+        else
+          return ClearColorizerCmd
+        end
       end
       return nil
     end
