@@ -1,11 +1,19 @@
 ---
 chargen:
+  allow_web_submit: true
   app_category: APP
   app_hold_status: HOLD
   app_resubmit_status: OPEN
+  app_review_commands:
+  - app %{name}
+  - profile %{name}
+  - bg %{name}
+  - hooks %{name}
+  - sheet %{name}
   approval_message: Congratulations!  Your application has been approved.  Type %xhonstage%xn
     to go forth and RP.  You may want to customize your character profile on the web
     portal.
+  arrivals_category: New Arrivals
   bg_blurb: 'You don''t need to write a novel. Just cover the basics: who you are,
     why are you here, and is there anything noteworthy about you. Be sure to explain
     any unusual skills.'
@@ -17,8 +25,8 @@ chargen:
     around at other character's sheets can be a good way to get inspiration for RP
     Hooks.
   hooks_required: true
-  post_approval_message: Please make sure they have a profile image for their log
-    icon.
+  post_approval_message: Please make sure to add them to their Clan channel with channel/addchar
+    <char>=<channel>
   rejection_message: Sorry, your character could not be approved at the present time
     for the reasons described below.  Please see %xhhelp app%xn for help making changes
     and resubmitting, and contact the person handling your application if you have
@@ -64,11 +72,3 @@ chargen:
     review:
       help: apps
   welcome_message: Please welcome %{name}, our latest %{position} to be approved!
-  arrivals_category: New Arrivals
-  app_review_commands:
-  - app %{name}
-  - profile %{name}
-  - bg %{name}
-  - hooks %{name}
-  - sheet %{name}
-  allow_web_submit: true
