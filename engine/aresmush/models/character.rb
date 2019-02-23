@@ -112,7 +112,7 @@ module AresMUSH
     def save_upcase
       self.name_upcase = self.name ? self.name.upcase : nil
       self.alias_upcase = self.alias ? self.alias.upcase : nil
-      self.admin_name_upcase = self.admin_name ? self.admin_name_upcase : nil
+      self.admin_name_upcase = self.admin_name ? self.admin_name.upcase : nil
     end
 
     def name_and_alias
