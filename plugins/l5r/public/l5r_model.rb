@@ -3,6 +3,7 @@ module AresMUSH
     collection :l5r_skills, "AresMUSH::L5rSkill"
     collection :l5r_advantages, "AresMUSH::L5rAdvantage"
     collection :l5r_spells, "AresMUSH::L5rSpell"
+    collection :l5r_traits, "AresMUSH::L5rTrait"
     collection :l5r_techniques, "AresMUSH::L5rTechnique"
     collection :l5r_kata, "AresMUSH::L5rKata"
     collection :l5r_kiho, "AresMUSH::L5rKiho"
