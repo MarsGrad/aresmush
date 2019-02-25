@@ -15,7 +15,7 @@ module AresMUSH
       case cmd.root
       when "sheet"
         if (cmd.switch_is?("init"))
-          return L5rInitCmd
+          return SheetInitCmd
         end
       when "school"
         if (cmd.switch_is?("add"))
