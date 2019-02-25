@@ -10,6 +10,7 @@ module AresMUSH
     collection :l5r_schools, "AresMUSH::L5rSchool"
 
     attribute :l5r_family
+    attribute :l5r_clan
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_insight_rank, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer

@@ -13,7 +13,7 @@ module AresMUSH
 
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
-      when "l5r"
+      when "sheet"
         if (cmd.switch_is?("init"))
           return L5rInitCmd
         end

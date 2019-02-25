@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class L5rInitCmd
+    class SheetInitCmd
       include CommandHandler
 
       attr_accessor :confirm

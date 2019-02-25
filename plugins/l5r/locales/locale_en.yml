@@ -2,7 +2,7 @@
 en:
   l5r:
     already_approved: "You're already approved!"
-    init_warning: '*Warning* Initializing sets parts of your sheet back to their beginning values. Type "l5r/init confirm" to proceed.'
+    init_warning: '*Warning* Initializing sets parts of your sheet back to their beginning values. Type "sheet/init confirm" to proceed.'
     must_set_clan: 'In order to set your family, you must first set your Clan.'
     family_added: "Your family has been set to %{family} and your Clan to %{clan}."
     invalid_family: "That's not a valid family name!"
