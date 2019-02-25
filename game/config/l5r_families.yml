@@ -1,0 +1,147 @@
+---
+l5r:
+  families:
+    -
+        name: Hida
+        clan: Crab
+        trait_bonus: Strength
+    -
+        name: Hiruma
+        clan: Crab
+        trait_bonus: Agility
+    -
+        name: Kaiu
+        clan: Crab
+        trait_bonus: Intelligence
+    -
+        name: Kuni
+        clan: Crab
+        trait_bonus: Intelligence
+    -
+        name: Toritaka
+        clan: Crab
+        trait_bonus: Perception
+    -
+        name: Yasuki
+        clan: Crab
+        trait_bonus: Awareness
+    -
+        name: Asahina
+        clan: Crane
+        trait_bonus: Intelligence
+    -
+        name: Daidoji
+        clan: Crane
+        trait_bonus: Stamina
+    -
+        name: Doji
+        clan: Crane
+        trait_bonus: Awareness
+    -
+        name: Kakita
+        clan: Crane
+        trait_bonus: Agility
+    -
+        name: Kitsuki
+        clan: Dragon
+        trait_bonus: Awareness
+    -
+        name: Mirumoto
+        clan: Dragon
+        trait_bonus: Agility
+    -
+        name: Tamori
+        clan: Dragon
+        trait_bonus: Willpower
+    -
+        name: Togashi
+        clan: Dragon
+        trait_bonus: Reflexes
+    -
+        name: Akodo
+        clan: Lion
+        trait_bonus: Agility
+    -
+        name: Ikoma
+        clan: Lion
+        trait_bonus: Awareness
+    -
+        name: Kitsu
+        clan: Lion
+        trait_bonus: Intelligence
+    -
+        name: Matsu
+        clan: Lion
+        trait_bonus: Strength
+    -
+        name: Kitsune
+        clan: Mantis
+        trait_bonus: Intelligence
+    -
+        name: Moshi
+        clan: Mantis
+        trait_bonus: Intelligence
+    -
+        name: Tsuruchi
+        clan: Mantis
+        trait_bonus: Perception
+    -
+        name: Yoritomo
+        clan: Mantis
+        trait_bonus: Stamina
+    -
+        name: Agasha
+        clan: Phoenix
+        trait_bonus: Perception
+    -
+        name: Asako
+        clan: Phoenix
+        trait_bonus: Awareness
+    -
+        name: Isawa
+        clan: Phoenix
+        trait_bonus: Willpower
+    -
+        name: Shiba
+        clan: Phoenix
+        trait_bonus: Perception
+    -
+        name: Bayushi
+        clan: Scorpion
+        trait_bonus: Agility
+    -
+        name: Shosuro
+        clan: Scorpion
+        trait_bonus: Awareness
+    -
+        name: Soshi
+        clan: Scorpion
+        trait_bonus: Intelligence
+    -
+        name: Yogo
+        clan: Scorpion
+        trait_bonus: Willpower
+    -
+        name: Horiuchi
+        clan: Unicorn
+        trait_bonus: Willpower
+    -
+        name: Ide
+        clan: Unicorn
+        trait_bonus: Perception
+    -
+        name: Iuchi
+        clan: Unicorn
+        trait_bonus: Intelligence
+    -
+        name: Moto
+        clan: Unicorn
+        trait_bonus: Agility
+    -
+        name: Shinjo
+        clan: Unicorn
+        trait_bonus: Reflexes
+    -
+        name: Utaku
+        clan: Unicorn
+        trait_bonus: Stamina
