@@ -14,7 +14,7 @@ module AresMUSH
     attribute :l5r_void_pool, :type => DataType::Integer
     attribute :l5r_mastery_rank, :type => DataType::Integer
 
-    before_delete: :delete_l5r_abilities
+    before_delete :delete_l5r_abilities
 
     def delete_l5r_abilities
       [ self.l5r_skills, self.l5r_advantages, self.l5r_spells,
@@ -70,7 +70,7 @@ module AresMUSH
 
       attribute :name
       attribute :rank, :type => DataType::Integer
-      attribute :disadvantage?, :type = DataType::Boolean
+      attribute :disadvantage?, :type => DataType::Boolean
       reference :character, "AresMUSH::Character"
       index :name
     end
