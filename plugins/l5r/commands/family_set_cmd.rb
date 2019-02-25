@@ -49,8 +49,12 @@ module AresMUSH
             model.update(l5r_clan: clan)
 
             trait = L5R.find_trait(model, trait_bonus)
-            trait.update(rank: trait.rank + 1)
-            client.emit_success t('l5r.family_added', :family => self.family_name, :clan => clan.titlecase)
+            if (trait)
+              trait.update(rank: trait.rank + 1)
+              client.emit_success t('l5r.family_added', :family => self.family_name, :clan => clan.titlecase)
+            else
+              client.emit_failure t('l5r.must_init_first')
+            end
           end
         end
       end
