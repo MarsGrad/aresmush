@@ -114,7 +114,7 @@ module AresMUSH
     class L5rSchool < Ohm::Model
       include ObjectModel
 
-      atttribute :name
+      attribute :name
       attribute :rank, :type => DataType::Integer
       reference :character, "AresMUSH::Character"
       index :name
