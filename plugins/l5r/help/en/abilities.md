@@ -2,14 +2,14 @@
 toc: L5R
 summary: Viewing available abilities
 aliases:
--schools
--school
--families
--family
--spells
--spell
--kata
--kiho
+- schools
+- school
+- families
+- family
+- spells
+- spell
+- kata
+- kiho
 ---
 
 #L5R Abilities
