@@ -63,6 +63,7 @@ module AresMUSH
         else
           return FamilyCmd
         end
+      end
 
       return nil
     end
