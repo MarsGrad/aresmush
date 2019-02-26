@@ -5,16 +5,16 @@ l5r:
           name: Hida Bushi
           clan: Crab
           trait_bonus: Stamina
-          skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, Lore: Shadowlands]
-          skill_choice: Any:Bugei
+          skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, "Lore: Shadowlands"]
+          skill_choice: "Any:Bugei"
           shugenja: false
           honor: 3.5
         -
           name: Kuni Shugenja
           clan: Crab
           trait_bonus: Willpower
-          skills: [Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Shadowlands, Lore: Theology, Spellcraft]
-          skill_choice: Any:Weapon
+          skills: [Calligraphy/Cipher, Defense, Lore: Shadowlands, "Lore: Shadowlands", "Lore: Theology", Spellcraft]
+          skill_choice: "Any:Weapon"
           shugenja: true
           affinity: Earth
           deficiency: Air
@@ -25,15 +25,15 @@ l5r:
           clan: Crab
           trait_bonus: Perception
           skills: [Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit]
-          skill_choice: Any:Merchant
+          skill_choice: "Any:Merchant"
           shugenja: false
           honor: 2.5
         -
           name: Hiruma Bushi
           clan: Crab
           trait_bonus: Willpower
-          skills: [Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, Lore: Shadowlands, Stealth]
-          skill_choice: Any:Skill
+          skills: [Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, "Lore: Shadowlands", Stealth]
+          skill_choice: "Any:Skill"
           shugenja: false
           honor: 4.5
         -
@@ -41,5 +41,5 @@ l5r:
           clan: Crane
           trait_bonus: Reflexes
           skills: [Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony]
-          skill_choice: Any:Bugei or High
+          skill_choice: "Any:Bugei or High"
           honor: 6.5
