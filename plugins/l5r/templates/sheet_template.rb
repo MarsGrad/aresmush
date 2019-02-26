@@ -31,12 +31,10 @@ module AresMUSH
       def fire_ring
         fire = "#{L5R.calc_l5r_ring(char, 'fire')}"
         fire << "\n"
-        fire << char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
-                     .map do |t|
-                       name = left("#{t.name}:", 15)
-                       rank = left(t.rank, 20)
-                       "%xr#{name}%xn: #{rank}"
-                     end
+        traits = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
+        trait1, trait2 = traits
+        fire << left("%xr#{trait1.name}%xn: #{trait1.rank}%t")
+        fire << left("%xr#{trait2.name}%xn: #{trait2.rank}")
         fire
       end
 
