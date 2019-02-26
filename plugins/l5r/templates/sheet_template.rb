@@ -32,6 +32,7 @@ module AresMUSH
         fire = L5R.calc_l5r_ring(char, 'fire')
         fire << "\n"
         fire << char.l5r_traits.to_a.select { |t| t.name == 'agility' || t.name == 'intelligence' }
+                     .each_with_index
                      .map do |t|
                        name = left("#{t.name}:", 15)
                        rank = left(t.rank, 20)
