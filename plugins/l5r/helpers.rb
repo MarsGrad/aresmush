@@ -37,6 +37,11 @@ module AresMUSH
       families.select { |f| f['name'].downcase == family_name.downcase }.first
     end
 
+    def self.find_school_config(school_name)
+      return nil if !school_name
+      schools = Global.read_config('l5r,' 'schools')
+      schools.select { |s| s['name'].downcase == school_name.downcase }.first
+
     def self.is_valid_clan?(clan)
       return false if !clan
       clans = Global.read_config("l5r", "clans").map { |c| c['name'].downcase }
@@ -47,6 +52,12 @@ module AresMUSH
       return false if !family
       families = Global.read_config("l5r", "families").map { |f| f['name'].downcase }
       families.include?(family.downcase)
+    end
+
+    def self.is_valid_school?(school)
+      return false if !school
+      schools = Global.read_config("l5r", "schools").map { |s| f['name'].downcase }
+      schools.include?(school.downcase)
     end
 
     def self.is_valid_l5r_skill_name?(name)

@@ -49,7 +49,7 @@ module AresMUSH
       end
 
       def water_ring
-        water = "%x27Fire Ring%xn: #{L5R.calc_l5r_ring(char, 'water')}"
+        water = "%x27Water Ring%xn: #{L5R.calc_l5r_ring(char, 'water')}"
         water << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'strength' || t.name == 'perception' }
         trait1, trait2 = traits[0], traits[1]

@@ -1,0 +1,45 @@
+---
+l5r:
+  schools:
+        -
+          name: Hida Bushi School
+          clan: Crab
+          trait_bonus: Stamina
+          skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, Lore: Shadowlands]
+          skill_choice: Any:Bugei
+          shugenja: false
+          honor: 3.5
+        -
+          name: Kuni Shugenja School
+          clan: Crab
+          trait_bonus: Willpower
+          skills: [Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Shadowlands, Lore: Theology, Spellcraft]
+          skill_choice: Any:Weapon
+          shugenja: true
+          affinity: Earth
+          deficiency: Air
+          spells: Universal, 3 Earth, 3 Fire, and 1 Water
+          honor: 2.5
+        -
+          name: Yasuki Courtier School
+          clan: Crab
+          trait_bonus: Perception
+          skills: [Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit]
+          skill_choice: Any:Merchant
+          shugenja: false
+          honor: 2.5
+        -
+          name: Hiruma Bushi School
+          clan: Crab
+          trait_bonus: Willpower
+          skills: [Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, Lore: Shadowlands, Stealth]
+          skill_choice: Any:Skill
+          shugenja: false
+          honor: 4.5
+        -
+          name: Kakita Bushi School
+          clan: Crane
+          trait_bonus: Reflexes
+          skills: [Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony]
+          skill_choice: Any:Bugei or High
+          honor: 6.5
