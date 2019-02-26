@@ -41,9 +41,9 @@ module AresMUSH
         skill.emphases.map { |k| "#{k}" }.join(", ")
       end
 
-      def fire_ring_title
-        fire = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')}"
-        fire
+      def fire_air_ring_title
+        fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')}"
+        fire_air
       end
 
       def fire_ring_traits
