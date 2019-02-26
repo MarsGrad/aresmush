@@ -6,17 +6,13 @@
 
 <%= line_with_text fire_air_ring_title%>
 <%= left(fire_ring_traits, 20) -%>
-<%= center(' ', 5) -%>
+<%= center('|', 5) -%>
 <%= right(air_ring_traits, 20) %>
 
-<%= line_with_text air_ring_title %>
-<%= air_ring_traits %>
-
-<%= line_with_text earth_ring_title %>
-<%= earth_ring_traits %>
-
-<%= line_with_text water_ring_title %>
-<%= water_ring_traits %>
+<%= line_with_text earth_water_ring_title %>
+<%= left(earth_ring_traits, 20) -%>
+<%= center('|', 5) -%>
+<%= right(water_ring_traits, 20 %>
 
 <%= line_with_text t('l5r.skills_title') %>
 <% skills.each do |s| %>
