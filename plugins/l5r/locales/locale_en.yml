@@ -7,6 +7,7 @@ en:
     must_set_clan: 'In order to set your family, you must first set your Clan.'
     family_added: "Your family has been set to %{family} and your Clan to %{clan}."
     invalid_family: "That's not a valid family name!"
+    invalid_school: "That's not a valid school!"
     must_init_first: "You must run the 'sheet/init' command first!"
     already_have_school: "You already belong to this school!"
     set_family_first: "You must set your family before your school!"
