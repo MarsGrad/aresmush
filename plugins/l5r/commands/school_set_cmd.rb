@@ -90,6 +90,7 @@ module AresMUSH
               L5rSkill.create(name: skill_name, rank: 1, character: model)
             end
 
+            skill = L5R.find_skill(model, skill_name)
             if (skill && !skill.emphases.include?(emp))
               skill.update(emphases: skill.emphases << emp)
             end
