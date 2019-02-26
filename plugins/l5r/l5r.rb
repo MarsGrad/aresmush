@@ -20,8 +20,8 @@ module AresMUSH
           return SheetCmd
         end
       when "school"
-        if (cmd.switch_is?("add"))
-          return SchoolAddCmd
+        if (cmd.switch_is?("set"))
+          return SchoolSetCmd
         elsif (cmd.switch_is?("rem"))
           return SchoolRemCmd
         else
