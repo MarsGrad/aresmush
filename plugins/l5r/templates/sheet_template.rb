@@ -34,7 +34,11 @@ module AresMUSH
       end
 
       def skills
-        format_two_per_line char.l5r_skills
+        char.l5r_skills.to_a.sort_by { |s| s.name }
+      end
+
+      def emphases(skill)
+        skill.emphases.map { |k| "#{k}" }.join(", ")
       end
 
       def fire_ring
