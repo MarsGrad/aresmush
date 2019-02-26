@@ -41,6 +41,7 @@ module AresMUSH
       return nil if !school_name
       schools = Global.read_config('l5r,' 'schools')
       schools.select { |s| s['name'].downcase == school_name.downcase }.first
+    end
 
     def self.is_valid_clan?(clan)
       return false if !clan
