@@ -28,7 +28,7 @@ module AresMUSH
         air = L5R.calc_l5r_ring(char, 'air')
         water = L5R.calc_l5r_ring(char, 'water')
         earth = L5R.calc_l5r_ring(char, 'earth')
-        void = L5R.l5r_void_ring
+        void = char.l5r_void_ring
 
         rings = "Fire: #{fire}%tAir: #{air}%tWater: #{water}%tEarth: #{earth}%tVoid: #{void}"
       end
