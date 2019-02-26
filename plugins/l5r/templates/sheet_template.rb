@@ -29,37 +29,44 @@ module AresMUSH
       end
 
       def fire_ring
-        fire = "#{L5R.calc_l5r_ring(char, 'fire')}"
+        fire = "%xrFire Ring%xn: #{L5R.calc_l5r_ring(char, 'fire')}"
         fire << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
         trait1, trait2 = traits[0], traits[1]
-        fire << left("%xr#{trait1.name}%xn: #{trait1.rank}%t", 30)
-        fire << left("%xr#{trait2.name}%xn: #{trait2.rank}", 30)
+        fire << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        fire << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         fire
       end
 
-
-      def rings
-        fire = L5R.calc_l5r_ring(char, 'fire')
-        air = L5R.calc_l5r_ring(char, 'air')
-        water = L5R.calc_l5r_ring(char, 'water')
-        earth = L5R.calc_l5r_ring(char, 'earth')
-        void = char.l5r_void_ring
-
-        rings = "Fire: #{fire}%tAir: #{air}%tWater: #{water}%tEarth: #{earth}%tVoid: #{void}"
+      def air_ring
+        air = "%xhAir Ring%xn: #{L5R.calc_l5r_ring(char, 'air')}"
+        air << "\n"
+        traits = char.l5r_traits.select { |t| t.name == 'reflexes' || t.name == 'awareness' }
+        trait1, trait2 = traits[0], traits[1]
+        air << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        air << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        air
       end
 
-      def format_two_per_line(list)
-        list.to_a.sort_by { |a| a.name }
-          .each_with_index
-            .map do |a, i|
-              linebreak = i % 2 == 0 ? "\n" : ""
-              title = left("#{ a.name }:", 15)
-              rating = left(a.rank, 20)
-              "#{linebreak}%xh#{title}%xn #{rating}"
-            end
+      def water_ring
+        water = "%x27Fire Ring%xn: #{L5R.calc_l5r_ring(char, 'water')}"
+        water << "\n"
+        traits = char.l5r_traits.select { |t| t.name == 'strength' || t.name == 'perception' }
+        trait1, trait2 = traits[0], traits[1]
+        water << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        water << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        water
       end
 
+      def earth_ring
+        earth = "%x3Earth Ring%xn: #{L5R.calc_l5r_ring(char, 'earth')}"
+        earth << "\n"
+        traits = char.l5r_traits.select { |t| t.name == 'stamina' || t.name == 'willpower' }
+        trait1, trait2 = traits[0], traits[1]
+        earth << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        earth << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        earth
+      end
     end
   end
 end

@@ -3,15 +3,14 @@
 <%= left( clan, 20) -%>
 <%= right( family, 20) -%>
 
+<%= line_with_text t(l5r.rings_title) -%>
+<%= fire_ring -%>
 <%= divider %>
-<%= fire_ring %>
+<%= air_ring -%>
 <%= divider %>
+<%= earth_ring -%>
+<%= divider %>
+<%= water_ring -%>
 
-<%= line_with_text t('l5r.rings_title') -%>%xn
-<%= rings %>
-
-<%= line_with_text t('l5r.traits_title') -%>
-<% traits.each do |t| %>
-<%= t %>
-<% end %>
+<%= line_with_text t(l5r.skills_title) -%> 
 %lf
