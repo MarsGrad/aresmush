@@ -17,7 +17,7 @@ module AresMUSH
       end
 
       def school
-        schools = char.l5r_schools.all.map { |s| s['name'] }
+        schools = char.l5r_schools.map { |s| s.name }
         if (schools)
           "School: #{schools.join(', ')}"
         else
