@@ -13,7 +13,7 @@ l5r:
           name: Kuni Shugenja
           clan: Crab
           trait_bonus: Willpower
-          skills: [Calligraphy/Cipher, Defense, Lore: Shadowlands, "Lore: Shadowlands", "Lore: Theology", Spellcraft]
+          skills: [Calligraphy/Cipher, Defense, "Lore: Shadowlands", "Lore: Shadowlands", "Lore: Theology", Spellcraft]
           skill_choice: "Any:Weapon"
           shugenja: true
           affinity: Earth

@@ -38,6 +38,11 @@ module AresMUSH
           schools.each { |s| s.delete }
         end
 
+        skills = enactor.l5r_skills
+        if (skills)
+          skills.each { |s| s.delete }
+        end
+        
         shugenja = enactor.l5r_is_shugenja
         if shugenja == true
           enactor.update(l5r_is_shugenja: false)
