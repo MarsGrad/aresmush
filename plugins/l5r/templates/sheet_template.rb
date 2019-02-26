@@ -33,8 +33,8 @@ module AresMUSH
         fire << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
         trait1, trait2 = traits[0], traits[1]
-        fire << left("%xr#{trait1.name}%xn: #{trait1.rank}%t")
-        fire << left("%xr#{trait2.name}%xn: #{trait2.rank}")
+        fire << left("%xr#{trait1.name}%xn: #{trait1.rank}%t", 30)
+        fire << left("%xr#{trait2.name}%xn: #{trait2.rank}", 30)
         fire
       end
 
