@@ -1,0 +1,302 @@
+---
+l5r:
+  skills:
+        -
+          name: Acting
+          level: High Skill
+          subtypes: Social, Perform
+          default_trait: Awareness
+          emphases: Clan, Gender, Profession
+          description: "A measure of an individual's ability to convincingly pass himself off as someone else."
+        -
+          name: Artisan
+          level: High Skill
+          subtypes: Macro
+          specialties: Bonsai, Gardening, Ikebana, Origami, Painting, Poetry, Sculpture, Tattooing
+          default_trait: Awareness
+          emphases: Varies by specialty
+          description: "A macro skill that represents one's ability in various artistic arts. Requires a specialty."
+        -
+          name: Calligraphy
+          level: High Skill
+          subtypes: Artisan
+          default_trait: Intelligence
+          emphases: Cipher, High Rokugani
+          description: "The art of fluid, masterful script and code writing."
+        -
+          name: Courtier
+          level: High Skill
+          subtypes: Social
+          default_trait: Awareness
+          emphases: Gossip, Manipulation, Rhetoric
+          description: "A measure of a character's ability to participate in Rokugani courts."
+        -
+          name: Divination
+          level: High Skill
+          subtypes: None
+          default_trait: Intelligence
+          emphases: Astrology, Kawaru
+          description: "The measure of one's ability to divine the future."
+        -
+          name: Etiquette
+          level: High Skill
+          subtypes: Social
+          default_trait: Awareness
+          emphases: Bureaucracy, Conversation, Courtesy
+          description: "A character's knowledge of Rokugani etiquette and the Imperial political system."
+        -
+          name: Games
+          level: High Skill
+          subtypes: Macro
+          specialties: Fortunes and Winds, Go, Kemari, Letters, Sadane, Shogi
+          default_trait: Awareness
+          emphases: Varies by specialty
+          description: "A macro skill that represents one's ability to play various games. Requires a specialty."
+        -
+          name: Investigation
+          level: High Skill
+          subtypes: None
+          default_trait: Perception
+          emphases: Interrogation, Notice, Search
+          description: "Represents your ability to assess your surroundings and gather information."
+        -
+          name: Lore
+          level: High Skill (certain specialties are considered Low Skills)
+          subtypes: Macro
+          default_trait: Intelligence
+          emphases: Varies by specialty
+          specialties: Lore has too many specialties to list here. Check pg. 137 for the full list.
+          description: "A macro skill that represents a breadth of knowledge in a specific subject."
+        -
+          name: Medicine
+          level: High Skill
+          subtypes: None
+          default_trait: Intelligence
+          emphases: Antidotes, Disease, Herbalism, Non-Humans, Wound Treatment
+          description: "Used to treat many different injuries and ailments."
+        -
+          name: Meditation
+          level: High Skill
+          subtypes: None
+          default_trait: Void
+          emphases: Fasting, Void Recovery
+          description: "A measure of one's ability to achieve a meaningful state of meditation."
+        -
+          name: Perform
+          level: High Skill
+          subtypes: Macro, Social
+          default_trait: Varies
+          emphases: Varies by specialty
+          specialties: Biwa, Dance, Drums, Flute, Oratory, Puppeteer, Samisen, Song, Storytelling
+          description: "A character's ability to entertain and perform."
+        -
+          name: Sincerity
+          level: High Skill
+          subtypes: Social
+          default_trait: Awareness
+          emphases: Honesty, Deceit (the use of the deceit emphasis is considered a Low Skill)
+          description: "One's ability to speak the truth (or a lie) convincingly."
+        -
+          name: Spellcraft
+          level: High Skill
+          subtypes: Use of the Importune emphasis is considered a Social skill
+          default_trait: Intelligence
+          emphases: Importune, Spell Research
+          description: "A measure of one's ability to commune with the kami to cast a spell."
+        -
+          name: Tea Ceremony
+          level: High Skill
+          subtypes: None
+          default_trait: Void
+          emphases: None
+          description: "A character's ability to perform a formal tea ceremony."
+        -
+          name: Athletics
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Strength
+          emphases: Climbing, Running, Swimming, Throwing
+          description: "The ability to perform various physical activities."
+        -
+          name: Battle
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Perception
+          emphases: Mass Combat, Skirmish
+          description: "The study of war and the practical application therein."
+        -
+          name: Defense
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Reflexes
+          emphases: None
+          description: "Represents one's ability to defend themselves in combat. Necessary to use Defense and Full Defense stances."
+        -
+          name: Horsemanship
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Agility
+          emphases: Gaijin Riding Horse, Rokugani Pony, Utaku Steed
+          description: "The ability to use a mount, particularly in combat."
+        -
+          name: Hunting
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Perception
+          emphases: Survival, Tracking, Trailblazing
+          description: "The ability to hunt, track, and survive in the wild."
+        -
+          name: Iaijutsu
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Reflexes
+          emphases: Assessment, Focus
+          description: "One's ability in the formal dueling system of Rokugan."
+        -
+          name: Jiujutsu
+          level: Bugei Skill
+          subtypes: None
+          default_trait: Agility
+          emphases: Grappling, Improvised Weapons, Martial Arts
+          description: "The art of unarmed combat."
+        -
+          name: Chain Weapons
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Kusarigama, Kyoketsu-shogi, Manrikikusari
+          description: "A character's ability to use chain weapons in combat."
+        -
+          name: Heavy Weapons
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Dai Tsuchi, Masakari, Ono, Tetsubo
+          description: "A character's ability to use heavy weapons in combat."
+        -
+          name: Kenjutsu
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Katana, Ninja-to, No-dachi, Parangu, Scimitar, Wakizashi
+          description: "A character's ability to use swords in combat."
+        -
+          name: Knives
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Aiguchi, Jitte, Kama, Sai, Tanto
+          description: "A character's ability to use knives in combat."
+        -
+          name: Kyujutsu
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Reflexes
+          emphases: Dai-kyu, Han-kyu, Yumi
+          description: "A character's ability to use a bow in combat."
+        -
+          name: Ninjutsu
+          level: Bugei Skill
+          subtypes: Weapon (Considered a Low Skill)
+          default_trait: Agility or Reflexes
+          emphases: Blowgun, Shuriken, Tsubute
+          description: "A character's ability to use the weapons of assassination."
+        -
+          name: Polearms
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Bisento, Nagamaki, Naginata, Sasumata, Sodegarami
+          description: "A character's ability to use polearms in combat."
+        -
+          name: Spears
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Mai Chong, Kumade, Lance, Nage-yari, Yari
+          description: "A character's ability to use spears in combat."
+        -
+          name: Staves
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: Bo, Jo, Machi-kanshisha, Nunchaku, Sang Kauw, Tonfa
+          description: "A character's ability to use staves in combat."
+        -
+          name: War Fan
+          level: Bugei Skill
+          subtypes: Weapon
+          default_trait: Agility
+          emphases: None
+          description: "A character's ability to use a War Fan in combat."
+        -
+          name: Animal Handling
+          level: Merchant Skill
+          subtypes: None
+          default_trait: Awareness
+          emphases: By animal (Dogs, Horses, and Falcons are most common)
+          description: "A representation of one's ability to train and command animals."
+        -
+          name: Commerce
+          level: Merchant Skill
+          subtypes: None
+          default_trait: Intelligence
+          emphases: Appraisal, Mathematics
+          description: "One's knowledge and ability in the trading and appraising of products."
+        -
+          name: Craft
+          level: Merchant Skill
+          subtypes: Macro
+          default_trait: Varies
+          emphases: Varies by specialty
+          specialties: Craft has too many specialties to list here. Please check pg. 143 of the core book.
+          description: "A macro skill that represents one's ability to produce products and useful items. Requires a specialty."
+        -
+          name: Engineering
+          level: Merchant Skill
+          subtypes: Craft
+          default_trait: Intelligence
+          emphases: Construction, Siege
+          description: "One's knowledge of and ability to build large scale projects."
+        -
+          name: Sailing
+          level: Merchant Skill
+          subtypes: Craft
+          default_trait: Agility or Intelligence
+          emphases: Knot-work, Navigation
+          description: "A character's ability to pilot or contribute to the sailing of a vessel."
+        -
+          name: Forgery
+          level: Low Skill
+          subtypes: Craft
+          default_trait: Agility
+          emphases: By type of item being forged (Artwork, Documents, Personal Seals, etc.)
+          description: "The ability to falsify papers or other items."
+        -
+          name: Intimidation
+          level: Low Skill
+          subtypes: Social
+          default_trait: Awareness
+          emphases: Bullying, Control, Torture
+          description: "A character's ability to manipulate others through the use of threats."
+        -
+          name: Sleight of Hand
+          level: Low Skill
+          subtypes: None
+          default_trait: Agility
+          emphases: Conceal, Escape, Pick Pocket, Prestidigitation
+          description: "The manipulation of small objects for the purpose of misdirection or concealment."
+        -
+          name: Stealth
+          level: Low Skill
+          subtypes: None
+          default_trait: Agility
+          emphases: Ambush, Shadowing, Sneaking, Spell Casting
+          description: "The ability to remain out of sight while moving or acting."
+        -
+          name: Temptation
+          level: Low Skill
+          subtypes: Social
+          default_trait: Awareness
+          emphases: Bribery, Seduction
+          description: "The art of manipulating others by offering them something they desire."
