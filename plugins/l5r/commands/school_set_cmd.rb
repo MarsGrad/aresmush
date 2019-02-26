@@ -13,7 +13,7 @@ module AresMUSH
           self.school_name = titlecase_arg(args.arg2)
         else
           self.target_name = enactor_name
-          self.family_name = titlecase_arg(cmd.args)
+          self.school_name = titlecase_arg(cmd.args)
         end
       end
 
