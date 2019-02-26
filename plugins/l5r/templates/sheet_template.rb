@@ -18,7 +18,7 @@ module AresMUSH
 
       def school
         if (char.l5r_schools && char.l5r_schools.any?)
-          "School: #{char.l5r.schools.join(', ')}"
+          "School: #{char.l5r_schools.join(', ')}"
         else
           "School: "
         end
