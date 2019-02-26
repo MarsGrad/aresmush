@@ -22,7 +22,7 @@ module AresMUSH
       end
 
       def check_valid_school
-        return t('l5r.invalid_school') if L5R.is_valid_school?(self.school_name)
+        return t('l5r.invalid_school') if !L5R.is_valid_school?(self.school_name)
         return nil
       end
 
