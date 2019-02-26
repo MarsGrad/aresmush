@@ -45,6 +45,7 @@ module AresMUSH
           school = school_config['name'].downcase
           clan = school_config['clan'].downcase
           trait_bonus = school_config['clan']
+        end
       end
     end
   end
