@@ -83,7 +83,7 @@ module AresMUSH
 
     def self.is_valid_school?(school)
       return false if !school
-      schools = Global.read_config("l5r", "schools").map { |s| f['name'].downcase }
+      schools = Global.read_config("l5r", "schools").map { |s| s['name'].downcase }
       schools.include?(school.downcase)
     end
 
