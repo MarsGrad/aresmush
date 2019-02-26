@@ -44,7 +44,7 @@ module AresMUSH
             .map do |a, i|
               linebreak = i % 2 == 0 ? "\n" : ""
               title = left("#{ a.name }:", 15)
-              rating = left(a.rank, 20)
+              rank = left(a.rank, 20)
               "#{linebreak}%xh#{title}%xn #{rank}"
             end
       end
