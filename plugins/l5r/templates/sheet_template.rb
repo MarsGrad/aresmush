@@ -24,6 +24,10 @@ module AresMUSH
         end
       end
 
+      def traits
+        format_two_per_line char.l5r_traits
+      end
+
       def rings
         fire = L5R.calc_l5r_ring(char, 'fire')
         air = L5R.calc_l5r_ring(char, 'air')
@@ -33,6 +37,18 @@ module AresMUSH
 
         rings = "Fire: #{fire}%tAir: #{air}%tWater: #{water}%tEarth: #{earth}%tVoid: #{void}"
       end
+
+      def format_two_per_line(list)
+        list.to_a.sort_by { |a| a.name }
+          .each_with_index
+            .map do |a, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              title = left("#{ a.name }:", 15)
+              rating = left(a.rating, 20)
+              "#{linebreak}%xh#{title}%xn #{rating}"
+            end
+      end
+
     end
   end
 end
