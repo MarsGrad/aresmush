@@ -28,6 +28,19 @@ module AresMUSH
         format_two_per_line char.l5r_traits
       end
 
+      def fire_ring
+        fire = L5R.calc_l5r_ring(char, 'fire')
+        fire << "\n"
+        fire << char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
+                     .map do |t|
+                       name = left("#{t.name}:", 15)
+                       rank = left(t.rank, 20)
+                       "%xr#{name}%xn: #{rank}"
+                     end
+        fire
+      end
+
+        trait1
       def rings
         fire = L5R.calc_l5r_ring(char, 'fire')
         air = L5R.calc_l5r_ring(char, 'air')
