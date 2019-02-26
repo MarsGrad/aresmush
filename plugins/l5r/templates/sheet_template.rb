@@ -16,7 +16,7 @@ module AresMUSH
           summ << "%tFamily: "
         end
         if (char.l5r_schools)
-          summ << "%tSchool: #{char.l5r_schools.join(', ')}"
+          summ << "%tSchool: #{char.l5r_schools}"
         else
           summ << "%tSchool: "
         end
