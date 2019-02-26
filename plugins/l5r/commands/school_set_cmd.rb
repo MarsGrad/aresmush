@@ -62,12 +62,12 @@ module AresMUSH
           if (!current_clan)
             client.emit_failure t('l5r.set_family_first')
             return
-          elsif current_clan == clan
+          elsif current_clan != clan
             client.emit_failure t('l5r.wrong_clan', :clan => current_clan)
             return
           end
 
-          if(shugenja == true)
+          if (shugenja == true)
             model.update(l5r_is_shugenja: true)
           end
 
