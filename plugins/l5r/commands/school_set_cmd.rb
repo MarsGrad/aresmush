@@ -45,7 +45,9 @@ module AresMUSH
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           current_school = model.l5r_schools
-          if (current_school)
+          current_school_name = current_school.name
+
+          if (current_school_name)
             client.emit_failure t('l5r.remove_school_first')
             return
           end
