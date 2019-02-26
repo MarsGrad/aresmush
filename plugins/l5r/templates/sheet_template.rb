@@ -40,7 +40,7 @@ module AresMUSH
         fire
       end
 
-        trait1
+        
       def rings
         fire = L5R.calc_l5r_ring(char, 'fire')
         air = L5R.calc_l5r_ring(char, 'air')
