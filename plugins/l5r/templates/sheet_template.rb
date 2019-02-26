@@ -50,7 +50,7 @@ module AresMUSH
         traits = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
         trait1, trait2 = traits[0], traits[1]
         fire = center("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
-        fire << center("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
+        fire << right("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         fire
       end
 
@@ -63,7 +63,7 @@ module AresMUSH
         traits = char.l5r_traits.select { |t| t.name == 'reflexes' || t.name == 'awareness' }
         trait1, trait2 = traits[0], traits[1]
         air = center("%xh#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
-        air << center("%xh#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
+        air << right("%xh#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         air
       end
 
@@ -76,7 +76,7 @@ module AresMUSH
         traits = char.l5r_traits.select { |t| t.name == 'strength' || t.name == 'perception' }
         trait1, trait2 = traits[0], traits[1]
         water = center("%x27#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
-        water << center("%x27#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
+        water << right("%x27#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         water
       end
 
@@ -89,7 +89,7 @@ module AresMUSH
         traits = char.l5r_traits.select { |t| t.name == 'stamina' || t.name == 'willpower' }
         trait1, trait2 = traits[0], traits[1]
         earth = center("%x3#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
-        earth << center("%x3#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
+        earth << right("%x3#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         earth
       end
 
