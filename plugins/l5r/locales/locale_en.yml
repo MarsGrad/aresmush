@@ -19,6 +19,7 @@ en:
     no_family: "There's no family to remove!"
     no_school: "There's no school to remove!"
     remove_school_first: "You have to remove the current school first!"
+    remove_schools_first: "You have to remove all schools first!"
     remove_family_first: "You have to remove the current family first!"
     school_not_found: "Couldn't find a school with that name!"
 

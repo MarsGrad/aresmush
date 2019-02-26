@@ -17,7 +17,7 @@ module AresMUSH
       def check_can_rem
         return nil if enactor_name == self.target_name
         return nil if L5R.can_manage_abilities?(enactor)
-        return t('dispatcher.not allowed')
+        return t('dispatcher.not_allowed')
       end
 
       def check_chargen_locked
@@ -34,9 +34,9 @@ module AresMUSH
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           current_family = model.l5r_family
 
-          current_schools = model.l5r_schools
+          current_schools = model.l5r_schools.any?
           if (current_schools)
-            client.emit_failure t('l5r.remove_school_first')
+            client.emit_failure t('l5r.remove_schools_first')
             return
           end
 
