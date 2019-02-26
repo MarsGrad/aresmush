@@ -48,13 +48,12 @@ module AresMUSH
             model.update(l5r_family: family)
             model.update(l5r_clan: clan)
 
-            current_family = model.l5r_family
-
-            if (current_family)
+            if (model.l5r_family)
+              current_family = model.l5r_family
               current_family_config = L5R.find_family_config(current_family)
               current_trait_bonus = current_family_config['trait_bonus']
               current_trait = L5R.find_trait(model, current_trait_bonus)
-              current_trait.update(rank: current_trait.rank - 1)
+              current_trait.update(rank: 2)
               client.emit "Removing previous trait bonus success"
             end
 
