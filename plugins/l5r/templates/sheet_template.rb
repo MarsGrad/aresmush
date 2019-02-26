@@ -41,12 +41,15 @@ module AresMUSH
         skill.emphases.map { |k| "#{k}" }.join(", ")
       end
 
-      def fire_ring
+      def fire_ring_title
         fire = "%xrFire Ring%xn: #{L5R.calc_l5r_ring(char, 'fire')}"
-        fire << "\n"
+        fire
+      end
+
+      def fire_ring_traits
         traits = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
         trait1, trait2 = traits[0], traits[1]
-        fire << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        fire = left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
         fire << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         fire
       end
