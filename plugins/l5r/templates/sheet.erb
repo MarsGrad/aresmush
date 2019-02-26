@@ -6,7 +6,9 @@
 
 <%= line_with_text t('l5r.rings_title') -%>%xn
 <%= rings %>
-<%= divider %>
 
-<%= traits %>
+<%= line_with_text t('l5r.traits_title') -%>
+<% traits.each do |t| %>
+<%= t %>
+<% end %>
 %lf
