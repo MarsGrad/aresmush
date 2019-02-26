@@ -28,26 +28,6 @@ module AresMUSH
       end
     end
 
-    def self.calc_l5r_ring(ring)
-      if ring == 'fire'
-        calc = self.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
-                   .map { |t| t.value }
-        return calc.min
-      elsif ring == 'air'
-        calc = self.l5r_traits.select { |t| t.name == 'awareness' || t.name == 'reflexes' }
-                   .map { |t| t.value }
-        return calc.min
-      elsif ring == 'earth'
-        calc = self.l5r_traits.select { |t| t.name == 'willpower' || t.name ==  'stamina' }
-                   .map { |t| t.value }
-        return calc.min
-      else
-        calc = self.l5r_traits.select { |t| t.name == 'perception' || t.name == 'strength' }
-                   .map { |t| t.value }
-        return calc.min
-      end
-    end
-
     class L5rTrait < Ohm::Model
       include ObjectModel
 
