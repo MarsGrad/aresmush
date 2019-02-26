@@ -81,7 +81,7 @@ module AresMUSH
       end
 
       def earth_water_ring_title
-        earth_water = "Earth Ring: #{L5R.calc_l5r_ring(char, 'earth')} ]-----------------------[ Water Ring: #{L5R.calc_l5r_ring(char, 'water')}"
+        earth_water = "Earth Ring: #{L5R.calc_l5r_ring(char, 'earth')} ]----------------------[ Water Ring: #{L5R.calc_l5r_ring(char, 'water')}"
         earth_water
       end
 
