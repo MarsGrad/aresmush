@@ -24,11 +24,11 @@ module AresMUSH
       end
 
       def rings
-        fire = char.calc_l5r_ring(fire)
-        air = char.calc_l5r_ring(air)
-        water = char.calc_l5r_ring(water)
-        earth = char.calc_l5r_ring(earth)
-        void = char.l5r_void_ring
+        fire = L5R.calc_l5r_ring(char, 'fire')
+        air = L5R.calc_l5r_ring(char, 'air')
+        water = L5R.calc_l5r_ring(char, 'water')
+        earth = L5R.calc_l5r_ring(char, 'earth')
+        void = L5R.l5r_void_ring
 
         rings = "Fire: #{fire}%tAir: #{air}%tWater: #{water}%tEarth: #{earth}%tVoid: #{void}"
       end
