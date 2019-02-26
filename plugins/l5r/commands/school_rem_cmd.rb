@@ -49,9 +49,11 @@ module AresMUSH
           trait_bonus = school_config['trait_bonus']
           trait = L5R.find_trait(model, trait_bonus)
           school = L5R.find_school(model, self.school_name)
+          skills = model.l5r_skills
           if (school)
             school.delete
             trait.update(rank: trait.rank - 1)
+            skills.each { |s| s.delete }
 
             client.emit_success t('l5r.school_removed')
             return
