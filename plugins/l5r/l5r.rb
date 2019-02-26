@@ -78,6 +78,7 @@ module AresMUSH
           end
         end
       when "family"
+        case cmd.switch
         when "set"
           return FamilySetCmd
         when "rem"
