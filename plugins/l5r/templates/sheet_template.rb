@@ -16,6 +16,14 @@ module AresMUSH
         end
       end
 
+      def school
+        if (char.l5r_schools && char.l5r_schools.any?)
+          "School: #{char.l5r.schools.join(', ')}"
+        else
+          "School: "
+        end
+      end
+
       def family
         if (char.l5r_family)
           "Family: #{char.l5r_family.titlecase}"
@@ -24,8 +32,8 @@ module AresMUSH
         end
       end
 
-      def traits
-        format_two_per_line char.l5r_traits
+      def skills
+        format_two_per_line char.l5r_skills
       end
 
       def fire_ring
@@ -66,6 +74,17 @@ module AresMUSH
         earth << left("%x3#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
         earth << left("%x3#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         earth
+      end
+
+      def format_two_per_line(list)
+        list.to_a.sort_by { |a| a.name }
+          .each_with_index
+            .map do |a, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              title = left("#{ a.name }:", 15)
+              rating = left(a.rank, 20)
+              "#{linebreak}%xh#{title}%xn #{rating}"
+            end
       end
     end
   end

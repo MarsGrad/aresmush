@@ -23,61 +23,41 @@ module AresMUSH
         return client.emit_failure t('l5r.init_warning') if !self.confirm
         return client.emit_failure t('dispatcher.huh') if self.confirm != 'confirm'
 
-        agi = L5R.find_trait(enactor, 'agility')
-        if (agi)
-          agi.update(rank: 2)
-        else
-          L5rTrait.create(name: 'agility', rank: 2, character: enactor)
+        clan = enactor.l5r_clan
+        if (clan)
+          enactor.update(l5r_clan: nil)
         end
 
-        awa = L5R.find_trait(enactor, 'awareness')
-        if (awa)
-          awa.update(rank: 2)
-        else
-          L5rTrait.create(name: 'awareness', rank: 2, character: enactor)
+        family = enactor.l5r_family
+        if (family)
+          enactor.update(l5r_family: nil)
         end
 
-        int = L5R.find_trait(enactor, 'intelligence')
-        if (int)
-          int.update(rank: 2)
-        else
-          L5rTrait.create(name: 'intelligence', rank: 2, character: enactor)
+        schools = enactor.l5r_schools
+        if (schools)
+          schools.each { |s| s.delete }
         end
 
-        per = L5R.find_trait(enactor, 'perception')
-        if (per)
-          per.update(rank: 2)
-        else
-          L5rTrait.create(name: 'perception', rank: 2, character: enactor)
+        shugenja = enactor.l5r_is_shugenja
+        if shugenja == true
+          enactor.update(l5r_is_shugenja: false)
         end
 
-        ref = L5R.find_trait(enactor, 'reflexes')
-        if (ref)
-          ref.update(rank: 2)
-        else
-          L5rTrait.create(name: 'reflexes', rank: 2, character: enactor)
-        end
+        L5R.set_l5r_trait(enactor, 'agility', 2)
 
-        stam = L5R.find_trait(enactor, 'stamina')
-        if (stam)
-          stam.update(rank: 2)
-        else
-          L5rTrait.create(name: 'stamina', rank: 2, character: enactor)
-        end
+        L5R.set_l5r_trait(enactor, 'awareness', 2)
 
-        str = L5R.find_trait(enactor, 'strength')
-        if (str)
-          str.update(rank: 2)
-        else
-          L5rTrait.create(name: 'strength', rank: 2, character: enactor)
-        end
+        L5R.set_l5r_trait(enactor, 'intelligence', 2)
 
-        will = L5R.find_trait(enactor, 'willpower')
-        if (will)
-          will.update(rank: 2)
-        else
-          L5rTrait.create(name: 'willpower', rank: 2, character: enactor)
-        end
+        L5R.set_l5r_trait(enactor, 'perception', 2)
+
+        L5R.set_l5r_trait(enactor, 'reflexes', 2)
+
+        L5R.set_l5r_trait(enactor, 'stamina', 2)
+
+        L5R.set_l5r_trait(enactor, 'strength', 2)
+
+        L5R.set_l5r_trait(enactor, 'willpower', 2)
 
         enactor.update(l5r_void_ring: 2)
 

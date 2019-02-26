@@ -42,9 +42,63 @@ module AresMUSH
 
           school_config = L5R.find_school_config(self.school_name)
 
-          school = school_config['name'].downcase
-          clan = school_config['clan'].downcase
-          trait_bonus = school_config['clan']
+          school_name = school_config['name'].downcase
+          trait_bonus = school_config['trait_bonus']
+          skills = school_config['skills']
+          skill_choice = school_config['skill_choice']
+          shugenja = school_config['shugenja']
+          honor = school_config['honor']
+
+          model.update(l5r_honor: honor)
+
+          school = L5R.find_school(model, self.school_name)
+          if (school)
+            client.emit_failure t('l5r.already_have_school')
+            return
+          end
+
+          current_clan = model.l5r_clan
+          if (!current_clan)
+            client.emit_failure t('l5r.set_family_first')
+            return
+          end
+
+          if(shugenja == true)
+            model.update(l5r_is_shugenja: true)
+          end
+
+          emp_skills = skills.select { |e| e =~ /\//}
+          non_emp_skills = skills.reject { |e| e =~ /\//}
+
+          non_emp_skills.each do |s|
+            skill = L5R.find_skill(model, s)
+            if (skill)
+              skill.update(rank: skill.rank + 1)
+            else
+              L5rSkill.create(name: s, rank: 1, character: model)
+            end
+          end
+
+          emp_skills.each do |s|
+            skill_name = s.partition("/").first
+            emp = s.partition("/").last
+            skill = L5R.find_skill(model, skill_name)
+
+            if (skill)
+              skill.update(rank: skill.rank + 1)
+            else
+              L5rSkill.create(name: skill_name, rank: 1, character: model)
+            end
+
+            if (skill && !skill.emphases.include?(emp))
+              skill.update(emphases: skill.emphases << emp)
+            end
+          end
+
+          trait = L5R.find_trait(model, trait_bonus)
+          trait.update(rank: trait.rank + 1)
+
+          L5rSchool.create(name: school_name, rank: 1, character: model)
         end
       end
     end

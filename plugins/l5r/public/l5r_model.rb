@@ -11,10 +11,11 @@ module AresMUSH
 
     attribute :l5r_family
     attribute :l5r_clan
+    attribute :l5r_is_shugenja, :type => DataType::Boolean
     attribute :l5r_void_ring, :type => DataType::Integer
-    attribute :l5r_insight_rank, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
-    attribute :l5r_mastery_rank, :type => DataType::Integer
+    attribute :l5r_honor, :type => DataType::Integer
+    attribute :l5r_glory, :type => DataType::Integer
 
     before_delete :delete_l5r_abilities
 
@@ -43,7 +44,7 @@ module AresMUSH
       attribute :name
       attribute :rank, :type => DataType::Integer
       reference :character, "AresMUSH::Character"
-      attribute :emphases, :type => DataType::Hash, :default => {}
+      attribute :emphases, :type => DataType::Array, :default => []
       index :name
     end
 

@@ -14,11 +14,32 @@ module AresMUSH
         calc = char.l5r_traits.select { |t| t.name == 'willpower' || t.name ==  'stamina' }
                    .map { |t| t.rank }
         return calc.min
-      else
+      elsif ring == 'water'
         calc = char.l5r_traits.select { |t| t.name == 'perception' || t.name == 'strength' }
                    .map { |t| t.rank }
         return calc.min
       end
+    end
+
+    def self.set_l5r_trait(char, trait_name, rank)
+      trait = L5R.find_trait(char, trait_name)
+      if (trait)
+        trait.update(rank: rank)
+      else
+        L5rTrait.create(name: trait_name, rank: rank, character: char)
+      end
+    end
+
+    def self.calc_l5r_insight(char)
+      fire = L5R.calc_l5r_ring(char, 'fire')
+      air = L5R.calc_l5r_ring(char, 'air')
+      earth = L5R.calc_l5r_ring(char, 'earth')
+      water = L5R.calc_l5r_ring(char, 'water')
+      void = char.l5r_void_ring
+      skills = char.l5r_skills.map { |s| s[:rank] }.inject(0){|sum,x| sum + x }
+      rings = fire + air + earth + water + void
+      insight = (rings * 10) + skills
+      return insight
     end
 
     def self.can_manage_abilities?(actor)
@@ -29,6 +50,11 @@ module AresMUSH
     def self.find_trait(model, ability_name)
       name_downcase = ability_name.downcase
       model.l5r_traits.select { |a| a.name.downcase == name_downcase }.first
+    end
+
+    def self.find_school(model, school_name)
+      name_downcase = school_name.downcase
+      model.l5r_schools.select { |s| s.name.downcase == name_downcase }.first
     end
 
     def self.find_family_config(family_name)
