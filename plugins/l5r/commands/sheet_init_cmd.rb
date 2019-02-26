@@ -79,6 +79,8 @@ module AresMUSH
           L5rTrait.create(name: 'willpower', rank: 2, character: enactor)
         end
 
+        enactor.update(l5r_void_ring: 2)
+
         client.emit_success t('l5r.init_success')
       end
     end

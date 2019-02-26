@@ -8,3 +8,5 @@ en:
     family_added: "Your family has been set to %{family} and your Clan to %{clan}."
     invalid_family: "That's not a valid family name!"
     must_init_first: "You must run the 'l5r/init' command first!"
+    rings_title: "Rings"
+    sheet_title: "Character Sheet for %{name}"
