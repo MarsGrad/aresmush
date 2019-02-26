@@ -99,6 +99,7 @@ module AresMUSH
           trait.update(rank: trait.rank + 1)
 
           L5rSchool.create(name: school_name, rank: 1, character: model)
+          client.emit_success t('l5r.school_set', :school => school_name.titlecase)
         end
       end
     end

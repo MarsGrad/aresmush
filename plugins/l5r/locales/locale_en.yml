@@ -6,6 +6,7 @@ en:
     init_success: "Sheet initialized."
     must_set_clan: 'In order to set your family, you must first set your Clan.'
     family_added: "Your family has been set to %{family} and your Clan to %{clan}."
+    school_set: "Your school has been set to %{school} School."
     invalid_family: "That's not a valid family name!"
     invalid_school: "That's not a valid school!"
     must_init_first: "You must run the 'sheet/init' command first!"

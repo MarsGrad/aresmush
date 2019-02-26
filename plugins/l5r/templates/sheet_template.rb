@@ -19,7 +19,7 @@ module AresMUSH
       def school
         schools = char.l5r_schools.map { |s| s.name }
         if (schools)
-          "School: #{schools.join(', ')}"
+          "School: #{schools.join(', ').titlecase}"
         else
           "School: "
         end
