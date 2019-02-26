@@ -52,6 +52,11 @@ module AresMUSH
       model.l5r_traits.select { |a| a.name.downcase == name_downcase }.first
     end
 
+    def self.find_skill(model, skill_name)
+      name_downcase = skill_name.downcase
+      model.l5r_skills.select { |s| s.name.downcase == name_downcase }.first
+    end
+
     def self.find_school(model, school_name)
       name_downcase = school_name.downcase
       model.l5r_schools.select { |s| s.name.downcase == name_downcase }.first
