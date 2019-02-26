@@ -43,8 +43,8 @@ module AresMUSH
         air << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'reflexes' || t.name == 'awareness' }
         trait1, trait2 = traits[0], traits[1]
-        air << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
-        air << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        air << left("%xh#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        air << left("%xh#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         air
       end
 
@@ -53,8 +53,8 @@ module AresMUSH
         water << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'strength' || t.name == 'perception' }
         trait1, trait2 = traits[0], traits[1]
-        water << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
-        water << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        water << left("%x27#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        water << left("%x27#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         water
       end
 
@@ -63,8 +63,8 @@ module AresMUSH
         earth << "\n"
         traits = char.l5r_traits.select { |t| t.name == 'stamina' || t.name == 'willpower' }
         trait1, trait2 = traits[0], traits[1]
-        earth << left("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
-        earth << left("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
+        earth << left("%x3#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 30)
+        earth << left("%x3#{trait2.name.titlecase}%xn: #{trait2.rank}", 30)
         earth
       end
     end
