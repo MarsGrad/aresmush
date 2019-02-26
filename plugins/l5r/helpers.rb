@@ -4,19 +4,19 @@ module AresMUSH
     def self.calc_l5r_ring(char, ring)
       if ring == 'fire'
         calc = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
-                   .map { |t| t.value }
+                   .map { |t| t.rank }
         return calc.min
       elsif ring == 'air'
         calc = char.l5r_traits.select { |t| t.name == 'awareness' || t.name == 'reflexes' }
-                   .map { |t| t.value }
+                   .map { |t| t.rank }
         return calc.min
       elsif ring == 'earth'
         calc = char.l5r_traits.select { |t| t.name == 'willpower' || t.name ==  'stamina' }
-                   .map { |t| t.value }
+                   .map { |t| t.rank }
         return calc.min
       else
         calc = char.l5r_traits.select { |t| t.name == 'perception' || t.name == 'strength' }
-                   .map { |t| t.value }
+                   .map { |t| t.rank }
         return calc.min
       end
     end
