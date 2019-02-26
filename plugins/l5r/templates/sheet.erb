@@ -15,7 +15,7 @@
 
 <%= line_with_text t('l5r.skills_title') %>
 <% skills.each do |s| %>
-%xh<%= left("#{s.name}:", 25) %>%xn <%= s.rank %>      <%= emphases(s) %>
+%xh<%= left("#{s.name}:", 20) %>%xn <%= s.rank %>      <%= emphases(s) %>
 <% end %>
 <%= divider %>
 %lf
