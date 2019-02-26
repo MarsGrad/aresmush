@@ -8,19 +8,12 @@ module AresMUSH
         super File.dirname(__FILE__) + "/sheet.erb"
       end
 
-      def summary
-        summ = "Clan: #{char.l5r_clan}"
-        if (char.l5r_family)
-          summ << "%tFamily: #{char.l5r_family}"
-        else
-          summ << "%tFamily: "
-        end
-        if (char.l5r_schools)
-          summ << "%tSchool: #{char.l5r_schools}"
-        else
-          summ << "%tSchool: "
-        end
-        summ
+      def clan
+        "Clan: #{char.l5r_clan}"
+      end
+
+      def family
+        "Family: #{char.l5r_family}"
       end
 
       def rings
