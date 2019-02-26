@@ -42,7 +42,7 @@ module AresMUSH
       end
 
       def fire_air_ring_title
-        fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')}"
+        fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')} ]-----------------------[ Air Ring: #{L5R.calc_l5r_ring(char, 'air')}"
         fire_air
       end
 
