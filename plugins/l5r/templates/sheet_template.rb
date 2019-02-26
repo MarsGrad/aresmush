@@ -9,11 +9,19 @@ module AresMUSH
       end
 
       def clan
-        "Clan: #{char.l5r_clan.titlecase}"
+        if (char.l5r_clan)
+          "Clan: #{char.l5r_clan.titlecase}"
+        else
+          "Clan: "
+        end
       end
 
       def family
-        "Family: #{char.l5r_family.titlecase}"
+        if (char.l5r_family)
+          "Family: #{char.l5r_family.titlecase}"
+        else
+          "Family: "
+        end
       end
 
       def rings
