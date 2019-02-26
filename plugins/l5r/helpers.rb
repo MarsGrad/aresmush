@@ -1,10 +1,6 @@
 module AresMUSH
   module L5R
 
-    def macro
-      @macro = ["lore", "artisan", "games", "perform", "craft"]
-    end
-
     def self.calc_l5r_ring(char, ring)
       if ring == 'fire'
         calc = char.l5r_traits.select { |t| t.name == 'agility' || t.name == 'intelligence' }
@@ -56,6 +52,7 @@ module AresMUSH
     def self.is_valid_l5r_skill_name?(name)
       return false if !name
       names = Global.read_config('l5r', 'skills').map { |a| a['name'].downcase }
+      macro = ["lore", "artisan", "games", "perform", "craft"]
       if names.include?(name.downcase)
         !macro.include?(name.downcase)
       elsif !names.include?(name.downcase)
