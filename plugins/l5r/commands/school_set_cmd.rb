@@ -43,6 +43,7 @@ module AresMUSH
           school_config = L5R.find_school_config(self.school_name)
 
           school_name = school_config['name'].downcase
+          clan = school_config['clan'].downcase
           trait_bonus = school_config['trait_bonus']
           skills = school_config['skills']
           skill_choice = school_config['skill_choice']
@@ -60,6 +61,11 @@ module AresMUSH
           current_clan = model.l5r_clan
           if (!current_clan)
             client.emit_failure t('l5r.set_family_first')
+            return
+          end
+
+          if clan == model.l5r_clan
+            client.emit_failure t('l5r.wrong_clan', :clan => model.l5r_clan)
             return
           end
 
