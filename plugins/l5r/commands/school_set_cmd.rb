@@ -64,7 +64,6 @@ module AresMUSH
             return
           elsif current_clan != clan
             client.emit_failure t('l5r.wrong_clan', :clan => current_clan.titlecase)
-            return
           end
 
           if (shugenja == true)

@@ -12,7 +12,7 @@ en:
     must_init_first: "You must run the 'sheet/init' command first!"
     already_have_school: "You already belong to this school!"
     set_family_first: "You must set your family before your school!"
-    wrong_clan: "That's not a valid school for the %{clan} Clan!"
+    wrong_clan: "Be aware: That's not a valid school for the %{clan} Clan. Your app may be denied unless you also take the 'Different School' advantage."
 
     rings_title: "Rings"
     sheet_title: "Character Sheet for %{name}"
