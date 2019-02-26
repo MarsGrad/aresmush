@@ -37,8 +37,18 @@ module AresMUSH
         Chargen.check_chargen_locked(enactor)
       end
 
+      def check_is_approved
+        return nil if !enactor.is_approved?
+        return t('l5r.already_approved')
+      end
+
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
+          current_school = model.l5r_schools
+          if (current_school)
+            client.emit_failure t('l5r.remove_school_first')
+            return
+          end
 
           school_config = L5R.find_school_config(self.school_name)
 

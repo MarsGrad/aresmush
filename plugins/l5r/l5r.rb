@@ -14,56 +14,78 @@ module AresMUSH
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
       when "sheet"
-        if (cmd.switch_is?("init"))
+        case cmd.switch
+        when "init"
           return SheetInitCmd
         else
-          return SheetCmd
+          if (!cmd.switch)
+            return SheetCmd
+          end
         end
       when "school"
-        if (cmd.switch_is?("set"))
+        case cmd.switch
+        when "set"
           return SchoolSetCmd
-        elsif (cmd.switch_is?("rem"))
+        when "rem"
           return SchoolRemCmd
         else
-          return SchoolCmd
+          if (!cmd.switch)
+            return SchoolCmd
+          end
         end
       when "tech"
-        if (cmd.switch_is?("add"))
+        case cmd.switch
+        when "add"
           return TechAddCmd
-        elsif (cmd.switch_is?("rem"))
+        when "rem"
           return TechRemCmd
         else
-          return TechCmd
+          if (!cmd.switch)
+            return TechCmd
+          end
         end
       when "spell"
-        if (cmd.switch_is?("add"))
+        case cmd.switch
+        when "add"
           return SpellAddCmd
-        elsif (cmd.switch_is?("rem"))
+        elswhen "rem"
           return SpellRemCmd
         else
-          return SpellCmd
+          if (!cmd.switch)
+            return SpellCmd
+          end
         end
       when "kata"
-        if (cmd.switch_is?("add"))
+        case cmd.switch
+        when "add"
           return KataAddCmd
-        elsif (cmd.switch_is?("rem"))
+        elswhen "rem"
           return KataRemCmd
         else
-          return KataCmd
+          if (!cmd.switch)
+            return KataCmd
+          end
         end
       when "kiho"
-        if (cmd.switch_is?("add"))
+        case cmd.switch
+        when "add"
           return KihoAddCmd
-        elsif (cmd.switch_is?("rem"))
+        when "rem"
           return KihoRemCmd
         else
-          return KihoCmd
+          if (!cmd.switch)
+            return KihoCmd
+          end
         end
       when "family"
-        if (cmd.switch_is?("set"))
+        when "set"
           return FamilySetCmd
+        when "rem"
+          return FamilyRemCmd
         else
-          return FamilyCmd
+          if (!cmd.switch)
+            return FamilyCmd
+          end
         end
       end
 

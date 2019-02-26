@@ -31,6 +31,11 @@ module AresMUSH
         return t('dispatcher.not_allowed')
       end
 
+      def check_is_approved
+        return nil if !enactor.is_approved?
+        return t('l5r.already_approved')
+      end
+
       def check_chargen_locked
         return nil if L5R.can_manage_abilities?(enactor)
         Chargen.check_chargen_locked(enactor)
@@ -38,6 +43,11 @@ module AresMUSH
 
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
+            current_family = model.l5r_family
+            if (current_family)
+              client.emit_failure t('l5r.remove_family_first')
+              return
+            end
 
             family_config = L5R.find_family_config(self.family_name)
 
@@ -48,20 +58,8 @@ module AresMUSH
             model.update(l5r_family: family)
             model.update(l5r_clan: clan)
 
-            current_family = model.l5r_family
-
-            if (current_family)
-              current_family_config = L5R.find_family_config(current_family)
-              current_trait_bonus = current_family_config['trait_bonus']
-              current_trait = L5R.find_trait(model, current_trait_bonus)
-              current_trait.update(rank: 2)
-              trait = L5R.find_trait(model, trait_bonus)
-              trait.update(rank: 3)
-              client.emit_success t('l5r.family_added', :family => family.titlecase, :clan => clan.titlecase)
-            end
-
             trait = L5R.find_trait(model, trait_bonus)
-            if (trait && !current_family)
+            if (trait)
               trait.update(rank: 3)
               client.emit_success t('l5r.family_added', :family => family.titlecase, :clan => clan.titlecase)
             else

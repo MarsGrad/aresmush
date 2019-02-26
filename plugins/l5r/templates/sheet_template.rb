@@ -54,22 +54,12 @@ module AresMUSH
         fire
       end
 
-      def air_ring_title
-        air = "Air Ring: #{L5R.calc_l5r_ring(char, 'air')}"
-        air
-      end
-
       def air_ring_traits
         traits = char.l5r_traits.select { |t| t.name == 'reflexes' || t.name == 'awareness' }
         trait1, trait2 = traits[0], traits[1]
         air = center("%xh#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
         air << right("%xh#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         air
-      end
-
-      def water_ring_title
-        water = "Water Ring: #{L5R.calc_l5r_ring(char, 'water')}"
-        water
       end
 
       def water_ring_traits
