@@ -9,7 +9,7 @@ module AresMUSH
       end
 
       def total
-        total = self.result[:result].last(self.result[:keep]).inject(0, :+)
+        total = self.result[:result_array].last(self.result[:keep]).inject(0, :+)
         total += self.result[:modifier]
         return total
       end
