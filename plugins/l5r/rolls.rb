@@ -98,6 +98,8 @@ module AresMUSH
               break
             end
           end
+        else
+          return i
         end
       end
       result = {}
