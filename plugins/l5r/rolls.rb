@@ -88,22 +88,22 @@ module AresMUSH
         roll -= 1
       end
 
-      until !result_array.include?(10)
-        result_array.map! do |i|
-          if i == 10
-            loop do
-              add = rand(1..10)
-              i.to_i += add.to_i
-              if add < 10
-                break
-              end
-            end
-            return i.to_i
-          elsif i < 10
-            return i.to_i
+
+      result_array.map! do |i|
+        if i == 10
+          add = 0
+          stop = 0
+          while stop < 10
+            explode = rand(1..10)
+            add += explode
+            stop = explode
           end
+          return i.to_i
+        elsif i < 10
+          return i.to_i
         end
       end
+
       result_array.sort!
 
       result = {}
