@@ -13,7 +13,10 @@ module AresMUSH
     end
 
     def self.initiative(char)
-      L5R.derived_stat(char, "initiative")
+      ranks = []
+      ranks << L5R.find_ability_rank(char, "reflexes")
+      ranks << L5R.calc_l5r_insight(char)
+      ranks.join("+")
     end
 
   end

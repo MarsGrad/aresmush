@@ -1,14 +1,14 @@
 module AresMUSH
   module L5R
 
-    def self.roll_ability(char, roll_str)
+    def self.roll_ability(char, roll_str, modifier)
       formatted = L5R.format_roll(roll_str)
 
       if (L5R.is_valid_rk?(formatted))
         roll = formatted.split("k")
         keep = roll[1]
         keep = keep.to_s
-        dice = L5R.roll_rk(formatted)
+        dice = L5R.roll_rk(formatted, modifier)
 
       elsif (roll_str =~ /\+/)
         abilities = formatted.split("+")
@@ -32,7 +32,7 @@ module AresMUSH
         keep = keep.to_s
 
         rk = roll + 'k' + keep
-        dice = L5R.roll_rk(rk)
+        dice = L5R.roll_rk(rk, modifier)
 
       else
         rank = L5R.find_ability_rank(char, roll_str)
@@ -43,18 +43,17 @@ module AresMUSH
         rank = rank.to_s
         keep = rank
         rk = rank + 'k' + rank
-        dice = L5R.roll_rk(rk)
+        dice = L5R.roll_rk(rk, modifier)
       end
       L5rRollResults.new(roll_str, dice)
     end
 
-    def self.roll_rk(input)
+    def self.roll_rk(input, modifier)
       return nil if !input
       input = L5R.format_roll(input)
 
       roll = input.before("k")
       keep = input.after("k")
-      modifier = 0
       roll = roll.to_i
       keep = keep.to_i
 

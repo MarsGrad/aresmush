@@ -7,8 +7,10 @@ module AresMUSH
 
       def parse_args
         return if !cmd.args
-        self.roll_str = trim_arg(cmd.args.before("vs"))
-        self.difficulty = integer_arg(cmd.args.after("vs"))
+        args = cmd.parse_args(ArgParser.arg1_slash_arg2_equals_arg3)
+        self.roll_str = trim_arg(args.arg1)
+        self.modifier = integer_arg(args.arg2)
+        self.difficulty = integer_arg(args.arg3)
       end
 
       def required_args
@@ -22,7 +24,7 @@ module AresMUSH
       end
 
       def handle
-        results = L5R.roll_ability(enactor, self.roll_str)
+        results = L5R.roll_ability(enactor, self.roll_str, self.modifier)
 
         if (!results)
           client.emit_failure t('l5r.invalid_roll')
