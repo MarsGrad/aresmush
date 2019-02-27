@@ -7,10 +7,16 @@ module AresMUSH
 
       def parse_args
         return if !cmd.args
-        args = cmd.parse_args(ArgParser.arg1_slash_arg2_equals_arg3)
-        self.roll_str = trim_arg(args.arg1)
-        self.modifier = integer_arg(args.arg2)
-        self.difficulty = integer_arg(args.arg3)
+        if cmd.args ~= /\//
+          args = cmd.parse_args(ArgParser.arg1_slash_arg2_equals_arg3)
+          self.roll_str = trim_arg(args.arg1)
+          self.modifier = integer_arg(args.arg2)
+          self.difficulty = integer_arg(args.arg3)
+        else
+          args = cmd.parse_args(ArgParse.arg1_equals_arg2)
+          self.roll_str = trim_arg(args.arg1)
+          self.difficulty = integer_arg(args.arg2)
+        end
       end
 
       def required_args
