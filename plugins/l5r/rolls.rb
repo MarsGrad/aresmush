@@ -106,7 +106,7 @@ module AresMUSH
         final <<  (i + add)
       end
 
-      result_array.sort!
+      final.sort!
 
       result = {}
       result[:result_array] = final
