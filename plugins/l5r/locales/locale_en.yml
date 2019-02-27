@@ -22,6 +22,12 @@ en:
     remove_schools_first: "You have to remove all schools first!"
     remove_family_first: "You have to remove the current family first!"
     school_not_found: "Couldn't find a school with that name!"
+    invalid_difficulty: "Difficulty must be a number higher than 0."
+
+    invalid_roll: "That's not a valid roll!"
+    roll_open: "%{name} rolls %{roll_str} and keeps %{keep}, getting:%r%{dice} (%{total})"
+    roll_vs_difficulty_fail: "%{name} rolls %{roll_str} vs difficulty %{difficulty} and keeps %{keep}, getting:%r%{dice} (%{total}) FAIL"
+    roll_vs_difficulty_success: "%{name} rolls %{roll_str} vs difficulty %{difficulty} and keeps %{keep}, getting:%r%{dice} (%{total}) SUCCESS"
 
     rings_title: "Rings"
     sheet_title: "Character Sheet for %{name}"

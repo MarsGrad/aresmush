@@ -1,0 +1,14 @@
+---
+l5r:
+  starting_experience_points: 40
+  wounds_per_rank_multiplier: 2
+  include_kata: true
+  include_kiho: true
+  include_maho: false
+  starting_glory: 1.0
+  starting_status: 1.0
+  max_ability_rank: 4
+
+  initiative:
+    - Reflexes
+    - Insight

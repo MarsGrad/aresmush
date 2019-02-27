@@ -74,6 +74,26 @@ module AresMUSH
       schools.select { |s| s['name'].downcase == school_name.downcase }.first
     end
 
+    def self.find_ability_rank(char, ability_name)
+      return nil if !ability_name
+
+      case ability_name.downcase
+      when "initiative"
+        return L5R.initiative(char)
+      end
+
+      [ char.l5r_skills, char.l5r_traits ].each do |list|
+        found = list.select { |a| a.name.downcase == ability_name.downcase }.first
+        return found.rank if found
+      end
+      return nil
+    end
+
+    def self.format_roll(input)
+      return "" if !input
+      input.downcase.gsub(" ", "")
+    end
+
     def self.is_valid_clan?(clan)
       return false if !clan
       clans = Global.read_config("l5r", "clans").map { |c| c['name'].downcase }
@@ -90,6 +110,10 @@ module AresMUSH
       return false if !school
       schools = Global.read_config("l5r", "schools").map { |s| s['name'].downcase }
       schools.include?(school.downcase)
+    end
+
+    def self.is_valid_rk?(roll_str)
+      /\d+k\d+/.match?(roll_str)
     end
 
     def self.is_valid_l5r_skill_name?(name)
