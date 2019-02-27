@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class RollCmd
+    class RollEmpCmd
       include CommandHandler
 
       attr_accessor :roll_str, :difficulty
