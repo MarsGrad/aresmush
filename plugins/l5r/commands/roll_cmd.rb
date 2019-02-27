@@ -7,7 +7,7 @@ module AresMUSH
 
       def parse_args
         return if !cmd.args
-        if cmd.args ~= /\//
+        if cmd.args =~ /\//
           args = cmd.parse_args(ArgParser.arg1_slash_arg2_equals_arg3)
           self.roll_str = trim_arg(args.arg1)
           self.modifier = integer_arg(args.arg2)
