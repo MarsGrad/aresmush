@@ -91,7 +91,8 @@ module AresMUSH
 
     def self.format_roll(input)
       return "" if !input
-      input.downcase.gsub(" ", "")
+      input.downcase.gsub(" + ", "+")
+      input.downcase.gsub(" k ", "k")
     end
 
     def self.is_valid_clan?(clan)
