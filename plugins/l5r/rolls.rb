@@ -50,7 +50,7 @@ module AresMUSH
 
     def self.roll_rk(input)
       return nil if !input
-      input = L5R.format_roll(roll_str)
+      input = L5R.format_roll(input)
 
       roll = input.before("k")
       keep = input.after("k")
