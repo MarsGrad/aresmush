@@ -89,12 +89,27 @@ module AresMUSH
       end
 
 
+      final =    []
+      result_array.each do |i|
+        if i != 10
+          final << i
+          next
+        end
 
+        add = 0
+        stop = 11
+        until stop < 10
+          explode = rand(1..10)
+          add += explode
+          stop = explode
+        end
+        final <<  (i + add)
+      end
 
       result_array.sort!
 
       result = {}
-      result[:result_array] = result_array
+      result[:result_array] = final
       result[:keep] = keep
       result[:modifier] = modifier
       return result
