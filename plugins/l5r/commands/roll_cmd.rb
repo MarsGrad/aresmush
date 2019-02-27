@@ -3,7 +3,7 @@ module AresMUSH
     class RollCmd
       include CommandHandler
 
-      attr_accessor :roll_str, :difficulty
+      attr_accessor :roll_str, :difficulty, :modifier
 
       def parse_args
         return if !cmd.args
