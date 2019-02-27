@@ -87,20 +87,22 @@ module AresMUSH
         result_array << rand(1..10)
         roll -= 1
       end
-      result_array = result_array.sort
 
-      result_array.each do |i|
-        if i == 10
-          loop do
-            add = rand(1..10)
-            i += add
-            if add < 10
-              break
+      until !result_array.include?(10)
+        result_array.map! do |i|
+          if i == 10
+            loop do
+              add = rand(1..10)
+              i += add
+              if add < 10
+                break
+              end
             end
           end
-          i
         end
       end
+      result_array.sort!
+
       result = {}
       result[:result_array] = result_array
       result[:keep] = keep
