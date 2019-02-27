@@ -114,14 +114,14 @@ module AresMUSH
       return result
     end
 
-    def self.roll_emp_ability(char, roll_str)
+    def self.roll_emp_ability(char, roll_str, modifier)
       formatted = L5R.format_roll(roll_str)
 
       if (L5R.is_valid_rk?(formatted))
         roll = formatted.split("k")
         keep = roll[1]
         keep = keep.to_s
-        dice = L5R.roll_emp_rk(formatted)
+        dice = L5R.roll_emp_rk(formatted, modifier)
 
       elsif (roll_str =~ /\+/)
         abilities = formatted.split("+")
@@ -145,7 +145,7 @@ module AresMUSH
         keep = keep.to_s
 
         rk = roll + 'k' + keep
-        dice = L5R.roll_emp_rk(rk)
+        dice = L5R.roll_emp_rk(rk, modifier)
 
       else
         rank = L5R.find_ability_rank(char, roll_str)
@@ -156,18 +156,17 @@ module AresMUSH
         rank = rank.to_s
         keep = rank
         rk = rank + 'k' + rank
-        dice = L5R.roll_emp_rk(rk)
+        dice = L5R.roll_emp_rk(rk, modifier)
       end
       L5rRollResults.new(roll_str, dice)
     end
 
-    def self.roll_emp_rk(input)
+    def self.roll_emp_rk(input, modifier)
       return nil if !input
       input = L5R.format_roll(input)
 
       roll = input.before("k")
       keep = input.after("k")
-      modifier = 0
       roll = roll.to_i
       keep = keep.to_i
 
@@ -234,14 +233,14 @@ module AresMUSH
       return result
     end
 
-    def self.roll_unsk_ability(char, roll_str)
+    def self.roll_unsk_ability(char, roll_str, modifier)
       formatted = L5R.format_roll(roll_str)
 
       if (L5R.is_valid_rk?(formatted))
         roll = formatted.split("k")
         keep = roll[1]
         keep = keep.to_s
-        dice = L5R.roll_unsk_rk(formatted)
+        dice = L5R.roll_unsk_rk(formatted, modifier)
 
       elsif (roll_str =~ /\+/)
         abilities = formatted.split("+")
@@ -265,7 +264,7 @@ module AresMUSH
         keep = keep.to_s
 
         rk = roll + 'k' + keep
-        dice = L5R.roll_unsk_rk(rk)
+        dice = L5R.roll_unsk_rk(rk, modifier)
 
       else
         rank = L5R.find_ability_rank(char, roll_str)
@@ -276,18 +275,17 @@ module AresMUSH
         rank = rank.to_s
         keep = rank
         rk = rank + 'k' + rank
-        dice = L5R.roll_unsk_rk(rk)
+        dice = L5R.roll_unsk_rk(rk, modifier)
       end
       L5rRollResults.new(roll_str, dice)
     end
 
-    def self.roll_unsk_rk(input)
+    def self.roll_unsk_rk(input, modifier)
       return nil if !input
       input = L5R.format_roll(input)
 
       roll = input.before("k")
       keep = input.after("k")
-      modifier = 0
       roll = roll.to_i
       keep = keep.to_i
 
@@ -337,11 +335,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end
@@ -353,11 +351,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.emp_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.emp_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.emp_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.emp_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end
@@ -369,11 +367,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.unsk_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.unsk_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.unsk_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input,
+        return t('l5r.unsk_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end

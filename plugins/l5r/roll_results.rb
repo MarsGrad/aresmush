@@ -14,6 +14,10 @@ module AresMUSH
         return total
       end
 
+      def modifier
+        self.result[:modifier]
+      end
+
       def keep
         self.result[:keep]
       end

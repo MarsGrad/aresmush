@@ -3,12 +3,21 @@ module AresMUSH
     class RollEmpCmd
       include CommandHandler
 
-      attr_accessor :roll_str, :difficulty
+      attr_accessor :roll_str, :difficulty, :modifier
 
       def parse_args
         return if !cmd.args
-        self.roll_str = trim_arg(cmd.args.before("vs"))
-        self.difficulty = integer_arg(cmd.args.after("vs"))
+        if cmd.args =~ /\//
+          args = cmd.parse_args(ArgParser.arg1_slash_arg2_equals_arg3)
+          self.roll_str = trim_arg(args.arg1)
+          self.modifier = integer_arg(args.arg2)
+          self.difficulty = integer_arg(args.arg3)
+        else
+          args = cmd.parse_args(ArgParser.arg1_equals_arg2)
+          self.roll_str = trim_arg(args.arg1)
+          self.modifier = 0
+          self.difficulty = integer_arg(args.arg2)
+        end
       end
 
       def required_args
@@ -22,7 +31,7 @@ module AresMUSH
       end
 
       def handle
-        results = L5R.roll_emp_ability(enactor, self.roll_str)
+        results = L5R.roll_emp_ability(enactor, self.roll_str, self.modifier)
 
         if (!results)
           client.emit_failure t('l5r.invalid_roll')
