@@ -14,7 +14,16 @@ module AresMUSH
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
       when "roll"
-        return RollCmd
+        case cmd.switch
+        when "emphasis"
+          return RollEmpCmd
+        when "unskilled"
+          return RollUnskCmd
+        else
+          if (!cmd.switch)
+            return RollCmd
+          end
+        end
       when "sheet"
         case cmd.switch
         when "init"

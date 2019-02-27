@@ -28,6 +28,10 @@ en:
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
     roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
     roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
+    emp_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc with emphasis vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
+    emp_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc with emphasis vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
+    unsk_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc (unskilled) vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
+    unsk_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc (unskilled) vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
 
     rings_title: "Rings"
     sheet_title: "Character Sheet for %{name}"
