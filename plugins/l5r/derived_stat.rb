@@ -13,10 +13,9 @@ module AresMUSH
     end
 
     def self.initiative(char)
-      ranks = []
-      ranks << L5R.find_ability_rank(char, "reflexes")
-      ranks << L5R.calc_l5r_insight(char)
-      ranks.join("+")
+      ranks = L5R.calc_l5r_insight(char) + L5R.find_ability_rank(char, "reflexes")
+      ranks = 'ranks' + 'k' + "#{L5R.find_ability_rank(char, "reflexes")}"
+      ranks
     end
 
   end
