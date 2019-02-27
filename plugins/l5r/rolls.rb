@@ -99,7 +99,7 @@ module AresMUSH
               end
             end
           elsif i < 10
-            return i
+            return i.to_i
           end
         end
       end
