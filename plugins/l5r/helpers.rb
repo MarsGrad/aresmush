@@ -36,7 +36,7 @@ module AresMUSH
       earth = L5R.calc_l5r_ring(char, 'earth')
       water = L5R.calc_l5r_ring(char, 'water')
       void = char.l5r_void_ring
-      skills = char.l5r_skills.map { |s| s[:rank] }.inject(0){|sum,x| sum + x }
+      skills = char.l5r_skills.map { |s| s.rank }.inject(0){|sum,x| sum + x }
       rings = fire + air + earth + water + void
       insight = (rings * 10) + skills
       return insight
