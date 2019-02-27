@@ -17,7 +17,7 @@ module AresMUSH
 
       def check_difficulty
         return nil if self.difficulty.blank?
-        return t('l5r.invalid_difficulty') if self.difficulty == 0
+        return t('l5r.invalid_difficulty') if self.difficulty < 0
         return nil
       end
 
