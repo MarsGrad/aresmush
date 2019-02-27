@@ -14,6 +14,10 @@ module AresMUSH
         return total
       end
 
+      def keep
+        self.result[:keep]
+      end
+
       def print_dice
         self.result[:result_array].join (" ")
       end
