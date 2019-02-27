@@ -335,11 +335,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end
@@ -351,11 +351,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.emp_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.emp_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.emp_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.emp_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end
@@ -367,11 +367,11 @@ module AresMUSH
       end
 
       if (results.total < difficulty)
-        return t('l5r.unsk_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.unsk_roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
 
       elsif (results.total >= difficulty )
-        return t('l5r.unsk_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier
+        return t('l5r.unsk_roll_vs_difficulty_success', :name => enactor_name, :roll_str => results.pretty_input, :modifier => results.modifier,
         :dice => results.print_dice, :keep => results.keep, :total => results.total, :difficulty => difficulty)
       end
     end
