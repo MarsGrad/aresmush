@@ -98,9 +98,7 @@ module AresMUSH
             add += explode
             stop = explode
           end
-          return i.to_i
-        elsif i < 10
-          return i.to_i
+          i + add
         end
       end
 
