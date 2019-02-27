@@ -93,13 +93,15 @@ module AresMUSH
         if i == 10
           add = 0
           stop = 0
-          while stop < 10
+          until stop < 10
             explode = rand(1..10)
             add += explode
             stop = explode
           end
           i + add
-        end
+        elsif i < 10
+          return i
+        end      
       end
 
       result_array.sort!
