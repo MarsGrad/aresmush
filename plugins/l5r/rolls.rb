@@ -93,7 +93,7 @@ module AresMUSH
           if i == 10
             loop do
               add = rand(1..10)
-              i += add
+              i.to_i += add.to_i
               if add < 10
                 break
               end
