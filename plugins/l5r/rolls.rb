@@ -98,6 +98,8 @@ module AresMUSH
                 break
               end
             end
+          elsif i < 10
+            return i
           end
         end
       end
