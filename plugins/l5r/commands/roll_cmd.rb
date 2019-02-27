@@ -15,6 +15,7 @@ module AresMUSH
         else
           args = cmd.parse_args(ArgParser.arg1_equals_arg2)
           self.roll_str = trim_arg(args.arg1)
+          self.modifier = 0
           self.difficulty = integer_arg(args.arg2)
         end
       end
