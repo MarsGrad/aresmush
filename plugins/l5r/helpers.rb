@@ -91,8 +91,6 @@ module AresMUSH
       return nil if !ability_name
 
       case ability_name.downcase
-      when "initiative"
-        return L5R.initiative(char)
       when "fire"
         return L5R.calc_l5r_ring(char, 'fire')
       when "air"
