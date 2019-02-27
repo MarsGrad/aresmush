@@ -40,10 +40,14 @@ module AresMUSH
           return nil
         end
 
-        rank = rank.to_s
-        keep = rank
-        rk = rank + 'k' + rank
-        dice = L5R.roll_rk(rk, modifier)
+        if (rank =~ /k/)
+          dice = L5R.roll_rk(rk, modifier)
+        else
+          rank = rank.to_s
+          keep = rank
+          rk = rank + 'k' + rank
+          dice = L5R.roll_rk(rk, modifier)
+        end
       end
       L5rRollResults.new(roll_str, dice)
     end
@@ -153,10 +157,14 @@ module AresMUSH
           return nil
         end
 
-        rank = rank.to_s
-        keep = rank
-        rk = rank + 'k' + rank
-        dice = L5R.roll_emp_rk(rk, modifier)
+        if (rank =~ /k/)
+          dice = L5R.roll_emp_rk(rk, modifier)
+        else
+          rank = rank.to_s
+          keep = rank
+          rk = rank + 'k' + rank
+          dice = L5R.roll_emp_rk(rk, modifier)
+        end
       end
       L5rRollResults.new(roll_str, dice)
     end
@@ -272,10 +280,14 @@ module AresMUSH
           return nil
         end
 
-        rank = rank.to_s
-        keep = rank
-        rk = rank + 'k' + rank
-        dice = L5R.roll_unsk_rk(rk, modifier)
+        if (rank =~ /k/)
+          dice = L5R.roll_unsk_rk(rk, modifier)
+        else
+          rank = rank.to_s
+          keep = rank
+          rk = rank + 'k' + rank
+          dice = L5R.roll_unsk_rk(rk, modifier)
+        end
       end
       L5rRollResults.new(roll_str, dice)
     end

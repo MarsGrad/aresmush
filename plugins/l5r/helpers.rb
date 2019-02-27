@@ -39,7 +39,20 @@ module AresMUSH
       skills = char.l5r_skills.map { |s| s.rank }.inject(0){|sum,x| sum + x }
       rings = fire + air + earth + water + void
       insight = (rings * 10) + skills
-      return insight
+
+      if (1..149).include?(insight)
+        rank = 1
+      elsif (150..174).include?(insight)
+        rank = 2
+      elsif (175..199).include?(insight)
+        rank = 3
+      elsif (200..224).include?(insight)
+        rank = 4
+      elsif (225..249).include?(insight)
+        rank = 5
+      end
+
+      return rank
     end
 
     def self.can_manage_abilities?(actor)
@@ -80,6 +93,16 @@ module AresMUSH
       case ability_name.downcase
       when "initiative"
         return L5R.initiative(char)
+      when "fire"
+        return L5R.calc_l5r_ring(char, 'fire')
+      when "air"
+        return L5R.calc_l5r_ring(char, 'air')
+      when "earth"
+        return L5R.calc_l5r_ring(char, 'earth')
+      when "water"
+        return L5R.calc_l5r_ring(char, 'water')
+      when "void"
+        return char.l5r_void_ring
       end
 
       [ char.l5r_skills, char.l5r_traits ].each do |list|
