@@ -25,9 +25,9 @@ en:
     invalid_difficulty: "Difficulty must be a number higher than 0."
 
     invalid_roll: "That's not a valid roll!"
-    roll_open: "%{name} rolls %{roll_str} and keeps %{keep}, getting:%r%{dice} (%{total})"
-    roll_vs_difficulty_fail: "%{name} rolls %{roll_str} vs difficulty %{difficulty} and keeps %{keep}, getting:%r%{dice} (%{total}) FAIL"
-    roll_vs_difficulty_success: "%{name} rolls %{roll_str} vs difficulty %{difficulty} and keeps %{keep}, getting:%r%{dice} (%{total}) SUCCESS"
+    roll_open: "%{name} rolls %xh%{roll_str}%xH and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
+    roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xh%{roll_str}%xH vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
+    roll_vs_difficulty_success: "%xw%{name}%xc rolls %xh%{roll_str}%xH vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
 
     rings_title: "Rings"
     sheet_title: "Character Sheet for %{name}"

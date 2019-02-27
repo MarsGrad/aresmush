@@ -45,7 +45,7 @@ module AresMUSH
         rk = rank + 'k' + rank
         dice = L5R.roll_rk(rk)
       end
-      L5rRollResults.new(roll_str, dice, keep)
+      L5rRollResults.new(roll_str, dice)
     end
 
     def self.roll_rk(input)
@@ -100,8 +100,11 @@ module AresMUSH
           end
         end
       end
-
-      return result_array
+      result = {}
+      result[:result_array] = result_array
+      result[:keep] = keep
+      result[:modifier] = modifier
+      return result
     end
 
     def self.get_success_message(enactor_name, results, difficulty)

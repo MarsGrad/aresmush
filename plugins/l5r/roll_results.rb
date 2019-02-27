@@ -1,20 +1,21 @@
 module AresMUSH
   module L5R
     class L5rRollResults
-      attr_accessor :roll, :input, :keep
+      attr_accessor :result, :input
 
-      def initialize(input, roll, keep)
-        self.roll = roll
+      def initialize(input, result)
+        self.result = result
         self.input = input
-        self.keep = keep.to_i
       end
 
       def total
-        self.roll.last(self.keep).inject(0, :+)
+        total = self.result[:result].last(self.result[:keep]).inject(0, :+)
+        total += self.result[:modifier]
+        return total
       end
 
       def print_dice
-        self.roll.join (" ")
+        self.result[:result_array].join (" ")
       end
 
       def pretty_input
