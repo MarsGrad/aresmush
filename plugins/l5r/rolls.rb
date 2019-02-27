@@ -89,7 +89,7 @@ module AresMUSH
       end
       result_array = result_array.sort
 
-      result_array = result_array.map do |i|
+      result_array.each do |i|
         if i == 10
           loop do
             add = rand(1..10)
@@ -98,8 +98,7 @@ module AresMUSH
               break
             end
           end
-        else
-          return i
+          i
         end
       end
       result = {}
