@@ -6,7 +6,7 @@ module AresMUSH
       def initialize(input, roll, keep)
         self.roll = roll
         self.input = input
-        self.keep = keep
+        self.keep = keep.to_i
       end
 
       def total
