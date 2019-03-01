@@ -8,7 +8,3 @@ l5r:
   starting_glory: 1.0
   starting_status: 1.0
   max_ability_rank: 4
-
-  initiative:
-    - Reflexes
-    - Insight

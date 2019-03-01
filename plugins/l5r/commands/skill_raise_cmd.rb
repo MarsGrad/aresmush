@@ -1,18 +1,18 @@
 module AresMUSH
   module L5R
-    class TraitRaiseCmd
+    class SkillRaiseCmd
       include CommandHandler
 
-      attr_accessor :target_name, :trait_name
+      attr_accessor :target_name, :skill_name
 
       def parse_args
-        args = parse_args(ArgParser.arg1_equals_arg2)
+        args = parse_args(ArgParse.arg1_equals_arg2)
         self.target_name = titlecase_arg(args.arg1)
-        self.trait_name = titlecase_arg(args.arg2)
+        self.skill_name = titlecase_arg(args.arg2)
       end
 
       def required_args
-        [self.target_name, self.trait_name]
+        [self.target_name, self.skill_name]
       end
 
       def check_can_set
@@ -23,13 +23,21 @@ module AresMUSH
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
 
-          trait = L5R.find_trait(model, self.trait_name)
-          if (trait)
-            trait.update(rank: trait.rank + 1)
-            client.emit_success t('l5r.trait_raised', :trait => self.trait_name)
-          else
-            client.emit_failure t('l5r.must_init_first')
+          skill_config = L5R.find_skill_config(self.skill_name)
+
+          if (!skill_config)
+            client.emit_failure t('l5r.invalid_skill')
+            return
           end
+
+          skill = L5R.find_skill(model, self.skill_name)
+          if (skill)
+            skill.update(rank: skill.rank + 1)
+          else
+            L5rSkill.create(name: self.skill_name, rank: 1, character: model)
+          end
+
+          client.emit_success t('l5r.skill_raised', :skill => self.skill_name)
 
           model.update(l5r_old_insight_rank: model.l5r_current_insight_rank)
           model.update(l5r_current_insight_rank: L5R.calc_l5r_insight(model))

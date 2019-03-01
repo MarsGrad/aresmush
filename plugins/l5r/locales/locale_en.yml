@@ -31,7 +31,9 @@ en:
     school_skill_choice: "Your school allows you to choose: %xw%{skill_choice} skill%xc. Inform Staff of your decision on your app job."
     shugenja_mismatch: "You can't have a shugenja school and a non-shugenja school at the same time."
     trait_raised: "You raised their %{trait} by 1."
+    skill_raised: "You raised their %{skill} by 1."
     insight_rank_up: "Insight Rank Up! %{character} is likely now entitled to a new school technique or new spells!"
+    invalid_skill: "That's not a valid skill name."
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"

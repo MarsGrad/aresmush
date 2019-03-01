@@ -29,6 +29,11 @@ module AresMUSH
         when "raise"
           return TraitRaiseCmd
         end
+      when "skill"
+        case cmd.switch
+        when "raise"
+          return SkillRaiseCmd
+        end
       when "sheet"
         case cmd.switch
         when "init"

@@ -66,6 +66,8 @@ module AresMUSH
 
           if (shugenja == true)
             model.update(l5r_is_shugenja: true)
+          elsif (shugenja == false)
+            model.update(l5r_is_shugenja: false)
           end
 
           emp_skills = skills.select { |e| e =~ /\//}
