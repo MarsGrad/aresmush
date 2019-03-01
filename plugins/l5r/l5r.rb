@@ -24,6 +24,11 @@ module AresMUSH
             return RollCmd
           end
         end
+      when "trait"
+        case cmd.switch
+        when "raise"
+          return TraitRaiseCmd
+        end
       when "sheet"
         case cmd.switch
         when "init"
@@ -39,6 +44,8 @@ module AresMUSH
           return SchoolSetCmd
         when "rem"
           return SchoolRemCmd
+        when "add"
+          return SchoolAddCmd
         else
           if (!cmd.switch)
             return SchoolCmd
@@ -59,7 +66,7 @@ module AresMUSH
         case cmd.switch
         when "add"
           return SpellAddCmd
-        elswhen "rem"
+        when "rem"
           return SpellRemCmd
         else
           if (!cmd.switch)
@@ -70,7 +77,7 @@ module AresMUSH
         case cmd.switch
         when "add"
           return KataAddCmd
-        elswhen "rem"
+        when "rem"
           return KataRemCmd
         else
           if (!cmd.switch)

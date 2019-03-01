@@ -9,6 +9,9 @@ module AresMUSH
     collection :l5r_kiho, "AresMUSH::L5rKiho"
     collection :l5r_schools, "AresMUSH::L5rSchool"
 
+    attribute :l5r_old_insight_rank
+    attribute :l5r_current_insight_rank
+    attribute :l5r_current_school
     attribute :l5r_family
     attribute :l5r_clan
     attribute :l5r_is_shugenja, :type => DataType::Boolean

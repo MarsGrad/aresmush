@@ -60,6 +60,31 @@ module AresMUSH
       actor.has_permission?("manage_apps")
     end
 
+    def self.find_tech(model, tech_name)
+      name_downcase = tech_name.downcase
+      model.l5r_techniques.select { |t| t.name.downcase == name_downcase }.first
+    end
+
+    def self.find_spell(model, spell_name)
+      name_downcase = spell_name.downcase
+      model.l5r_spells.select { |s| s.name.downcase == name_downcase }.first
+    end
+
+    def self.find_advantage(model, advantage_name)
+      name_downcase = advantage_name.downcase
+      model.l5r_advantages.select { |a| a.name.downcase == name_downcase }.first
+    end
+
+    def self.find_kata(model, kata_name)
+      name_downcase = kata_name.downcase
+      model.l5r_kata.select { |k| k.name.downcase == name_downcase }.first
+    end
+
+    def self.find_kiho(model, kiho_name)
+      name_downcase = kiho_name.downcase
+      model.l5r_kiho.select { |k| k.name.downcase == name_downcase }.first
+    end
+
     def self.find_trait(model, ability_name)
       name_downcase = ability_name.downcase
       model.l5r_traits.select { |a| a.name.downcase == name_downcase }.first
@@ -73,6 +98,54 @@ module AresMUSH
     def self.find_school(model, school_name)
       name_downcase = school_name.downcase
       model.l5r_schools.select { |s| s.name.downcase == name_downcase }.first
+    end
+
+    def self.find_tech_config(tech_name)
+      return nil if !tech_name
+      techs = Global.read_config('l5r', 'techniques')
+      techs.select { |t| t['name'].downcase == tech_name.downcase }.first
+    end
+
+    def self.find_spell_config(spell_name)
+      return nil if !spell_name
+      spells = Global.read_config('l5r', 'spells')
+      spells.select { |s| s['name'].downcase == spell_name.downcase }.first
+    end
+
+    def self.find_advantage_config(adv_name)
+      return nil if !adv_name
+      advs = Global.read_config('l5r', 'advantages')
+      advs.select { |a| a['name'].downcase == adv_name.downcase }.first
+    end
+
+    def self.find_disadvantage_config(dis_name)
+      return nil if !dis_name
+      dis = Global.read_config('l5r', 'disadvantages')
+      dis.select { |d| d['name'].downcase == dis_name.downcase }.first
+    end
+
+    def self.find_kata_config(kata_name)
+      return nil if !kata_name
+      katas = Global.read_config('l5r', 'kata')
+      katas.select { |k| k['name'].downcase == kata_name.downcase }.first
+    end
+
+    def self.find_kiho_config(kiho_name)
+      return nil if !kiho_name
+      kihos = Global.read_config('l5r', 'kiho')
+      kihos.select { |k| k['name'].downcase == kiho_name.downcase }.first
+    end
+
+    def self.find_skill_config(skill_name)
+      return nil if !skill_name
+      skills = Global.read_config('l5r', 'skills')
+      skills.select { |s| s['name'].downcase == skill_name.downcase }.first
+    end
+
+    def self.find_trait_config(trait_name)
+      return nil if !trait_name
+      traits = Global.read_config('l5r', 'traits')
+      traits.select { |t| t['name'].downcase == trait_name.downcase }.first
     end
 
     def self.find_family_config(family_name)
@@ -101,6 +174,8 @@ module AresMUSH
         return L5R.calc_l5r_ring(char, 'water')
       when "void"
         return char.l5r_void_ring
+      when "insight"
+        return L5R.calc_l5r_insight(char)
       end
 
       [ char.l5r_skills, char.l5r_traits ].each do |list|

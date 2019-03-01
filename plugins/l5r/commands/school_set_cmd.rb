@@ -6,12 +6,6 @@ module AresMUSH
       attr_accessor :target_name, :school_name
 
       def parse_args
-        # Admin version
-        if(cmd.args =~ /\=/)
-          args = cmd.parse_args(ArgParse.arg1_equals_arg2)
-          self.target_name = titlecase_arg(args.arg1)
-          self.school_name = titlecase_arg(args.arg2)
-        else
           self.target_name = enactor_name
           self.school_name = titlecase_arg(cmd.args)
         end
@@ -26,19 +20,13 @@ module AresMUSH
         return nil
       end
 
-      def check_can_set
-        return nil if enactor_name == self.target_name
-        return nil if L5R.can_manage_abilities?(enactor)
-        return t('dispatcher.not_allowed')
-      end
-
       def check_chargen_locked
         return nil if L5R.can_manage_abilities?(enactor)
         Chargen.check_chargen_locked(enactor)
       end
 
       def check_is_approved
-        return nil if !enactor.is_approved?
+        return nil if !enactor.is_approved? || L5R.can_manage_abilities?(enactor)
         return t('l5r.already_approved')
       end
 
@@ -112,8 +100,13 @@ module AresMUSH
           trait = L5R.find_trait(model, trait_bonus)
           trait.update(rank: trait.rank + 1)
 
+          current_insight = L5R.calc_l5r_insight(model)
+          model.update(l5r_current_insight_rank: current_insight)
+
+          model.update(l5r_current_school: school_name)
           L5rSchool.create(name: school_name, rank: 1, character: model)
           client.emit_success t('l5r.school_set', :school => school_name.titlecase)
+          client.emit_success t('l5r.school_skill_choice', :skill_choice => skill_choice)
         end
       end
     end

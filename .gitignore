@@ -1,5 +1,6 @@
 # Secret files
 # -----------------------------
+server.yml
 secrets.yml
 real_database.yml
 
