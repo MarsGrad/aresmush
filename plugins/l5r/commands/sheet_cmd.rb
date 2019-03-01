@@ -15,11 +15,6 @@ module AresMUSH
         return t('dispatcher.not_allowed')
       end
 
-      def check_has_init
-        return nil if self.target_name.l5r_void_ring
-        return t('l5r.must_init_first')
-      end
-
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           template = SheetTemplate.new(model)
