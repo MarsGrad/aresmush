@@ -10,7 +10,7 @@ module AresMUSH
       end
 
       def check_is_approved
-        return nil if !enactor.is_approved?
+        return nil if !enactor.is_approved? || L5R.can_manage_abilities?(enactor)
         return t('l5r.already_approved')
       end
 
@@ -42,7 +42,7 @@ module AresMUSH
         if (skills)
           skills.each { |s| s.delete }
         end
-        
+
         shugenja = enactor.l5r_is_shugenja
         if shugenja == true
           enactor.update(l5r_is_shugenja: false)
