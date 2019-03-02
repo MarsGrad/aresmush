@@ -223,7 +223,8 @@ module AresMUSH
       if names.include?(name.downcase)
         !macro.include?(name.downcase)
       elsif !names.include?(name.downcase)
-        name.starts_with?(macro)
+        r = /#{macro.join("|")}/
+        r === name
       end
     end
   end
