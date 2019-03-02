@@ -42,6 +42,7 @@ en:
     sheet_already_set: "You've already set your sheet type. Use sheet/init to reset before choosing a different type."
     must_set_sheet: "You must set your sheet type first."
     invalid_sheet_type: "That's not a valid sheet type."
+    sheet_type_set: "Sheet type set to %{sheet_type}."
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"

@@ -36,14 +36,18 @@ module AresMUSH
           enactor.update(l5r_void_ring: 1)
           enactor.update(l5r_void_pool: 1)
           enactor.update(l5r_sheet_type: sheet_type)
+          client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "monk"
           enactor.update(l5r_void_ring: 3)
           enactor.update(l5r_void_pool: 3)
           enactor.update(l5r_sheet_type: sheet_type)
+          client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "ronin"
           enactor.update(l5r_sheet_type: sheet_type)
+          client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "samurai"
           enactor.update(l5r_sheet_type: sheet_type)
+          client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         else
           client.emit_failure t('l5r.invalid_sheet_type')
         end
