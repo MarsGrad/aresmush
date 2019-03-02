@@ -26,7 +26,7 @@ module AresMUSH
 
           model.update(l5r_affinity: self.affinity)
           model.update(l5r_deficiency: self.deficiency)
-          client.emit_success t('l5r.affinity_deficiency_set')
+          client.emit_success t('l5r.affinity_deficiency_set', :affinity => self.affinity, :deficiency => self.deficiency)
         end
       end
     end

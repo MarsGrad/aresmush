@@ -1,5 +1,6 @@
 %lh
-<%= line_with_text t('l5r.sheet_title', :name => char.name) %>
+<%= line_with_text t('l5r.sheet_title', :name => char.name, :sheet_type => char.l5r_sheet_type.titlecase) %>
+<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "monk" || char.l5r_sheet_type == "samurai" %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
 <%= right( family, 20) %>
@@ -10,6 +11,11 @@
 <%= left( affinity, 20) -%>
 <%= center( ' ', 30) -%>
 <%= right( deficiency, 20) %>
+<% end %>
+<% end %>
+<% if char.l5r_sheet_type == "bonge" || char.l5r_sheet_type == "geisha" %>
+<%= left( clan, 20) -%>
+<%= right( insight, 20 ) %>
 <% end %>
 <%= line_with_text fire_air_ring_title%>
 <%= left(fire_ring_traits, 20) -%>
@@ -25,9 +31,11 @@
 <% skills.each do |s| %>
 %xh<%= left("#{s.name}:", 20) %>%xn <%= s.rank %>      <%= emphases(s) %>
 <% end %>
+<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" %>
 <%= line_with_text t('l5r.techniques_title') %>
 <% techs.each do |t| %>
 <%= t -%>
+<% end %>
 <% end %>
 <% if shugenja == true %>
 <%= line_with_text t('l5r.spells_title') %>

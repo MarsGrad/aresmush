@@ -9,6 +9,7 @@ l5r:
           skill_choice: "Any:Bugei"
           shugenja: false
           honor: 3.5
+          starting_technique: The Way of the Crab
         -
           name: Kuni Shugenja
           clan: Crab
@@ -20,6 +21,7 @@ l5r:
           deficiency: Air
           spells: Universal, 3 Earth, 3 Fire, and 1 Water
           honor: 2.5
+          starting_technique: Gaze into Shadow
         -
           name: Yasuki Courtier
           clan: Crab
@@ -28,6 +30,7 @@ l5r:
           skill_choice: "Any:Merchant"
           shugenja: false
           honor: 2.5
+          starting_technique: The Way of the Carp
         -
           name: Hiruma Bushi
           clan: Crab
@@ -36,6 +39,7 @@ l5r:
           skill_choice: "Any:Skill"
           shugenja: false
           honor: 4.5
+          starting_technique: "Torch's Flame Flickers"
         -
           name: Kakita Bushi
           clan: Crane
@@ -43,3 +47,4 @@ l5r:
           skills: [Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony]
           skill_choice: "Any:Bugei or High"
           honor: 6.5
+          starting_technique: The Way of the Crane

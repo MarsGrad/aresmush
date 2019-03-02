@@ -47,13 +47,29 @@ module AresMUSH
           school_config = L5R.find_school_config(self.school_name)
 
           trait_bonus = school_config['trait_bonus']
+          first_tech = school_config['starting_technique']
+          school_skills = school_config['skills']
+          skill_names = []
+          school_skills.each do |s|
+            skill_names << s.partition("/").first
+          end
           trait = L5R.find_trait(model, trait_bonus)
           school = L5R.find_school(model, self.school_name)
-          skills = model.l5r_skills
+
           if (school)
             school.delete
             trait.update(rank: trait.rank - 1)
-            skills.each { |s| s.delete }
+            model.l5r_skills.each do |s|
+              if skill_names.include?(s.name)
+                s.delete
+              end
+            end
+            model.l5r_techniques.each do |t|
+              if t.name == first_tech
+                t.delete
+              end
+            end
+
 
             client.emit_success t('l5r.school_removed')
             return

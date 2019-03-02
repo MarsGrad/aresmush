@@ -29,6 +29,11 @@ module AresMUSH
         return t('l5r.already_approved')
       end
 
+      def check_sheet_set
+        return nil if self.target_name.l5r_sheet_type
+        return t('l5r.must_set_sheet')
+      end
+
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           current_school = model.l5r_schools.any?
@@ -48,6 +53,7 @@ module AresMUSH
           affinity = school_config['affinity']
           deficiency = school_config['deficiency']
           honor = school_config['honor']
+          first_tech = school_config['starting_technique']
 
           model.update(l5r_honor: honor)
 
@@ -58,7 +64,7 @@ module AresMUSH
           end
 
           current_clan = model.l5r_clan
-          if (!current_clan)
+          if (!current_clan && model.l5r_sheet_type != "ronin")
             client.emit_failure t('l5r.set_family_first')
             return
           elsif current_clan != clan
@@ -113,6 +119,7 @@ module AresMUSH
           model.update(l5r_current_insight_rank: current_insight)
 
           model.update(l5r_current_school: school_name)
+          L5rTechnique.create(name: first_tech, rank: 1, school: school_name, character: model)
           L5rSchool.create(name: school_name, rank: 1, character: model)
           client.emit_success t('l5r.school_set', :school => school_name.titlecase)
           client.emit_success t('l5r.school_skill_choice', :skill_choice => skill_choice)

@@ -88,6 +88,7 @@ module AresMUSH
         enactor.update(l5r_void_pool: 2)
         enactor.update(l5r_old_insight_rank: 1)
         enactor.update(l5r_current_insight_rank: 1)
+        enactor.update(l5r_sheet_type: nil)
 
         client.emit_success t('l5r.init_success')
       end

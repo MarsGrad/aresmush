@@ -39,6 +39,9 @@ en:
     spell_added: "Spell added."
     isawa_shugenja: "The Isawa Shugenja School allows you to choose your own affinity and deficiency. Inform Staff of your decision on your app job."
     affinity_deficiency_set: "You've set their affinity to %{affinity} and deficiency to %{deficiency}."
+    sheet_already_set: "You've already set your sheet type. Use sheet/init to reset before choosing a different type."
+    must_set_sheet: "You must set your sheet type first."
+    invalid_sheet_type: "That's not a valid sheet type."
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
@@ -51,6 +54,6 @@ en:
 
     rings_title: "Rings"
     spells_title: "Spells"
-    sheet_title: "Character Sheet for %{name}"
+    sheet_title: "%{sheet_type} Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
     techniques_title: "School Techniques"
