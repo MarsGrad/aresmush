@@ -223,8 +223,8 @@ module AresMUSH
       if names.include?(name.downcase)
         !macro.include?(name.downcase)
       elsif !name.include?(name.downcase)
-        check = macro.select { |m| name.start_with?(m) }
-        if (check)
+        check = macro.map { |m| name.start_with?(m) }
+        if (check.include?(true))
           return true
         else
           return false

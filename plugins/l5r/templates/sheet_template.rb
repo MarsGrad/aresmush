@@ -48,7 +48,7 @@ module AresMUSH
               title = a.name
               rank = " (#{a.rank})"
               school = a.school
-              display = left("#{title}#{rank}: #{school}", 36)
+              display = left("#{title}#{rank}: #{school}", 80)
               "%r#{display}"
             end
       end
