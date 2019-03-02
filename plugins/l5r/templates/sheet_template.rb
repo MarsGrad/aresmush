@@ -40,7 +40,7 @@ module AresMUSH
       def order
         orders = char.l5r_schools.map { |s| "#{s.name}" + ": " + "#{s.rank}" }
         if (orders)
-          "Order: #{schools.join(', ').titlecase}"
+          "Order: #{orders.join(', ').titlecase}"
         else
           "Order: "
         end
