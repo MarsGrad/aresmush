@@ -1,0 +1,19 @@
+---
+l5r:
+  spells:
+    -
+      name: Sense
+      ring: All
+      mastery: 1
+    -
+      name: Summon
+      ring: All
+      mastery: 1
+    -
+      name: Commune
+      ring: All
+      mastery: 1
+    -
+      name: Blessed Wind
+      ring: Air
+      mastery: 1
