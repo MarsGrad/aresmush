@@ -41,6 +41,18 @@ module AresMUSH
         skill.emphases.map { |k| "#{k}" }.join(", ")
       end
 
+      def techs
+        @char.l5r_techniques.to_a.sort_by { |a| a.rank }
+          .each_with_index
+            .map do |a, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              title = a.name
+              rank = " (#{a.rating})"
+              display = left("#{title}#{rank}", 36)
+              "#{linebreak}#{display}"
+            end
+      end
+
       def fire_air_ring_title
         fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')} ]-----------------------[ Air Ring: #{L5R.calc_l5r_ring(char, 'air')}"
         fire_air
