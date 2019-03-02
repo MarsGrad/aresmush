@@ -82,7 +82,7 @@ module AresMUSH
       end
 
       def spells
-        char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
+        @char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
           .each_with_index
             .map do |s, i|
               name = s.name
