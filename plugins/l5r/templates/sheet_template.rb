@@ -141,16 +141,17 @@ module AresMUSH
       end
 
       def void_pool
-        void_pool = "Void Pool: "
+        void_pool = left("%x8Void Pool: ", 20)
         void_pool << format_bar(char.l5r_void_pool, char.l5r_void_ring)
+        void_pool << "%xn"
         void_pool
       end
 
       def format_bar(current, max)
         current = current || 0
         max = max || 10
-        x = current.times.map { |i| 'X' }.join
-        o = (max - current).times.map { |i| 'o' }.join
+        x = current.times.map { |i| '{%xr*%xn}' }.join
+        o = (max - current).times.map { |i| '{ }' }.join
         "#{x}#{o} (#{current}/#{max})"
       end
 
