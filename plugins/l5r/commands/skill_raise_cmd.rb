@@ -50,6 +50,7 @@ module AresMUSH
           client.emit current
 
           if old == current
+            client.emit "Is this running too?!"
             return
           else
             current_school = model.l5r_current_school
