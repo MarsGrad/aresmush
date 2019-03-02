@@ -8,6 +8,10 @@ module AresMUSH
         super File.dirname(__FILE__) + "/sheet.erb"
       end
 
+      def shugenja
+        shugenja = char.l5r_is_shugenja
+      end
+
       def clan
         if (char.l5r_clan)
           "Clan: #{char.l5r_clan.titlecase}"
@@ -20,7 +24,7 @@ module AresMUSH
         rank = L5R.calc_l5r_insight(char)
         "Insight: #{rank}"
       end
-      
+
       def school
         schools = char.l5r_schools.map { |s| "#{s.name}" + ": " + "#{s.rank}" }
         if (schools)

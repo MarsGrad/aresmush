@@ -60,7 +60,7 @@ l5r:
           emphases: Interrogation, Notice, Search
           description: "Represents your ability to assess your surroundings and gather information."
         -
-          name: Lore:*
+          name: Lore
           level: High Skill (certain specialties are considered Low Skills)
           subtypes: Macro
           default_trait: Intelligence

@@ -22,8 +22,11 @@
 <% end %>
 
 <%= line_with_text t('l5r.techniques_title') %>
-<% techs.each do |t| -%>
+<% techs.each do |t| %>
 <%= t -%>
 <% end %>
+
+<% if shugenja == true %>
+<%= line_with_text t('l5r.spells_titls') %>
 
 %lf
