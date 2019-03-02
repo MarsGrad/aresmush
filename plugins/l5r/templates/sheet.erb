@@ -37,12 +37,11 @@
 %xh<%= left("#{s.name}:", 20) %>%xn <%= s.rank %>      <%= emphases(s) %>
 <% end %>
 <% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" %>
-<%= line_with_text t('l5r.techniques_title') -%>
+<%= line_with_text t('l5r.techniques_title') %>
 <% techs.each do |t| %>
 <%= t %>
 <% end %>
 <% end %>
-
 <% if shugenja == true %>
 <%= line_with_text t('l5r.spells_title') %>
 <% spells.each do |s| %>
