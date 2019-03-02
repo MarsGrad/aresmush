@@ -43,6 +43,8 @@ module AresMUSH
         case cmd.switch
         when "init"
           return SheetInitCmd
+        when "set"
+          return SheetSetCmd
         else
           if (!cmd.switch)
             return SheetCmd
