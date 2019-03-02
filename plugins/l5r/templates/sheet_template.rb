@@ -74,7 +74,7 @@ module AresMUSH
             .map do |a, i|
               title = a.name
               rank = " (#{a.rank})"
-              school = a.school
+              school = a.school.titlecase
               ldisplay = left("#{title}#{rank}:", 35)
               cdisplay = center("#{school}", 50)
               "%r#{ldisplay}" "#{cdisplay}"
