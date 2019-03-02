@@ -89,7 +89,7 @@ module AresMUSH
               name = s.name
               ring = s.ring
               mastery = s.mastery
-              display = left("#{name}: #{ring}/#{mastery}", 40)
+              display = left("#{name}: #{ring}/#{mastery}", 30)
               "#{linebreak}#{display}"
             end
       end
