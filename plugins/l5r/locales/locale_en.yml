@@ -52,6 +52,11 @@ en:
     emp_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with emphasis vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
     unsk_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc (unskilled) vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
     unsk_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc (unskilled) vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
+    aff_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with affinity vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
+    aff_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with affinity vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
+    def_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
+    def_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
+
 
     rings_title: "Rings"
     spells_title: "Spells"
