@@ -85,12 +85,11 @@ module AresMUSH
         char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
           .each_with_index
             .map do |s, i|
-              linebreak = i % 2 == 0 ? "\n" : ""
               name = s.name
               ring = s.ring
               mastery = s.mastery
-              display = left("#{name}: #{ring}/#{mastery}", 30)
-              "#{linebreak}#{display}"
+              display = left("#{name}: #{ring}/#{mastery}", 50)
+              "#{display}"
             end
       end
 
