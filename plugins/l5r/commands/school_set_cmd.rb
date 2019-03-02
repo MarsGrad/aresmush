@@ -45,6 +45,8 @@ module AresMUSH
           skills = school_config['skills']
           skill_choice = school_config['skill_choice']
           shugenja = school_config['shugenja']
+          affinity = school_config['affinity']
+          deficiency = school_config['deficiency']
           honor = school_config['honor']
 
           model.update(l5r_honor: honor)
@@ -65,6 +67,12 @@ module AresMUSH
 
           if (shugenja == true)
             model.update(l5r_is_shugenja: true)
+            if (school_name == "Isawa Shugenja")
+              client.emit_ooc t('l5r.isawa_shugenja')
+            else
+              model.update(l5r_affinity: affinity)
+              model.update(l5r_deficiency: deficiency)
+            end
           elsif (shugenja == false)
             model.update(l5r_is_shugenja: false)
           end

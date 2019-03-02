@@ -20,9 +20,12 @@ module AresMUSH
         end
       end
 
-      def insight
-        rank = L5R.calc_l5r_insight(char)
-        "Insight Rank: #{rank}"
+      def family
+        if (char.l5r_family)
+          "Family: #{char.l5r_family.titlecase}"
+        else
+          "Family: "
+        end
       end
 
       def school
@@ -34,11 +37,26 @@ module AresMUSH
         end
       end
 
-      def family
-        if (char.l5r_family)
-          "Family: #{char.l5r_family.titlecase}"
+      def insight
+        rank = L5R.calc_l5r_insight(char)
+        "Insight Rank: #{rank}"
+      end
+
+      def affinity
+        aff = char.l5r_affinity
+        if aff
+          "Affinity: #{aff}"
         else
-          "Family: "
+          "Affinity: "
+        end
+      end
+
+      def deficiency
+        defic = char.l5r_deficiency
+        if defic
+          "Deficiency: #{char.l5r_deficiency}"
+        else
+          "Deficiency: "
         end
       end
 
@@ -74,7 +92,7 @@ module AresMUSH
               display = left("#{name}: #{ring}/#{mastery}", 40)
               "#{linebreak}#{display}"
             end
-      end              
+      end
 
       def fire_air_ring_title
         fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')} ]-----------------------[ Air Ring: #{L5R.calc_l5r_ring(char, 'air')}"
@@ -87,6 +105,10 @@ module AresMUSH
         fire = center("%xr#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
         fire << right("%xr#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         fire
+      end
+
+      def void_ring_title
+        "Void Ring: #{char.l5r_void_ring}"
       end
 
       def air_ring_traits
@@ -116,6 +138,18 @@ module AresMUSH
         earth = center("%x3#{trait1.name.titlecase}%xn: #{trait1.rank}%t", 20)
         earth << right("%x3#{trait2.name.titlecase}%xn: #{trait2.rank}", 20)
         earth
+      end
+
+      def void_pool
+        format_bar(char.l5r_void_pool, char.l5r_void_ring)
+      end
+
+      def format_bar(current, max)
+        current = current || 0
+        max = max || 10
+        x = current.times.map { |i| 'X' }.join
+        o = (max - current).times.map { |i| 'o' }.join
+        "#{x}#{o} (#{current}/#{max})"
       end
 
       def format_two_per_line(list)

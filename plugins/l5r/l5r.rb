@@ -24,6 +24,11 @@ module AresMUSH
             return RollCmd
           end
         end
+      when "ad"
+        case cmd.switch
+        when "set"
+          return ADSetCmd
+        end
       when "trait"
         case cmd.switch
         when "raise"

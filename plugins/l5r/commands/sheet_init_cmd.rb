@@ -85,6 +85,7 @@ module AresMUSH
         L5R.set_l5r_trait(enactor, 'willpower', 2)
 
         enactor.update(l5r_void_ring: 2)
+        enactor.update(l5r_void_pool: 2)
         enactor.update(l5r_old_insight_rank: 1)
         enactor.update(l5r_current_insight_rank: 1)
 

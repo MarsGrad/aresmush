@@ -5,6 +5,10 @@
 <%= right( family, 20) %>
 <%= left( school, 48) -%>
 <%= right( insight, 20) %>
+<% if shugenja == true %>
+<%= left( affinity, 20) %>
+<%= right( deficiency, 20) %>
+<% end %>
 
 <%= line_with_text fire_air_ring_title%>
 <%= left(fire_ring_traits, 20) -%>
@@ -15,6 +19,9 @@
 <%= left(earth_ring_traits, 20) -%>
 <%= center(' ', 8) -%>
 <%= right(water_ring_traits, 20) %>
+
+<%= line_with_text void_ring_title %>
+<%= void_pool %>
 
 <%= line_with_text t('l5r.skills_title') %>
 <% skills.each do |s| %>

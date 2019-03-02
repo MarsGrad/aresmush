@@ -34,6 +34,11 @@ en:
     skill_raised: "You raised their %{skill} by 1."
     insight_rank_up: "Insight Rank Up! %{character} is likely now entitled to a new school technique or new spells!"
     invalid_skill: "That's not a valid skill name."
+    not_shugenja: "Target isn't a Shugenja."
+    already_have_spell: "Target already has that spell."
+    spell_added: "Spell added."
+    isawa_shugenja: "The Isawa Shugenja School allows you to choose your own affinity and deficiency. Inform Staff of your decision on your app job."
+    affinity_deficiency_set: "You've set their affinity to %{affinity} and deficiency to %{deficiency}."
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
