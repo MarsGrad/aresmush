@@ -19,6 +19,10 @@ module AresMUSH
           return RollEmpCmd
         when "unskilled"
           return RollUnskCmd
+        when "affinity"
+          return RollAffCmd
+        when "deficiency"
+          return RollDefCmd
         else
           if (!cmd.switch)
             return RollCmd
