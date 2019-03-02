@@ -31,6 +31,7 @@ module AresMUSH
 
           rank = tech_config['rank']
           school = tech_config['school']
+          name = tech_config['name']
 
           set_school = L5R.find_school(model, school)
           if (!set_school)
@@ -44,7 +45,7 @@ module AresMUSH
             return
           end
 
-          L5rTechnique.create(name: self.tech_name, rank: rank, school: school, character: model)
+          L5rTechnique.create(name: name.titlecase, rank: rank, school: school, character: model)
           client.emit_success t('l5r.tech_added')
         end
       end

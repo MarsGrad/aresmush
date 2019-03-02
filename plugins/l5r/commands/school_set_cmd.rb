@@ -121,7 +121,7 @@ module AresMUSH
 
           model.update(l5r_current_school: school_name)
           L5rTechnique.create(name: first_tech, rank: 1, school: school_name, character: model)
-          L5rSchool.create(name: school_name, rank: 1, character: model)
+          L5rSchool.create(name: school_name.titlecase, rank: 1, character: model)
           client.emit_success t('l5r.school_set', :school => school_name.titlecase)
           client.emit_success t('l5r.school_skill_choice', :skill_choice => skill_choice)
         end
