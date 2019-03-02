@@ -1,6 +1,10 @@
 %lh
-<%= line_with_text t('l5r.sheet_title', :name => char.name, :sheet_type => char.l5r_sheet_type.titlecase) %>
-<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "monk" || char.l5r_sheet_type == "samurai" %>
+<% if char.l5r_sheet_type != nil %>
+<%= line_with_text t('l5r.sheet_title_1', :name => char.name, :sheet_type => char.l5r_sheet_type.titlecase) %>
+<% else %>
+<%= line_with_text t('l5r.sheet_title_2', :name => char.name) %>
+<% end %>
+<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "monk" || char.l5r_sheet_type == "samurai" || char.l5r_sheet_type == nil %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
 <%= right( family, 20) %>

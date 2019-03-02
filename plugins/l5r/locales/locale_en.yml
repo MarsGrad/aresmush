@@ -54,6 +54,7 @@ en:
 
     rings_title: "Rings"
     spells_title: "Spells"
-    sheet_title: "%{sheet_type} Sheet for %{name}"
+    sheet_title_1: "%{sheet_type} Sheet for %{name}"
+    sheet_title_2: "Character Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
     techniques_title: "School Techniques"
