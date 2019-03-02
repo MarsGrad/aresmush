@@ -41,16 +41,17 @@ module AresMUSH
         Chargen.check_chargen_locked(enactor)
       end
 
-      def check_sheet_set
-        return nil if self.target_name.l5r_sheet_type
-        return t('l5r.must_set_sheet')
-      end
-
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
             current_family = model.l5r_family
             if (current_family)
               client.emit_failure t('l5r.remove_family_first')
+              return
+            end
+
+            sheet_type = model.l5r_sheet_type
+            if (!sheet_type)
+              client.emit_failure t('l5r.must_set_sheet')
               return
             end
 

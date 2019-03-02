@@ -42,6 +42,12 @@ module AresMUSH
             return
           end
 
+          sheet_type = model.l5r_sheet_type
+          if (!sheet_type)
+            client.emit_failure t('l5r.must_set_sheet')
+            return
+          end
+
           school_config = L5R.find_school_config(self.school_name)
 
           school_name = school_config['name'].downcase
