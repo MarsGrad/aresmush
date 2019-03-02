@@ -81,8 +81,6 @@ module AresMUSH
                 t.delete
               end
             end
-          end
-
             client.emit_success t('l5r.school_removed')
             return
           else
