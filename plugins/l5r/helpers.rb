@@ -189,6 +189,7 @@ module AresMUSH
       return "" if !input
       if input.downcase =~ /\+/
         input.downcase.gsub(" + ", "+")
+        input.downcase.gsub(" k ", "k")
       else
         input.downcase.gsub(" k ", "k")
       end
