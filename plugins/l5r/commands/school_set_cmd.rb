@@ -6,9 +6,8 @@ module AresMUSH
       attr_accessor :target_name, :school_name
 
       def parse_args
-          self.target_name = enactor_name
-          self.school_name = titlecase_arg(cmd.args)
-        end
+        self.target_name = enactor_name
+        self.school_name = titlecase_arg(cmd.args)
       end
 
       def required_args
