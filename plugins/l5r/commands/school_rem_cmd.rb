@@ -61,15 +61,11 @@ module AresMUSH
           if (school)
             school.delete
             trait.update(rank: trait.rank - 1)
-            skill_names.each do |n|
-              skill_name = n
-              model.l5r_skills.each do |s|
-                if skill_name == s.name
-                  s.update(rank: s.rank - 1)
-                  emps = s.emphases
-                  emp_names.each do |e|
-                    emps.delete(e)
-                  end
+            model.l5r_skills.each do |s|
+              if skill_names.include?(s.name)
+                s.update(rank: s.rank - 1)
+                emp_names.each do |e|
+                  s.emphases.delete(e)
                 end
                 if s.rank == 0
                   s.delete
@@ -81,7 +77,7 @@ module AresMUSH
                 t.delete
               end
             end
-          end
+
 
             client.emit_success t('l5r.school_removed')
             return
