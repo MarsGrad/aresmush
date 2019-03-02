@@ -18,17 +18,19 @@ module AresMUSH
         roll_2 = string_2[0]
         keep_1 = string_2[1]
 
-
+        client.emit roll_1_rank
         roll_1_rank = L5R.find_ability_rank(char, roll_1)
         if (!roll_1_rank)
           return nil
         end
 
+        client.emit roll_2_rank
         roll_2_rank = L5R.find_ability_rank(char, roll_2)
         if (!roll_2_rank)
           return nil
         end
 
+        client.emit keep_1_rank
         keep_1_rank = L5R.find_ability_rank(char, keep_1)
         if (!keep_1_rank)
           return nil
@@ -41,6 +43,7 @@ module AresMUSH
         keep = keep.to_s
 
         rk = roll + 'k' + keep
+        client.emit rk
         dice = L5R.roll_rk(rk, modifier)
 
       else
