@@ -6,7 +6,7 @@ module AresMUSH
       attr_accessor :target_name, :tech_name
 
       def parse_args
-        args = parse_args(ArgParser.arg1_equals_arg2)
+        args = cmd.parse_args(ArgParser.arg1_equals_arg2)
         self.target_name = titlecase_arg(args.arg1)
         self.tech_name = titlecase_arg(args.arg2)
       end
