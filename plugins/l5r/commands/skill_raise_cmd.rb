@@ -46,6 +46,9 @@ module AresMUSH
 
           name = model.name
 
+          client.emit old
+          client.emit current
+
           if old == current
             return
           else
