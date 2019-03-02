@@ -16,8 +16,13 @@ module AresMUSH
         end
       end
 
+      def insight
+        rank = L5R.calc_l5r_insight(char)
+        "Insight: #{rank}"
+      end
+      
       def school
-        schools = char.l5r_schools.map { |s| s.name }
+        schools = char.l5r_schools.map { |s| "#{s.name}" + ": " + "#{s.rank}" }
         if (schools)
           "School: #{schools.join(', ').titlecase}"
         else
@@ -48,8 +53,9 @@ module AresMUSH
               title = a.name
               rank = " (#{a.rank})"
               school = a.school
-              display = left("#{title}#{rank}: #{school}", 80)
-              "%r#{display}"
+              ldisplay = left("#{title}#{rank}:", 35)
+              cdisplay = center("#{school}", 50)
+              "%r#{ldisplay}" "#{cdisplay}"
             end
       end
 
