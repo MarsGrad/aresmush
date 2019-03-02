@@ -74,6 +74,7 @@ module AresMUSH
       include ObjectModel
 
       attribute :name
+      attribute :school
       attribute :rank, :type => DataType::Integer
       reference :character, "AresMUSH::Character"
       index :name
