@@ -141,7 +141,9 @@ module AresMUSH
       end
 
       def void_pool
-        "Void Pool: " format_bar(char.l5r_void_pool, char.l5r_void_ring)
+        void_pool = "Void Pool: "
+        void_pool << format_bar(char.l5r_void_pool, char.l5r_void_ring)
+        void_pool
       end
 
       def format_bar(current, max)
