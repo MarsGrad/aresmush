@@ -34,11 +34,11 @@ module AresMUSH
           model.update(l5r_old_insight_rank: model.l5r_current_insight_rank)
           model.update(l5r_current_insight_rank: L5R.calc_l5r_insight(model))
 
-          if model.l5r_old_insight_rank != model.l5r_current_insight_rank
+          if (model.l5r_old_insight_rank != model.l5r_current_insight_rank)
             current_school = model.l5r_current_school
             school = L5R.find_school(model, current_school)
             school.update(rank: school.rank + 1)
-            client.emit_success t('l5r.insight_rank_up', :character => model)
+            client.emit_success t('l5r.insight_rank_up', :character => self.target_name)
           end
         end
       end
