@@ -4,7 +4,7 @@
 <% else %>
 <%= line_with_text t('l5r.sheet_title_2', :name => char.name) %>
 <% end %>
-<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "monk" || char.l5r_sheet_type == "samurai" || char.l5r_sheet_type == nil %>
+<% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" || char.l5r_sheet_type == nil %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
 <%= right( family, 20) %>
@@ -16,6 +16,14 @@
 <%= center( ' ', 30) -%>
 <%= right( deficiency, 20) %>
 <% end %>
+<% end %>
+<% if char.l5r_sheet_type == "monk" %>
+<%= left( clan, 20) -%>
+<%= center( ' ', 30) -%>
+<%= right( family, 20) %>
+<%= left( order, 40) -%>
+<%= center( ' ', 10) -%>
+<%= right( insight, 20) %>
 <% end %>
 <% if char.l5r_sheet_type == "bonge" || char.l5r_sheet_type == "geisha" %>
 <%= left( clan, 20) -%>
@@ -39,7 +47,7 @@
 <% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" %>
 <%= line_with_text t('l5r.techniques_title') %>
 <% techs.each do |t| %>
-%xh<%= left("#{t.name}:", 25) %>%xn <%= "(#{t.rank})" %>    <%= t.school.titlecase %>
+%xh<%= left("#{t.name}:", 25) %>%xn <%= "#{t.rank}" %>    <%= t.school.titlecase %>
 <% end %>
 <% end %>
 <% if shugenja == true %>

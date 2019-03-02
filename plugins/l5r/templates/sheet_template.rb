@@ -37,6 +37,15 @@ module AresMUSH
         end
       end
 
+      def order
+        orders = char.l5r_schools.map { |s| "#{s.name}" + ": " + "#{s.rank}" }
+        if (orders)
+          "Order: #{schools.join(', ').titlecase}"
+        else
+          "Order: "
+        end
+      end
+
       def insight
         rank = L5R.calc_l5r_insight(char)
         "Insight Rank: #{rank}"
