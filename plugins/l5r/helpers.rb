@@ -221,7 +221,7 @@ module AresMUSH
       names = Global.read_config('l5r', 'skills').map { |a| a['name'].downcase }
       macro = ["lore", "artisan", "games", "perform", "craft"]
       if names.include?(name.downcase)
-        !macro.include?(name.downcase)
+        return false if macro.include?(name.downcase)
       elsif !name.include?(name.downcase)
         check = macro.select { |m| name.start_with?(m) }
         if (check)
