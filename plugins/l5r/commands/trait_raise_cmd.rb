@@ -35,7 +35,7 @@ module AresMUSH
           model.update(l5r_current_insight_rank: L5R.calc_l5r_insight(model))
 
           old = model.l5r_old_insight_rank
-          current = model.l5r_old_insight_rank
+          current = model.l5r_current_insight_rank
 
           name = model.name
 
