@@ -80,6 +80,9 @@ module AresMUSH
               model.update(l5r_affinity: affinity)
               model.update(l5r_deficiency: deficiency)
             end
+            L5rSpell.create(name: "Commune", ring: "All", mastery: 1, character: model)
+            L5rSpell.create(name: "Summon", ring: "All", mastery: 1, character: model)
+            L5rSpell.create(name: "Sense", ring: "All", mastery: 1, character: model)
           elsif (shugenja == false)
             model.update(l5r_is_shugenja: false)
           end

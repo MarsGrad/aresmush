@@ -67,7 +67,12 @@ module AresMUSH
                 t.delete
               end
             end
-
+            if model.l5r_is_shugenja == true
+              model.l5r_spells.each { |s| s.delete }
+              model.l5r_is_shugenja = false
+              model.l5r_affinity = nil
+              model.l5r_deficiency = nil
+            end
 
             client.emit_success t('l5r.school_removed')
             return
