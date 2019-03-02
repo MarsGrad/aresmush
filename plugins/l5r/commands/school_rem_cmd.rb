@@ -61,17 +61,7 @@ module AresMUSH
           if (school)
             school.delete
             trait.update(rank: trait.rank - 1)
-            model.l5r_skills.each do |s|
-              if skill_names.include?(s.name)
-                s.update(rank: s.rank - 1)
-                emp_names.each do |e|
-                  s.emphases.delete(e)
-                end
-                if s.rank == 0
-                  s.delete
-                end
-              end
-            end
+            model.l5r_skills.each { |s| s.delete }
             model.l5r_techniques.each do |t|
               if t.name == first_tech
                 t.delete
