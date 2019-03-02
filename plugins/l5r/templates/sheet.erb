@@ -34,18 +34,18 @@
 <%= left(void_pool, 80) %>
 <%= line_with_text t('l5r.skills_title') %>
 <% skills.each do |s| %>
-%xh<%= left("#{s.name}:", 20) %>%xn <%= s.rank %>      <%= emphases(s) %>
+%xh<%= left("#{s.name}:", 25) %>%xn <%= s.rank %>      <%= emphases(s) %>
 <% end %>
 <% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" %>
 <%= line_with_text t('l5r.techniques_title') %>
 <% techs.each do |t| %>
-<%= t %>
+%xh<%= left("#{t.name}:", 25) %>%xn <%= "(#{t.rank})" %>    <%= t.school.titlecase %>
 <% end %>
 <% end %>
 <% if shugenja == true %>
 <%= line_with_text t('l5r.spells_title') %>
 <% spells.each do |s| %>
-<%= s %>
+%xh<%= left("#{s.name}:", 25) %>%xn <%= "#{s.rank}/#{s.mastery}" %>
 <% end %>
 <% end %>
 %lf

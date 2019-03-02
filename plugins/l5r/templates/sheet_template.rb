@@ -69,28 +69,11 @@ module AresMUSH
       end
 
       def techs
-        @char.l5r_techniques.to_a.sort_by { |a| a.rank }
-          .each_with_index
-            .map do |a, i|
-              title = a.name
-              rank = " (#{a.rank})"
-              school = a.school.titlecase
-              ldisplay = left("#{title}#{rank}:", 35)
-              cdisplay = center("#{school}", 50)
-              "%r#{ldisplay}" "#{cdisplay}"
-            end
+        char.l5r_techniques.to_a.sort_by { |t| t.rank }
       end
 
       def spells
-        @char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
-          .each_with_index
-            .map do |s, i|
-              name = s.name
-              ring = s.ring
-              mastery = s.mastery
-              display = left("#{name}: #{ring}/#{mastery}", 50)
-              "#{display}"
-            end
+        char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
       end
 
       def fire_air_ring_title
