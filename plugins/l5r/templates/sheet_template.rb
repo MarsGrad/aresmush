@@ -141,7 +141,7 @@ module AresMUSH
       end
 
       def void_pool
-        void_pool = center("%x8Void Pool: ", 20)
+        void_pool = center("%x8Void Pool: ", 14)
         void_pool << format_bar(char.l5r_void_pool, char.l5r_void_ring)
         void_pool << "%xn"
         void_pool
