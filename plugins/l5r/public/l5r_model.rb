@@ -14,6 +14,8 @@ module AresMUSH
     attribute :l5r_current_school
     attribute :l5r_family
     attribute :l5r_clan
+    attribute :l5r_affinity
+    attribute :l5r_deficiency
     attribute :l5r_is_shugenja, :type => DataType::Boolean
     attribute :l5r_xp, :type => DataType::Integer
     attribute :l5r_void_ring, :type => DataType::Integer
