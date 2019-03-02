@@ -15,6 +15,7 @@ module AresMUSH
     attribute :l5r_family
     attribute :l5r_clan
     attribute :l5r_is_shugenja, :type => DataType::Boolean
+    attribute :l5r_xp, :type => DataType::Integer
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
     attribute :l5r_honor, :type => DataType::Integer
@@ -23,7 +24,7 @@ module AresMUSH
     before_delete :delete_l5r_abilities
 
     def delete_l5r_abilities
-      [ self.l5r_skills, self.l5r_advantages, self.l5r_spells,
+      [ self.l5r_skills, self.l5r_advantages, self.l5r_spells, self.l5r_traits,
         self.l5r_techniques, self.l5r_kata, self.l5r_kiho, self.l5r_schools ].each do |list|
           list.each do |a|
             a.delete

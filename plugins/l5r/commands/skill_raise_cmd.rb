@@ -46,7 +46,7 @@ module AresMUSH
 
           name = model.name
 
-          if (old != current)
+          if old != current
             current_school = model.l5r_current_school
             school = L5R.find_school(model, current_school)
             school.update(rank: school.rank + 1)

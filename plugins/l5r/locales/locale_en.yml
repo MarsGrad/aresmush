@@ -45,6 +45,7 @@ en:
     unsk_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc (unskilled) vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
 
     rings_title: "Rings"
+    spells_title: "Spells"
     sheet_title: "Character Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
     techniques_title: "School Techniques"

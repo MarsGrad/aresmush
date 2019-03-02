@@ -48,6 +48,21 @@ module AresMUSH
           techs.each { |t| t.delete }
         end
 
+        spells = enactor.l5r_spells
+        if (spells)
+          spells.each { |s| s.delete }
+        end
+
+        kata = enactor.l5r_kata
+        if (kata)
+          kata.each { |k| k.delete }
+        end
+
+        kiho = enactor.l5r_kiho
+        if (kiho)
+          kiho.each { |k| k.delete }
+        end
+
         shugenja = enactor.l5r_is_shugenja
         if shugenja == true
           enactor.update(l5r_is_shugenja: false)
@@ -70,6 +85,8 @@ module AresMUSH
         L5R.set_l5r_trait(enactor, 'willpower', 2)
 
         enactor.update(l5r_void_ring: 2)
+        enactor.update(l5r_old_insight_rank: 1)
+        enactor.update(l5r_current_insight_rank: 1)
 
         client.emit_success t('l5r.init_success')
       end

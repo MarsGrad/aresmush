@@ -22,7 +22,7 @@ module AresMUSH
 
       def insight
         rank = L5R.calc_l5r_insight(char)
-        "Insight: #{rank}"
+        "Insight Rank: #{rank}"
       end
 
       def school
