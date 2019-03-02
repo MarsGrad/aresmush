@@ -224,7 +224,7 @@ module AresMUSH
         !macro.include?(name.downcase)
       elsif !names.include?(name.downcase)
         r = /#{macro.join("|")}/
-        r === name
+        return r === name
       end
     end
   end
