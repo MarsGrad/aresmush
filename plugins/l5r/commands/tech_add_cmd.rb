@@ -44,7 +44,7 @@ module AresMUSH
             return
           end
 
-          L5rTechnique(name: self.tech_name, rank: rank, character: model)
+          L5rTechnique.create(name: self.tech_name, rank: rank, character: model)
           client.emit_success t('l5r.tech_added')
         end
       end
