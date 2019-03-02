@@ -45,11 +45,11 @@ module AresMUSH
         @char.l5r_techniques.to_a.sort_by { |a| a.rank }
           .each_with_index
             .map do |a, i|
-              linebreak = i % 2 == 0 ? "\n" : ""
               title = a.name
               rank = " (#{a.rank})"
-              display = left("#{title}#{rank}", 36)
-              "#{linebreak}#{display}"
+              school = a.school
+              display = left("#{title}#{rank}: #{school}", 36)
+              "%r#{display}"
             end
       end
 
