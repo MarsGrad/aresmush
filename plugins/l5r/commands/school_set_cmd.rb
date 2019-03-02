@@ -29,11 +29,6 @@ module AresMUSH
         return t('l5r.already_approved')
       end
 
-      def check_sheet_set
-        return nil if self.target_name.l5r_sheet_type
-        return t('l5r.must_set_sheet')
-      end
-
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           current_school = model.l5r_schools.any?
