@@ -195,7 +195,7 @@ module AresMUSH
     end
 
     def self.modify_xp(char, amount)
-      xp = char.l5r_xp + amount
+      xp = char.xp + amount
       char.update(l5r_xp: xp)
     end
 
