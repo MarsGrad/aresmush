@@ -27,7 +27,7 @@ module AresMUSH
 
           model.spend_xp(xp)
           Global.logger.info "#{xp} of #{model.name}'s XP spent by #{enactor_name} for: #{self.reason}"
-          L5rXpLog.create(date: DateTime.now, log: t('l5r.xp_log', :type => "Spent", :actor => enactor_name, :amount => xp, :reason => self.reason))
+          L5rXpLog.create(date: DateTime.now, log: t('l5r.xp_log', :type => "Spent", :actor => enactor_name, :xp => xp, :reason => self.reason))
           client.emit_success t('l5r.xp_spent', :target => model.name, :amount => xp, :reason => self.reason)
           Global.client_monitor.emit_if_logged_in(model, t('l5r.xp_spent_recipient', :spender => enactor_name, :amount => xp, :reason => self.reason))
         end
