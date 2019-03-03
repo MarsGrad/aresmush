@@ -27,7 +27,10 @@ module AresMUSH
 
           L5R.award_xp(model, xp)
           Global.logger.info "#{xp} XP Awarded by #{enactor_name} to #{model.name} for #{self.reason}"
-          L5rXpLog.create(date: DateTime.now, log: t('l5r.xp_log', :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason), :character => model)
+          datetime = DateTime.now
+          datetime = datetime.split("T")
+          date = datetime[0]
+          L5rXpLog.create(date: date, log: t('l5r.xp_log', :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason), :character => model)
           client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
           Login.emit_ooc_if_logged_in(model, t('l5r.xp_awarded_recipient', :awarder => enactor_name, :amount => xp, :reason => self.reason))
         end
