@@ -5,6 +5,6 @@
 <%= divider %>
 %xh<%= t('l5r.xp_last_five_title', :name => char.name )%>%xn
 <% xp_logs.each do |l| %>
-<%= "#{l.date} -- #{l.log}" %>
+<%= "#{l.date[0, 10]} -- #{l.log}" %>
 <% end %>
 <%= footer %>
