@@ -16,6 +16,7 @@ module AresMUSH
         xp_logs = char.l5r_xp_logs.to_a.sort_by { |l| l.date }
         xp_logs = xp_logs[0...4]
         xp_logs
+      end
     end
   end
 end

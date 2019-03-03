@@ -37,10 +37,7 @@ module AresMUSH
 
           end
 
-        end
-
-        return if awards.blank?
-        
+        end      
     end
   end
 end
