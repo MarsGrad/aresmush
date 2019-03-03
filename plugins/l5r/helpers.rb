@@ -198,11 +198,11 @@ module AresMUSH
       char.update(l5r_xp: char.l5r_xp + amount)
     end
 
-    def award_xp(char, amount)
+    def self.award_xp(char, amount)
       L5R.modify_xp(char, amount)
     end
 
-    def spend_xp(char, amount)
+    def self.spend_xp(char, amount)
       L5R.modify_xp(char, -amount)
     end
 
