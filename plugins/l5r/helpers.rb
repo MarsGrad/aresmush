@@ -178,7 +178,7 @@ module AresMUSH
         return L5R.calc_l5r_insight(char)
       end
 
-      [ char.l5r_skills, char.l5r_traits ].each do |list|
+      [ char.l5r_skills, char.l5r_traits, char.l5r_schools ].each do |list|
         found = list.select { |a| a.name.downcase == ability_name.downcase }.first
         return found.rank if found
       end
