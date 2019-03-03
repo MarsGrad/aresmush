@@ -9,8 +9,6 @@ module AresMUSH
     collection :l5r_kiho, "AresMUSH::L5rKiho"
     collection :l5r_schools, "AresMUSH::L5rSchool"
 
-    collection :l5r_xp_logs, "AresMUSH::L5rXpLog"
-
     attribute :l5r_old_insight_rank
     attribute :l5r_current_insight_rank
     attribute :l5r_current_school
@@ -113,14 +111,4 @@ module AresMUSH
       reference :character, "AresMUSH::Character"
       index :name
     end
-
-    class L5rXpLog < Ohm::Model
-      include ObjectModel
-
-      attribute :date
-      attribute :log
-      reference :character, "AresMUSH::Character"
-      index :date
-    end
-
   end
