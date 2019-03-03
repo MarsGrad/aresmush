@@ -38,14 +38,6 @@ module AresMUSH
       end
     end
 
-    def award_xp(amount)
-      L5R.modify_xp(self, amount)
-    end
-
-    def spend_xp(amount)
-      L5R.modify_xp(self, -amount)
-    end
-
     class L5rTrait < Ohm::Model
       include ObjectModel
 

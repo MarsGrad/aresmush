@@ -25,7 +25,7 @@ module AresMUSH
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           xp = self.xp.to_f
 
-          model.award_xp(xp)
+          L5R.award_xp(model, xp)
           Global.logger.info "#{xp} XP Awarded by #{enactor_name} to #{model.name} for #{self.reason}"
           L5rXpLog.create(date: DateTime.now, log: t('l5r.xp_log', :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason))
           client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
