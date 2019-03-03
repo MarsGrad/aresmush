@@ -9,6 +9,8 @@ module AresMUSH
     collection :l5r_kiho, "AresMUSH::L5rKiho"
     collection :l5r_schools, "AresMUSH::L5rSchool"
 
+    collection :l5r_xp_logs, "AresMUSH::L5rXpLog"
+
     attribute :l5r_old_insight_rank
     attribute :l5r_current_insight_rank
     attribute :l5r_current_school
@@ -18,7 +20,7 @@ module AresMUSH
     attribute :l5r_deficiency
     attribute :l5r_sheet_type
     attribute :l5r_is_shugenja, :type => DataType::Boolean
-    attribute :l5r_xp, :type => DataType::Integer
+    attribute :l5r_xp, :type => DataType::Float, :default => 0
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
     attribute :l5r_honor, :type => DataType::Integer
@@ -34,6 +36,14 @@ module AresMUSH
           end
         end
       end
+    end
+
+    def award_xp(char, amount)
+      L5R.modify_xp(char, amount)
+    end
+
+    def spend_xp(char, amount)
+      L5R.modify_xp(char, -amount)
     end
 
     class L5rTrait < Ohm::Model
@@ -111,4 +121,14 @@ module AresMUSH
       reference :character, "AresMUSH::Character"
       index :name
     end
+
+    class L5rXpLog < Ohm::Model
+      include ObjectModel
+
+      attribute :date
+      attribute :log
+      reference :character, "AresMUSH::Character"
+      index :date
+    end
+
   end

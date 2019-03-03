@@ -1,0 +1,13 @@
+---
+vote:
+  vote_award_cron:
+    day_of_week:
+    - Fri
+    hour:
+    - 22
+    minute:
+    - 0
+  vote_category: Vote Awards
+  votes_per_xp: 5
+  shortcuts:
+    votes: vote

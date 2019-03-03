@@ -1,0 +1,13 @@
+en:
+    vote:
+        invalid_recipient: "%{name} not found."
+        vote_given: "You vote for %{name}."
+        vote_already_given: "You have already voted for %{name} this week."
+        votes_given_this_week: "This week you have voted for: %{votes}."
+        votes_not_given_this_week: "You have not voted for anyone yet this week."
+        cant_vote_yourself: "You cannot vote for yourself."
+        giving_votes_here: "You vote for everyone here."
+        vote_received: "%{name} has voted for you."
+        votes_total: "You have received %{votes} votes since joining the game."
+        invalid_scene: "Scene not found."
+        giving_votes_to_scene: "You vote for everyone in scene %{scene}."

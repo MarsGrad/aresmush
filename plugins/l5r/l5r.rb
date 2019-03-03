@@ -13,6 +13,17 @@ module AresMUSH
 
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
+      when "xp"
+        case cmd.switch
+        when "award"
+          return XPAwardCmd
+        when "spend"
+          return XPSpendCmd
+        else
+          if (!cmd.switch)
+            return XPCmd
+          end
+        end
       when "roll"
         case cmd.switch
         when "emphasis"

@@ -194,6 +194,15 @@ module AresMUSH
       end
     end
 
+    def self.modify_xp(char, amount)
+      xp = char.l5r_xp + amount
+      char.update(l5r_xp: xp)
+    end
+
+    def self.can_manage_xp?(actor)
+      actor.has_permission?("manage_abilities")
+    end
+
     def self.is_valid_clan?(clan)
       return false if !clan
       clans = Global.read_config("l5r", "clans").map { |c| c['name'].downcase }

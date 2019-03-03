@@ -49,6 +49,7 @@ module AresMUSH
           dice = L5R.roll_rk(rk, modifier)
         end
       end
+      Global.logger.debug "CORTEX: Rolling #{roll_str}/#{modifier} for #{char.name}: #{dice}."
       L5rRollResults.new(roll_str, dice)
     end
 
@@ -166,6 +167,7 @@ module AresMUSH
           dice = L5R.roll_aff_rk(rk, modifier)
         end
       end
+      Global.logger.debug "CORTEX: Rolling with affinity #{roll_str}/#{modifier} for #{char.name}: #{dice}."
       L5rRollResults.new(roll_str, dice)
     end
 
@@ -284,6 +286,7 @@ module AresMUSH
           dice = L5R.roll_def_rk(rk, modifier)
         end
       end
+      Global.logger.debug "CORTEX: Rolling with deficiency #{roll_str}/#{modifier} for #{char.name}: #{dice}."
       L5rRollResults.new(roll_str, dice)
     end
 
@@ -402,6 +405,7 @@ module AresMUSH
           dice = L5R.roll_emp_rk(rk, modifier)
         end
       end
+      Global.logger.debug "CORTEX: Rolling with emphasis #{roll_str}/#{modifier} for #{char.name}: #{dice}."
       L5rRollResults.new(roll_str, dice)
     end
 
@@ -525,6 +529,7 @@ module AresMUSH
           dice = L5R.roll_unsk_rk(rk, modifier)
         end
       end
+      Global.logger.debug "CORTEX: Rolling unskilled #{roll_str}/#{modifier} for #{char.name}: #{dice}."
       L5rRollResults.new(roll_str, dice)
     end
 

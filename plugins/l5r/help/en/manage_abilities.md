@@ -22,4 +22,4 @@ from character sheets.
 `kiho/rem <character>=<kiho>` - Removes a kiho technique from a character's sheet
 
 >**Note:** As of v1.0, the system will *NOT* check if a character qualifies for a given ability.
-Use the commands detailed in [Abilities](help/abilities) to check prereqs.
+Use the commands detailed in [Abilities](help abilities) to check prereqs.

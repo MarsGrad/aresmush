@@ -43,6 +43,12 @@ en:
     must_set_sheet: "You must set your sheet type first."
     invalid_sheet_type: "That's not a valid sheet type."
     sheet_type_set: "Sheet type set to %{sheet_type}."
+    xp_log: "%{type}: %{actor}: %{xp} for %{reason}"
+    xp_spent: "You spend %{amount} of %{target}'s XP for: %{reason}."
+    xp_spent_recipient: "%{spender} spends %{amount} of your XP for: %{reason}"
+    xp_awarded: "You give %{recipient} %{amount} XP for: %{reason}."
+    xp_awarded_recipient: "%{awarder} gives you %{amount} XP for: %{reason}"
+    xp_last_five_title: "Last Five Spends/Awards for %{name}"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
@@ -64,3 +70,4 @@ en:
     sheet_title_2: "Character Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
     techniques_title: "School Techniques"
+    xp_title: "%{name}'s Total XP"
