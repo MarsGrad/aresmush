@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class XPTemplate < ErbTemplateRenderer
+    class XpTemplate < ErbTemplateRenderer
       attr_accessor :char
 
       def initialize(char)
