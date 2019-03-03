@@ -11,31 +11,22 @@ module AresMUSH
         dice = L5R.roll_rk(formatted, modifier)
 
       elsif (roll_str =~ /\+/)
-        rolls = formatted.split("+")
-        roll_1 = rolls[0]
-        string_1 = rolls[1]
-        string_2 = string_1.reverse.split('-', 2).collect(&:reverse).reverse
-        roll_2 = string_2[0]
-        keep_1 = string_2[1]
+        abilities = formatted.split("+")
+        abil_1 = abilities[0]
+        abil_2 = abilities[1]
 
-
-        roll_1_rank = L5R.find_ability_rank(char, roll_1)
-        if (!roll_1_rank)
+        abil_1_rank = L5R.find_ability_rank(char, abil_1)
+        if (!abil_1_rank)
           return nil
         end
 
-        roll_2_rank = L5R.find_ability_rank(char, roll_2)
-        if (!roll_2_rank)
+        abil_2_rank = L5R.find_ability_rank(char, abil_2)
+        if (!abil_2_rank)
           return nil
         end
 
-        keep_1_rank = L5R.find_ability_rank(char, keep_1)
-        if (!keep_1_rank)
-          return nil
-        end
-
-        roll = roll_1_rank + roll_2_rank
-        keep = keep_1_rank
+        roll = abil_1_rank + abil_2_rank
+        keep = abil_1_rank
 
         roll = roll.to_s
         keep = keep.to_s
