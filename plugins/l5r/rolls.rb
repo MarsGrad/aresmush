@@ -8,7 +8,10 @@ module AresMUSH
         roll = formatted.split("k")
         keep = roll[1]
         keep = keep.to_s
-        dice = L5R.roll_rk(formatted, modifier)
+        if (modifier.class != Integer)
+          numodifier = L5R.find_ability_rank(char, modifier)
+        end
+        dice = L5R.roll_rk(formatted, numodifier)
 
       elsif (roll_str =~ /\+/)
         abilities = formatted.split("+")
@@ -32,7 +35,10 @@ module AresMUSH
         keep = keep.to_s
 
         rk = roll + 'k' + keep
-        dice = L5R.roll_rk(rk, modifier)
+        if (modifier.class != Integer)
+          numodifier = L5R.find_ability_rank(char, modifier)
+        end
+        dice = L5R.roll_rk(rk, numodifier)
 
       else
         rank = L5R.find_ability_rank(char, roll_str)
@@ -41,12 +47,18 @@ module AresMUSH
         end
 
         if (rank =~ /k/)
-          dice = L5R.roll_rk(rk, modifier)
+          if (modifier.class != Integer)
+            numodifier = L5R.find_ability_rank(char, modifier)
+          end
+          dice = L5R.roll_rk(rk, numodifier)
         else
           rank = rank.to_s
           keep = rank
           rk = rank + 'k' + rank
-          dice = L5R.roll_rk(rk, modifier)
+          if (modifier.class != Integer)
+            numodifier = L5R.find_ability_rank(char, modifier)
+          end
+          dice = L5R.roll_rk(rk, numodifier)
         end
       end
       L5rRollResults.new(roll_str, dice)
