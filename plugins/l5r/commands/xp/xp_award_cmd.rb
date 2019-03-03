@@ -27,7 +27,7 @@ module AresMUSH
 
           L5R.award_xp(model, xp)
           Global.logger.info "#{xp} XP Awarded by #{enactor_name} to #{model.name} for #{self.reason}"
-          datetime = DateTime.now
+          datetime = DateTime.now.to_s
           datetime = datetime.split("T")
           date = datetime[0]
           L5rXpLog.create(date: date, log: t('l5r.xp_log', :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason), :character => model)
