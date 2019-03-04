@@ -53,7 +53,7 @@
 <% if shugenja == true %>
 <%= line_with_text t('l5r.spells_title') %>
 <% spells.each do |s| %>
-%xh<%= left("#{s.name}:", 25) %>%xn <%= "#{s.ring}/#{s.mastery}" %>
+<%= s -%>
 <% end %>
 <% end %>
 %lf

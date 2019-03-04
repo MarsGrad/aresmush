@@ -82,7 +82,15 @@ module AresMUSH
       end
 
       def spells
-        char.l5r_spells.to_a.sort_by { |s| [s.ring, s.mastery, s.name] }
+        @char.l5r_spells.to_a.sort_by { |a| [a.ring, a.mastery, a.name] }
+          .each_with_index
+            .map do |a, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              title = "%xh#{a.name}%xn"
+              rating = "#{a.ring}/#{a.mastery}"
+              display = left("#{title}: #{rating}", 36)
+              "#{linebreak}#{display}"
+            end
       end
 
       def fire_air_ring_title
