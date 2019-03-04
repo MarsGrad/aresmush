@@ -144,6 +144,11 @@ module AresMUSH
     end
 
     def self.get_event_handler(event_name)
+      case event_name
+      when "CronEvent"
+        return XpCronHandler
+      end
+      
       nil
     end
 
