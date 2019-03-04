@@ -58,14 +58,15 @@ module AresMUSH
             return
           end
 
+          descriptor = self.descriptor
           if (adv && is_ranked == true)
             if adv.rank == max_rank
               client.emit_failure t('l5r.at_max_rank')
               return
             end
             adv.update(rank: adv.rank + 1)
-          elsif (!adv && self.descriptor)
-            L5rAdvantage.create(name: name.titlecase, descriptor: self.descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
+          elsif (!adv && descriptor)
+            L5rAdvantage.create(name: name.titlecase, descriptor: descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
           end
           client.emit_success t('l5r.ability_added')
         end
