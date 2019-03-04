@@ -70,7 +70,7 @@ module AresMUSH
       model.l5r_spells.select { |s| s.name.downcase == name_downcase }.first
     end
 
-    def self.find_advantage(model, advantage_name, descriptor)
+    def self.find_advantage(model, advantage_name, descriptor = nil)
       name_downcase = advantage_name.downcase
       if !descriptor
         model.l5r_advantages.select { |a| a.name.downcase == name_downcase }.first
