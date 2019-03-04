@@ -56,6 +56,7 @@ module AresMUSH
           adv = ""
 
           if adv.empty?
+            client.emit "Is this firing?"
             if is_ranked == false
               client.emit_failure t('l5r.not_ranked')
               return
