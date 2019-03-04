@@ -13,7 +13,7 @@ module AresMUSH
       end
 
       def xp_logs
-        logs = char.l5r_xp_log
+        logs = char.l5r_xp_log.to_a
         logs.reverse
         logs.pop(5)
         logs

@@ -30,7 +30,7 @@ module AresMUSH
           date = DateTime.new
           date = date.strftime("%m/%d/%y")
           client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
-          logs = model.l5r_xp_log
+          logs = model.l5r_xp_log.to_a
           if (logs.count < 10)
             logs << t('l5r.xp_log', :date => date, :type => "Spend", :actor => enactor_name, :xp => xp, :reason => self.reason)
             model.update(l5r_xp_log: logs)
