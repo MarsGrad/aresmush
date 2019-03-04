@@ -1,6 +1,8 @@
 module AresMUSH
   module Vote
     class CronEventHandler
+      include L5R
+      
       def on_event(event)
         config = Global.read_config("vote", "vote_award_cron")
         return if !Cron.is_cron_match?(config, event.time)
