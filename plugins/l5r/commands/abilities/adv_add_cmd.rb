@@ -65,9 +65,7 @@ module AresMUSH
             end
             adv.update(rank: adv.rank + 1)
           elsif (!adv && self.descriptor)
-            L5rAdvantage.create(name: name.titlecase, descriptor: self.descriptor.titlecase, rank: 1, disadvantage?: is_disadvantage, character: model)
-          else
-            L5rAdvantage.create(name: name.titlecase, rank: 1, disadvantage?: is_disadvantage, character: model)
+            L5rAdvantage.create(name: name.titlecase, descriptor: self.descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
           end
           client.emit_success t('l5r.ability_added')
         end
