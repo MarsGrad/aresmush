@@ -65,7 +65,7 @@ module AresMUSH
               return
             end
             adv.update(rank: adv.rank + 1)
-          elsif (!adv && descriptor)
+          elsif (!adv && !descriptor.empty?)
             client.emit_ooc "Is this firing?"
             L5rAdvantage.create(name: name.titlecase, descriptor: descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
           end
