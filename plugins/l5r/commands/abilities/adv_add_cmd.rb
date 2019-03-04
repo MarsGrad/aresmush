@@ -66,6 +66,7 @@ module AresMUSH
             end
             adv.update(rank: adv.rank + 1)
           elsif (!adv && descriptor)
+            client.emit_ooc "Is this firing?"
             L5rAdvantage.create(name: name.titlecase, descriptor: descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
           end
           client.emit_success t('l5r.ability_added')
