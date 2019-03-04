@@ -2,4 +2,9 @@
 %xh<%= t('l5r.xp_title', :name => char.name ) %>%xn
 <%= divider %>
 %xh<%= xp %>
+<%= divider %>
+%xh<%= t('l5r.recent_xp_logs') %>%xn
+<% xp_logs.each do |x| %>
+<%= x %>
+<% end %>
 <%= footer %>

@@ -19,6 +19,7 @@ module AresMUSH
     attribute :l5r_sheet_type
     attribute :l5r_is_shugenja, :type => DataType::Boolean
     attribute :l5r_xp, :type => DataType::Float, :default => 0
+    attribute :l5r_xp_logs, :type => DataType::Array, :default => []
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
     attribute :l5r_honor, :type => DataType::Integer

@@ -27,6 +27,18 @@ module AresMUSH
 
           L5R.spend_xp(model, xp)
           Global.logger.info "#{xp} of #{model.name}'s XP spent by #{enactor_name} for: #{self.reason}"
+          date = DateTime.new
+          date = date.strftime(%m/%d/%y)
+          client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
+          logs = model.l5r_xp_logs
+          if (logs.count < 10)
+            logs << t('l5r.xp_log', :date => date, :type => "Spend", :actor => enactor_name, :xp => xp, :reason => self.reason)
+            model.update(l5r_xp_logs: logs)
+          else
+            logs.shift
+            logs << t('l5r.xp_log', :date => date, :type => "Spend", :actor => enactor_name, :xp => xp, :reason => self.reason)
+            model.update(l5r_xp_logs: logs)
+          end
           client.emit_success t('l5r.xp_spent', :target => model.name, :amount => xp, :reason => self.reason)
           Login.emit_ooc_if_logged_in(model, t('l5r.xp_spent_recipient', :spender => enactor_name, :amount => xp, :reason => self.reason))
         end
