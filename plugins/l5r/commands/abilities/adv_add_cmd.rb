@@ -55,12 +55,12 @@ module AresMUSH
 
           adv = ""
 
-          if (adv && is_ranked == false)
+          if (adv.empty? && is_ranked == false)
             client.emit_failure t('l5r.not_ranked')
             return
           end
 
-          if (adv && is_ranked == true)
+          if (adv.empty? && is_ranked == true)
             if adv.rank == max_rank
               client.emit_failure t('l5r.at_max_rank')
               return
