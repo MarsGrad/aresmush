@@ -30,14 +30,14 @@ module AresMUSH
           date = DateTime.new
           date = date.strftime("%m/%d/%y")
           client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
-          logs = model.l5r_xp_logs
+          logs = model.l5r_xp_log
           if (logs.count < 10)
             logs << t('l5r.xp_log', :date => date, :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason)
-            model.update(l5r_xp_logs: logs)
+            model.update(l5r_xp_log: logs)
           else
             logs.shift
             logs << t('l5r.xp_log', :date => date, :type => "Award", :actor => enactor_name, :xp => xp, :reason => self.reason)
-            model.update(l5r_xp_logs: logs)
+            model.update(l5r_xp_log: logs)
           end
           Login.emit_ooc_if_logged_in(model, t('l5r.xp_awarded_recipient', :awarder => enactor_name, :amount => xp, :reason => self.reason))
         end
