@@ -4,9 +4,9 @@ vote:
     day_of_week:
     - Mon
     hour:
-    - 13
+    - 18
     minute:
-    - 45
+    - 48
   vote_category: Vote Awards
   votes_per_xp: 5
   shortcuts:

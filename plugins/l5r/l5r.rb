@@ -54,6 +54,11 @@ module AresMUSH
         when "raise"
           return SkillRaiseCmd
         end
+      when "adv"
+        case cmd.switch
+        when "add"
+          return AdvAddCmd
+        end
       when "sheet"
         case cmd.switch
         when "init"
