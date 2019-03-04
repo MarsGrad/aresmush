@@ -89,7 +89,11 @@ module AresMUSH
               title = "%xh#{a.name}%xn"
               rating = "#{a.ring}/#{a.mastery}"
               display = left("#{title}: #{rating}", 36)
-              "#{linebreak}#{display}"
+              if i == 0
+                "#{display}"
+              else
+                "#{linebreak}#{display}"
+              end
             end
       end
 
