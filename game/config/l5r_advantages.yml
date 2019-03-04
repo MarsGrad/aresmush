@@ -1,0 +1,325 @@
+---
+l5r:
+  advantages:
+    -
+      name: Absolute Direction
+      subtype: Mental
+      cost: '1'
+      restriction: None
+    -
+      name: Allies
+      subtype: Social
+      cost: Varies
+      restriction: descriptor
+    -
+      name: Balance
+      subtype: Mental
+      cost: '2'
+      restriction: None
+    -
+      name: Blackmail
+      subtype: Social
+      cost: Varies
+      restriction: descriptor
+    -
+      name: Bland
+      subtype: Physical
+      cost: '2'
+      restriction: None
+    -
+      name: Blissful Betrothal
+      subtype: Social
+      cost: '3'
+      restriction: None
+    -
+      name: Blood of Osano-Wo
+      subtype: Spiritual
+      cost: '4'
+      restriction: None
+    -
+      name: Chosen by the Oracles
+      subtype: Spritual
+      cost: '6'
+      restriction: None
+    -
+      name: Clear Thinker
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Crab Hands
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Craft
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Dangerous Beauty
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Daredevil
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Dark Paragon
+      subtype: Mental
+      cost: '5'
+      restriction: Yes
+    -
+      name: Darling of the Court
+      subtype: Social
+      cost: '2'
+      restriction: descriptor
+    -
+      name: Different School
+      subtype: Social
+      cost: '5'
+      restriction: Yes
+    -
+      name: Elemental Blessing
+      subtype: Spiritual
+      cost: '4'
+      restriction: None
+    -
+      name: Enlightened
+      subtype: Spiritual
+      cost: '6'
+      restriction: Yes
+    -
+      name: Fame
+      subtype: Social
+      cost: '3'
+      restriction: Yes
+    -
+      name: Forbidden Knowledge
+      subtype: Mental
+      cost: '5'
+      restriction: [descriptor, note]
+    -
+      name: Friendly Kami
+      subtype: Spiritual
+      cost: '5'
+      restriction: None
+    -
+      name: Friend of the Brotherhood
+      subtype: Spirtual
+      cost: '5'
+      restriction: None
+    -
+      name: Friend of the Elements
+      subtype: Spritual
+      cost: '4'
+      restriction: None
+    -
+      name: Gaijin Gear
+      subtype: Material
+      cost: '5'
+      restriction: [descriptor, note]
+    -
+      name: Great Destiny
+      subtype: Spiritual
+      cost: '5'
+      restriction: None
+    -
+      name: Great Potential
+      subtype: Varies
+      cost: '5'
+      restriction: None
+    -
+      name: Hands of Stone
+      subtype: Physical
+      cost: '6'
+      restriction: None
+    -
+      name: Heart of Vengeance
+      subtype: Social
+      cost: '5'
+      restriction: None
+    -
+      name: Hero of the People
+      subtype: Social
+      cost: '2'
+      restriction: Yes
+    -
+      name: Imperial Spouse
+      subtype: Social
+      cost: '5'
+      restriction: note
+    -
+      name: Inari's Blessing
+      subtype: Spritual
+      cost: '3'
+      restriction: None
+    -
+      name: Inheritance
+      subtype: Material
+      cost: '5'
+      restriction: [descriptor, note]
+    -
+      name: Inner Gift
+      subtype: Spiritual
+      cost: '7'
+      restriction: descriptor
+    -
+      name: Irreproachable
+      subtype: Mental
+      cost: '2'
+      restriction: None
+    -
+      name: Ishiken-Do
+      subtype: Spiritual
+      cost: '8'
+      restriction: Yes
+    -
+      name: Kharmic Tie
+      subtype: Spiritual
+      cost: '1-5'
+      restriction: descriptor
+    -
+      name: Languages
+      subtype: Mental
+      cost: '1 or 3'
+      restriction: descriptor
+    -
+      name: Large
+      subtype: Physical
+      cost: '4'
+      restriction: None
+    -
+      name: Leadership
+      subtype: Social
+      cost: '6'
+      restriction: None
+    -
+      name: Luck
+      subtype: Spiritual
+      cost: '3/6/9'
+      restriction: None
+    -
+      name: Magic Resistance
+      subtype: Spiritual
+      cost: '2/4/6'
+      restriction: None
+    -
+      name: Multiple Schools
+      subtype: Social
+      cost: '10'
+      restriction: Yes
+    -
+      name: Paragon
+      subtype: Mental
+      cost: '7'
+      restriction: note
+    -
+      name: Perceived Honor
+      subtype: Social
+      cost: '2/rank'
+      max_rank: 3
+      restriction: None
+    -
+      name: Precise Memory
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Prodigy
+      subtype: Physical
+      cost: '12'
+      restriction: None
+    -
+      name: Quick
+      subtype: Physical
+      cost: '6'
+      restriction: None
+    -
+      name: Quick Healer
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Read Lips
+      subtype: Mental
+      cost: '4'
+      restriction: None
+    -
+      name: Sacred Weapon
+      subtype: Material
+      cost: Varies
+      restriction: note
+    -
+      name: Sage
+      subtype: Mental
+      cost: '4'
+      restriction: None
+    -
+      name: Sensation
+      subtype: Social
+      cost: '3'
+      restriction: None
+    -
+      name: Servant
+      subtype: Material
+      cost: '5'
+      restriction: descriptor
+    -
+      name: Seven Fortunes' Blessing
+      subtype: Spiritual
+      cost: '4'
+      restriction: descriptor
+    -
+      name: Silent
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Soul of Artistry
+      subtype: Mental
+      cost: '4'
+      restriction: None
+    -
+      name: Strength of the Earth
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Tactician
+      subtype: Mental
+      cost: '4'
+      restriction: None
+    -
+      name: Touch of the Spirit Realms
+      subtype: Spiritual
+      cost: '5'
+      restriction: None
+    -
+      name: Virtuous
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Voice
+      subtype: Physical
+      cost: '3'
+      restriction: None
+    -
+      name: Wary
+      subtype: Mental
+      cost: '3'
+      restriction: None
+    -
+      name: Way of the Land
+      subtype: Mental
+      cost: '2'
+      restriction: None
+    -
+      name: Wealthy
+      subtype: Material
+      cost: '1/rank'
+      max_rank: 3
+      restriction: None
