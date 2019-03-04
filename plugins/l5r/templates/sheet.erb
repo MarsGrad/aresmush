@@ -7,28 +7,28 @@
 <% if char.l5r_sheet_type == "ronin" || char.l5r_sheet_type == "samurai" || char.l5r_sheet_type == nil %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
-<%= right( family, 20) %>
+<%= family %>
 <%= left( school, 40) -%>
 <%= center( ' ', 10) -%>
-<%= right( insight, 20) %>
+<%= insight %>
 <% if shugenja == true %>
 <%= left( affinity, 20) -%>
 <%= center( ' ', 30) -%>
-<%= right( deficiency, 20) %>
+<%= deficiency %>
 <% end %>
 <% end %>
 <% if char.l5r_sheet_type == "monk" %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
-<%= right( family, 20) %>
+<%= family %>
 <%= left( order, 40) -%>
 <%= center( ' ', 10) -%>
-<%= right( insight, 20) %>
+<%= insight %>
 <% end %>
 <% if char.l5r_sheet_type == "bonge" || char.l5r_sheet_type == "geisha" %>
 <%= left( clan, 20) -%>
 <%= center( ' ', 30) -%>
-<%= right( insight, 20 ) %>
+<%= insight %>
 <% end %>
 <%= line_with_text fire_air_ring_title%>
 <%= left(fire_ring_traits, 20) -%>

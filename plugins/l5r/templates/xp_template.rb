@@ -16,8 +16,10 @@ module AresMUSH
         logs = char.l5r_xp_log.to_a
         if logs.count > 5
           logs = logs.reverse.shift(5)
+          logs
+        else
+          logs.reverse
         end
-        logs
       end
     end
   end
