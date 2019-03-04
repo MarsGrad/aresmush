@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class XpCronHandler
+    class L5rXpCronHandler
       def on_event(event)
         config = Global.read_config("l5r", "xp_cron")
         return if !Cron.is_cron_match?(config, event.time)
