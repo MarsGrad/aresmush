@@ -67,6 +67,7 @@ module AresMUSH
                 return
               end
               adv.update(rank: adv.rank + 1)
+              client.emit_success t('l5r.ability_added')
             end
           end
 
