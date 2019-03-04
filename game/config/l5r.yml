@@ -8,3 +8,11 @@ l5r:
   starting_glory: 1.0
   starting_status: 1.0
   max_ability_rank: 4
+  xp_cron:
+    day_of_week:
+    - Mon
+    hour:
+    - 20
+    minute:
+    - 21
+  periodic_xp: 2

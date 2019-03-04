@@ -2,9 +2,9 @@
 vote:
   vote_award_cron:
     day_of_week:
-    - Mon
+    - Sat
     hour:
-    - 20
+    - 5
     minute:
     - 00
   vote_category: Vote Awards
