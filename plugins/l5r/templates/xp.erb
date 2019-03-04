@@ -3,7 +3,8 @@
 <%= divider %>
 %xh<%= xp %>
 <%= divider %>
-%xh<%= t('l5r.recent_xp_logs') %>%xn
+%xh<%= t('l5r.xp_last_five_title', :name => char.name ) %>%xn
+<%= divider %>
 <% xp_logs.each do |x| %>
 <%= x %>
 <% end %>

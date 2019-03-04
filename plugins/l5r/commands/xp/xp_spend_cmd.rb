@@ -27,7 +27,7 @@ module AresMUSH
 
           L5R.spend_xp(model, xp)
           Global.logger.info "#{xp} of #{model.name}'s XP spent by #{enactor_name} for: #{self.reason}"
-          date = DateTime.new
+          date = DateTime.now
           date = date.strftime("%m/%d/%y")
           client.emit_success t('l5r.xp_awarded', :recipient => model.name, :amount => xp, :reason => self.reason)
           logs = model.l5r_xp_log.to_a
