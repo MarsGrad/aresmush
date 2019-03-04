@@ -60,6 +60,7 @@ module AresMUSH
       include ObjectModel
 
       attribute :name
+      attribute :descriptor
       attribute :rank, :type => DataType::Integer
       attribute :disadvantage?, :type => DataType::Boolean
       reference :character, "AresMUSH::Character"

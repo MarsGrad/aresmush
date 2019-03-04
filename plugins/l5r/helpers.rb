@@ -70,9 +70,14 @@ module AresMUSH
       model.l5r_spells.select { |s| s.name.downcase == name_downcase }.first
     end
 
-    def self.find_advantage(model, advantage_name)
+    def self.find_advantage(model, advantage_name, descriptor)
       name_downcase = advantage_name.downcase
-      model.l5r_advantages.select { |a| a.name.downcase == name_downcase }.first
+      if !descriptor
+        model.l5r_advantages.select { |a| a.name.downcase == name_downcase }.first
+      else
+        descriptor_downcase = descriptor.downcase
+        model.l5r_advantages.select { |a| a.name.downcase == name_downcase && a.descriptor.downcase == descriptor_downcase }
+      end
     end
 
     def self.find_kata(model, kata_name)
@@ -116,12 +121,6 @@ module AresMUSH
       return nil if !adv_name
       advs = Global.read_config('l5r', 'advantages')
       advs.select { |a| a['name'].downcase == adv_name.downcase }.first
-    end
-
-    def self.find_disadvantage_config(dis_name)
-      return nil if !dis_name
-      dis = Global.read_config('l5r', 'disadvantages')
-      dis.select { |d| d['name'].downcase == dis_name.downcase }.first
     end
 
     def self.find_kata_config(kata_name)

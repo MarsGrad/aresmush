@@ -30,14 +30,14 @@ module AresMUSH
 
           if (votes_per_xp != 0)
             xp = count.to_f / votes_per_xp
-            char.award_xp(xp)
+            L5R.award_xp(char, xp)
           end
 
           char.update(total_votes: char.total_votes + count)
 
           end
 
-        end      
+        end
     end
   end
 end

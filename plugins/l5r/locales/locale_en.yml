@@ -48,6 +48,11 @@ en:
     xp_spent_recipient: "%{spender} spends %{amount} of your XP for: %{reason}"
     xp_awarded: "You give %{recipient} %{amount} XP for: %{reason}."
     xp_awarded_recipient: "%{awarder} gives you %{amount} XP for: %{reason}"
+    needs_descriptor: "That ability needs a descriptor."
+    not_ranked: "They already have that ability."
+    ability_added: "Ability added."
+    needs_note: "Make sure they have a note set explaining this ability."
+    at_max_rank: "That ability is already at the max rank!"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
@@ -61,7 +66,6 @@ en:
     aff_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with affinity vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
     def_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
     def_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
-
 
     rings_title: "Rings"
     spells_title: "Spells"
