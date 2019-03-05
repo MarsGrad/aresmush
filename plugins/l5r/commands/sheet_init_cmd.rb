@@ -58,6 +58,11 @@ module AresMUSH
           adv.each { |a| a.delete }
         end
 
+        disadv = enactor.l5r_disadvantages
+        if (disadv)
+          disadv.each { |d| d.delete }
+        end
+        
         kata = enactor.l5r_kata
         if (kata)
           kata.each { |k| k.delete }
