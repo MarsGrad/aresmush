@@ -23,9 +23,8 @@ module AresMUSH
       end
 
       def skills
-        skills = school_config['skills']
+        skills = school_config['skills_display']
         skill_choice = school_config['skill_choice']
-        skills = skills.join(", ")
         display = "%xySkills:%xn #{skills}, and #{skill_choice}"
         display
       end
