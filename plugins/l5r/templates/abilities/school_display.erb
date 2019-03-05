@@ -1,0 +1,14 @@
+%lh
+<%= name_clan %>
+<% if school_config['shugenja'] == true %>
+<%= affinity_deficiency %>
+<% end %>
+<%= trait %>
+<%= honor %>
+<%= skills %>
+<% if school_config['shugenja'] == true %>
+<%= spells %>
+<%= starting_tech %>
+<% else %>
+<%= techniques %>
+%lf

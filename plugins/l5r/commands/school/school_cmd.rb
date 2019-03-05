@@ -12,25 +12,31 @@ module AresMUSH
       end
 
       def handle
-        school_list = Global.read_config('l5r', 'schools')
-        school_names = school_list.map { |s| "#{s['name']} -- #{s['clan']}" }
+        if (!self.school_name)
+          school_list = Global.read_config('l5r', 'schools')
+          school_names = school_list.map { |s| "#{s['name']} -- #{s['clan']}" }
 
-        list = school_names.each_with_index.map do |a, i|
-              linebreak = i % 2 == 0 ? "\n" : ""
-              display = a
-              if i == 0
-                "#{display}"
-              else
-                "#{linebreak}#{display}"
+          list = school_names.each_with_index.map do |a, i|
+                linebreak = i % 2 == 0 ? "\n" : ""
+                if i == 0
+                  "#{a}"
+                else
+                  "#{linebreak}#{a}"
+                end
               end
-            end
 
-        paginator = Paginator.paginate(list, cmd.page, 10)
+          paginator = Paginator.paginate(list, cmd.page, 10)
 
-        if (paginator.out_of_bounds?)
-          client.emit_failure paginator.out_of_bounds_msg
+          if (paginator.out_of_bounds?)
+            client.emit_failure paginator.out_of_bounds_msg
+          else
+            template = OptionsListTemplate.new(paginator)
+            client.emit template.render
+          end
         else
-          template = OptionsListTemplate.new(paginator)
+          school_config = L5R.find_school_config(self.school_name)
+
+          template = SchoolDisplay.new(school_config)
           client.emit template.render
         end
       end

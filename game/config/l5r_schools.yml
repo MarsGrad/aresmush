@@ -10,6 +10,7 @@ l5r:
           shugenja: false
           honor: 3.5
           starting_technique: The Way of the Crab
+          techniques: [The Way of the Crab, The Mountain Does Not Move, "Two Pincers, One Mind", Devastating Blow, The Mountain Does Not Fall]
         -
           name: Kuni Shugenja
           clan: Crab
@@ -32,6 +33,7 @@ l5r:
           shugenja: false
           honor: 2.5
           starting_technique: The Way of the Carp
+          techniques: [The Way of the Carp, Do As We Say, Treasures of the Carp, Wiles of the Carp, What is Yours is Mine]
         -
           name: Hiruma Bushi
           clan: Crab
@@ -41,6 +43,7 @@ l5r:
           shugenja: false
           honor: 4.5
           starting_technique: "Torch's Flame Flickers"
+          techniques: ["Torch's Flame Flickers", "Wolf's Little Lesson", Hummingbird Wings, Shark Smells Blood, Daylight Wastes No Movement]
         -
           name: Kakita Bushi
           clan: Crane
@@ -49,3 +52,4 @@ l5r:
           skill_choice: "Any:Bugei or High"
           honor: 6.5
           starting_technique: The Way of the Crane
+          techniques: [The Way of the Crane, Speed of Lightning, First and Last Strike, "One Strike, Two Cuts", Strike With No Thoughts]
