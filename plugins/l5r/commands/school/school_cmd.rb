@@ -17,7 +17,7 @@ module AresMUSH
 
         list = school_names.each_with_index.map do |a, i|
               linebreak = i % 2 == 0 ? "\n" : ""
-              display = left(a, 30)
+              display = a
               if i == 0
                 "#{display}"
               else
