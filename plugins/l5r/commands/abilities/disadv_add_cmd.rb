@@ -47,9 +47,9 @@ module AresMUSH
           end
 
           if (self.descriptor)
-            disadv = L5R.find_disadvantage(model, self.adv_name, self.descriptor)
+            disadv = L5R.find_disadvantage(model, self.disadv_name, self.descriptor)
           else
-            disadv = L5R.find_disadvantage(model, self.adv_name)
+            disadv = L5R.find_disadvantage(model, self.disadv_name)
           end
 
           if (disadv && !is_ranked)
