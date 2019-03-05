@@ -68,6 +68,8 @@ en:
     def_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
     def_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
 
+    school_list_title: "Schools"
+
     rings_title: "Rings"
     spells_title: "Spells"
     sheet_title_1: "%{sheet_type} Sheet for %{name}"
