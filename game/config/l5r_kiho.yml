@@ -1,0 +1,33 @@
+---
+l5r:
+  kiho:
+    -
+      name: Air Fist
+      ring: Air
+      mastery: 3
+      atemi: false
+      type: Internal
+    -
+      name: Flee the Darkness
+      ring: Air
+      mastery: 6
+      atemi: false
+      type: Kharmic
+    -
+      name: The Great Silence
+      ring: Air
+      mastery: 4
+      atemi: true
+      type: Mystical
+    -
+      name: Harmony of the Mind
+      ring: Air
+      mastery: 5
+      atemi: false
+      type: Mystical
+    -
+      name: Riding the Clouds
+      ring: Air
+      mastery: 4
+      atemi: false
+      type: Mystical

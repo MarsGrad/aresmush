@@ -85,6 +85,22 @@ module AresMUSH
         char.l5r_kata.to_a.sort_by { |k| [k.ring, k.mastery, k.name] }
       end
 
+      def kiho
+        char.l5r_kiho.to_a.sort_by { |k| [k.ring, k.mastery, k.name] }
+          .each_with_index
+            .map do |k, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              title = "%xh#{k.name}%xn"
+              rating = "#{k.ring}/#{k.mastery}"
+              display = left("#{title}: #{rating}", 36)
+              if i == 0
+                "#{display}"
+              else
+                "#{linebreak}#{display}"
+              end
+            end
+      end
+
       def spells
         @char.l5r_spells.to_a.sort_by { |a| [a.ring, a.mastery, a.name] }
           .each_with_index

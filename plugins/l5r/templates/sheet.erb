@@ -57,17 +57,28 @@
 <% end %>
 <% end %>
 
+<% if !char.l5r_kiho.to_a.empty? %>
+<%= line_with_text t('l5r.kiho_title') %>
+<% kiho.each do |k| %>
+<%= k -%>
+<% end %>
+<% end %>
+
+<% if !char.l5r_advantages.to_a.empty? %>
 <%= line_with_text t('l5r.advantage_title') %>
 <% advantages.each do |a| %>
 <%= left(a[0], 35) -%>
 <%= a[1] %>
 <% end %>
+<% end %>
+<% if !char.l5r_disadvantages.to_a.empty? %>
 <%= line_with_text t('l5r.disadvantage_title') %>
 <% disadvantages.each do |d| %>
 <%= left(d[0], 35) -%>
 <%= d[1] %>
 <% end %>
-<% if char.l5r_sheet_type != "geisha" || char.l5r_sheet_type != "bonge" %>
+<% end %>
+<% if !char.l5r_kata.to_a.empty? %>
 <%= line_with_text t('l5r.kata_title') %>
 <% kata.each do |k| %>
 %xh<%= left("#{k.name}:", 25) %>%xn <%= "#{k.ring}/#{k.mastery}" %>
