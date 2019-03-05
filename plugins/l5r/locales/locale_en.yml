@@ -81,5 +81,6 @@ en:
     advantage_title: "Advantages"
     disadvantage_title: "Disadvantages"
     kata_title: "Kata"
+    kiho_title: "Kiho"
     xp_title: "%{name}'s Total XP"
     xp_last_five_title: "Last Five Spends/Awards for %{name}"
