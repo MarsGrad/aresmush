@@ -14,7 +14,9 @@ module AresMUSH
       def handle
         if (!self.school_name)
           school_list = Global.read_config('l5r', 'schools')
-          school_names = school_list.map { |s| "#{s['name']} -- #{s['clan']}" }
+          school_names = school_list.map do |s|
+            "#{s['name']} -- #{s['clan']}" 
+          end
 
           list = school_names.each_with_index.map do |a, i|
                 linebreak = i % 2 == 0 ? "\n" : ""
