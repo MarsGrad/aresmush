@@ -73,7 +73,7 @@ en:
     sheet_title_1: "%{sheet_type} Sheet for %{name}"
     sheet_title_2: "Character Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
-    techniques_title: "School Techniques ]-----[ School"
+    techniques_title: "School Techniques ]------[ School"
     advantage_title: "Advantages"
     disadvantage_title: "Disadvantages"
     xp_title: "%{name}'s Total XP"
