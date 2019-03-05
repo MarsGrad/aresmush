@@ -17,7 +17,7 @@ l5r:
           clan: Crab
           trait_bonus: Willpower
           skills: [Calligraphy/Cipher, Defense, "Lore: Shadowlands", "Lore: Shadowlands", "Lore: Theology", Spellcraft]
-          skills_display: "Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Theology, Spellcraft"
+          skills_display: "Calligraphy/Cipher, Defense, Lore: Shadowlands 2, Lore: Theology, Spellcraft"
           skill_choice: "Any:Weapon"
           shugenja: true
           affinity: Earth
