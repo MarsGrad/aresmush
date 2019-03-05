@@ -2,7 +2,7 @@
 l5r:
   schools:
         -
-          name: Hida
+          name: Hida Bushi
           clan: Crab
           trait_bonus: Stamina
           skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, "Lore: Shadowlands"]
