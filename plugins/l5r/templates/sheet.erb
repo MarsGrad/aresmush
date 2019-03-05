@@ -57,8 +57,8 @@
 <% end %>
 
 <%= line_with_text t('l5r.spell_pools_title') %>
-<%= left(fire_spell_pool, 40) air_spell_pool %>
-<%= left(earth_spell_pool, 40) water_spell_pool %>
+<%= left(fire_spell_pool, 40) -%> <%= air_spell_pool %>
+<%= left(earth_spell_pool, 40) -%> <%= water_spell_pool %>
 <%= left(void_spell_pool, 40) %>
 <% end %>
 <% if !char.l5r_kiho.to_a.empty? %>
