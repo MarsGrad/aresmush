@@ -64,7 +64,7 @@ module AresMUSH
               return
             end
             adv.update(rank: adv.rank + 1)
-          elsif (adv && self.descriptor)
+          elsif (!adv && self.descriptor)
             L5rAdvantage.create(name: name.titlecase, descriptor: self.descriptor, rank: 1, disadvantage?: is_disadvantage, character: model)
           else
             L5rAdvantage.create(name: name.titlecase, rank: 1, disadvantage?: is_disadvantage, character: model)
