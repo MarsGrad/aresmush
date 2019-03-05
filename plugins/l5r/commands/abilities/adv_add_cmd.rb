@@ -30,7 +30,7 @@ module AresMUSH
             return
           end
 
-          is_ranked = adv_config['is_ranked']
+          is_ranked = adv_config['ranked']
           restriction = adv_config['restriction']
           name = adv_config['name']
           is_disadvantage = adv_config['disadvantage']
