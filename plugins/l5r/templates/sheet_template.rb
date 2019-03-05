@@ -107,6 +107,7 @@ module AresMUSH
               descriptor = "#{a.descriptor}"
               display << "(#{descriptor})"
             end
+            display << center("#{rank}", 10)
             "#{display}"
           end
       end
