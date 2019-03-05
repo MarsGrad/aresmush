@@ -13,7 +13,7 @@ module AresMUSH
 
       def handle
         school_list = Global.read_config('l5r', 'schools')
-        school_names = school_list.map { |s| s.name }
+        school_names = school_list.map { |s| s['name'] }
         template = BorderedPageListTemplate.new(school_names, cmd.page, 10, t('l5r.school_list_title'))
         client.emit template.render
       end
