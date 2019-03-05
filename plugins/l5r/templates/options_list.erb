@@ -1,12 +1,8 @@
 <%= header %>
 %xh<%= t('l5r.school_list_title') %>%xn
 <%= divider %>
-<% paginator.page_items.each_with_index do |p, i| %>
-<% if i.odd? %>
+<% paginator.page_items.each do |p| %>
 <%= left(p, 30) -%>
-<% else %>
-<%= right(p, 30) -%>
-<% end %>
 <% end %>
 
 <%= paginator.page_footer %>
