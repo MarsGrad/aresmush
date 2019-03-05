@@ -17,8 +17,13 @@ module AresMUSH
 
         list = school_names.each_with_index.map do |a, i|
               linebreak = i % 2 == 0 ? "\n" : ""
-              "#{linebreak}#{a}"
+              display = left(a, 30)
+              if i == 0
+                "#{display}"
+              else
+                "#{linebreak}#{display}"
               end
+            end
 
         paginator = Paginator.paginate(list, cmd.page, 10)
 
