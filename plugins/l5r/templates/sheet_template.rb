@@ -210,19 +210,19 @@ module AresMUSH
       end
 
       def water_spell_pool
-        water_spell_pool = center("%xrWater Spells:%xn ", 20)
+        water_spell_pool = center("%xbWater Spells:%xn ", 20)
         water_spell_pool << format_bar(char.l5r_water_spell_pool, L5R.calc_l5r_ring(char, "water"))
         water_spell_pool
       end
 
       def earth_spell_pool
-        earth_spell_pool = center("%xrEarth Spells:%xn ", 20)
+        earth_spell_pool = center("%x3Earth Spells:%xn ", 20)
         earth_spell_pool << format_bar(char.l5r_earth_spell_pool, L5R.calc_l5r_ring(char, "earth"))
         earth_spell_pool
       end
 
       def void_spell_pool
-        void_spell_pool = center("%xrVoid Spells:%xn ", 20)
+        void_spell_pool = center("%x8Void Spells:%xn ", 20)
         void_spell_pool << format_bar(char.l5r_void_spell_pool, char.l5r_void_ring)
         void_spell_pool
       end
