@@ -55,15 +55,15 @@
 <% spells.each do |s| %>
 <%= s -%>
 <% end %>
-<% end %>
 
+<% end %>
 <% if !char.l5r_kiho.to_a.empty? %>
 <%= line_with_text t('l5r.kiho_title') %>
 <% kiho.each do |k| %>
 <%= k -%>
 <% end %>
-<% end %>
 
+<% end %>
 <% if !char.l5r_advantages.to_a.empty? %>
 <%= line_with_text t('l5r.advantage_title') %>
 <% advantages.each do |a| %>
