@@ -83,6 +83,8 @@ module AresMUSH
           return SchoolRemCmd
         when "add"
           return SchoolAddCmd
+        when "sort"
+          return SchoolSortCmd
         else
           if (!cmd.switch)
             return SchoolCmd
