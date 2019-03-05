@@ -67,4 +67,10 @@
 <%= left(d[0], 35) -%>
 <%= d[1] %>
 <% end %>
+<% if char.l5r_sheet_type != "geisha" || char.l5r_sheet_type != "bonge" %>
+<%= line_with_text t('l5r.kata_title') %>
+<% kata.each do |k| %>
+%xh<%= left("#{k.name}:", 25) %>%xn <%= "#{k.ring}/#{k.mastery}" %>
+<% end %>
+<% end %>
 %lf

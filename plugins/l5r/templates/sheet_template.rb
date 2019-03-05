@@ -81,6 +81,10 @@ module AresMUSH
         char.l5r_techniques.to_a.sort_by { |t| t.rank }
       end
 
+      def kata
+        char.l5r_kata.to_a.sort_by { |k| [k.ring, k.mastery, k.name] }
+      end
+
       def spells
         @char.l5r_spells.to_a.sort_by { |a| [a.ring, a.mastery, a.name] }
           .each_with_index
