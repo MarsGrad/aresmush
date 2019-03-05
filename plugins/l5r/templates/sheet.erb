@@ -59,12 +59,12 @@
 
 <%= line_with_text t('l5r.advantage_title') %>
 <% advantages.each do |a| %>
-<%= left("a[0]", 35) -%>
+<%= left(a[0], 35) -%>
 <%= a[1] %>
 <% end %>
 <%= line_with_text t('l5r.disadvantage_title') %>
 <% disadvantages.each do |d| %>
-<%= left("d[0]", 35) -%>
+<%= left(d[0], 35) -%>
 <%= d[1] %>
 <% end %>
 %lf
