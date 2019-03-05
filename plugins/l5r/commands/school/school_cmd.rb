@@ -20,8 +20,14 @@ module AresMUSH
               "#{linebreak}#{a}"
               end
 
-        template = BorderedPagedListTemplate.new(list, cmd.page, 10, t("l5r.school_list_title"))
-        client.emit template.render
+        paginator = Paginator.paginate(list, cmd.page, 10)
+
+        if (paginator.out_of_bounds?)
+          client.emit_failure paginator.out_of_bounds_msg
+        else
+          template = OptionsListTemplate.new(paginator)
+          client.emit template.render
+        end
       end
     end
   end
