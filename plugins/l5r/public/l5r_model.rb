@@ -102,7 +102,8 @@ module AresMUSH
       include ObjectModel
 
       attribute :name
-      attribute :rank, :type => DataType::Integer
+      attribute :mastery, :type => DataType::Integer
+      attribute :ring
       reference :character, "AresMUSH::Character"
       index :name
     end

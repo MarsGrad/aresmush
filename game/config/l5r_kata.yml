@@ -1,0 +1,28 @@
+---
+l5r:
+  kata:
+    -
+      name: Striking as Air
+      ring: Air
+      mastery: 3
+      schools: ["Any"]
+    -
+      name: Striking as Earth
+      ring: Earth
+      mastery: 3
+      schools: ["Any"]
+    -
+      name: Striking as Fire
+      ring: Fire
+      mastery: 3
+      schools: ["Any"]
+    -
+      name: Striking as Water
+      ring: Water
+      mastery: 4
+      schools: ["Any"]
+    -
+      name: Striking as Void
+      ring: Void
+      mastery: 3
+      schools: ["Any"]
