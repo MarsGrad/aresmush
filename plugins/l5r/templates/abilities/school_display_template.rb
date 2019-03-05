@@ -67,3 +67,6 @@ module AresMUSH
         display = "Starting Spells: #{spells}"
         display
       end
+    end
+  end
+end
