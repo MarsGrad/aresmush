@@ -7,7 +7,7 @@ module AresMUSH
 
       def parse_args
         if (cmd.args)
-          self.school_name = trim_args(cmd.args)
+          self.school_name = downcase_arg(cmd.args)
         end
       end
 
