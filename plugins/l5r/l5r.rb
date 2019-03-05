@@ -39,6 +39,13 @@ module AresMUSH
             return RollCmd
           end
         end
+      when "void"
+        case cmd.switch
+        when "burn"
+          return VoidBurnCmd
+        when "recover"
+          return VoidRecoverCmd
+        end
       when "ad"
         case cmd.switch
         when "set"
@@ -107,6 +114,10 @@ module AresMUSH
           return SpellAddCmd
         when "rem"
           return SpellRemCmd
+        when "burn"
+          return SpellBurnCmd
+        when "recover"
+          return SpellRecoverCmd
         else
           if (!cmd.switch)
             return SpellCmd

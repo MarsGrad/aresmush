@@ -197,6 +197,36 @@ module AresMUSH
         void_pool
       end
 
+      def fire_spell_pool
+        fire_spell_pool = center("%xrFire Spells:%xn ", 20)
+        fire_spell_pool << format_bar(char.l5r_fire_spell_pool, L5R.calc_l5r_ring(char, fire))
+        fire_spell_pool
+      end
+
+      def air_spell_pool
+        air_spell_pool = center("%xhAir Spells:%xn ", 20)
+        air_spell_pool << format_bar(char.l5r_air_spell_pool, L5R.calc_l5r_ring(char, air))
+        air_spell_pool
+      end
+
+      def water_spell_pool
+        water_spell_pool = center("%xrWater Spells:%xn ", 20)
+        water_spell_pool << format_bar(char.l5r_water_spell_pool, L5R.calc_l5r_ring(char, water))
+        water_spell_pool
+      end
+
+      def earth_spell_pool
+        earth_spell_pool = center("%xrEarth Spells:%xn ", 20)
+        earth_spell_pool << format_bar(char.l5r_earth_spell_pool, L5R.calc_l5r_ring(char, earth))
+        earth_spell_pool
+      end
+
+      def void_spell_pool
+        void_spell_pool = center("%xrVoid Spells:%xn ", 20)
+        void_spell_pool << format_bar(char.l5r_void_spell_pool, char.l5r_void_ring)
+        void_spell_pool
+      end
+
       def format_bar(current, max)
         current = current || 0
         max = max || 10

@@ -26,6 +26,11 @@ module AresMUSH
     attribute :l5r_honor, :type => DataType::Float
     attribute :l5r_glory, :type => DataType::Float, :default => 1.0
     attribute :l5r_status, :type => DataType::Float, :default => 1.0
+    attribute :l5r_fire_spell_pool, :type => DataType::Integer, :default => 2
+    attribute :l5r_air_spell_pool, :type => DataType::Integer, :default => 2
+    attribute :l5r_earth_spell_pool, :type => DataType::Integer, :default => 2
+    attribute :l5r_water_spell_pool, :type => DataType::Integer, :default => 2
+    attribute :l5r_void_spell_pool, :type => DataType::Integer, :default => 2
 
     before_delete :delete_l5r_abilities
 

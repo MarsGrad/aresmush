@@ -62,7 +62,7 @@ module AresMUSH
         if (disadv)
           disadv.each { |d| d.delete }
         end
-        
+
         kata = enactor.l5r_kata
         if (kata)
           kata.each { |k| k.delete }

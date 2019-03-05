@@ -74,6 +74,7 @@ en:
 
     rings_title: "Rings"
     spells_title: "Spells"
+    spell_pools_title: "Spell Slots"
     sheet_title_1: "%{sheet_type} Sheet for %{name}"
     sheet_title_2: "Character Sheet for %{name}"
     skills_title: "Skills ]-----------------[ Emphases"
