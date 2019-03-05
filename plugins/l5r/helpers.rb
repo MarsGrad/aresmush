@@ -76,7 +76,7 @@ module AresMUSH
         model.l5r_advantages.select { |a| a.name.downcase == name_downcase }.first
       else
         descriptor_downcase = descriptor.downcase
-        model.l5r_advantages.select { |a| a.name.downcase == name_downcase && a.descriptor.downcase == descriptor_downcase }
+        model.l5r_advantages.select { |a| a.name.downcase == name_downcase && a.descriptor.downcase == descriptor_downcase }.first
       end
     end
 
