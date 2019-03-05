@@ -32,7 +32,7 @@ module AresMUSH
           name = kiho_config['name']
           ring = kiho_config['ring']
           mastery = kiho_config['mastery']
-          atemi? = kiho_config['atemi']
+          atemi = kiho_config['atemi']
           type = kiho_config['type']
 
           kiho = L5R.find_kiho(model, self.kiho_name)
@@ -41,7 +41,7 @@ module AresMUSH
             return
           end
 
-          L5rKiho.create(name: name, ring: ring, mastery: mastery, type: type, atemi?: atemi?, character: model)
+          L5rKiho.create(name: name, ring: ring, mastery: mastery, type: type, atemi: atemi, character: model)
           client.emit_success t('l5r.ability_added')
         end
       end
