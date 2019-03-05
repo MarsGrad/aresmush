@@ -53,6 +53,8 @@ module AresMUSH
             adv = L5R.find_advantage(model, self.adv_name)
           end
 
+          client.emit adv
+
           if (adv && !is_ranked)
             client.emit_failure t('l5r.not_ranked')
             return
