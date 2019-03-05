@@ -1,0 +1,27 @@
+---
+l5r:
+  disadvantages:
+    -
+      name: Antisocial
+      subtype: Social
+      cost: "2/4 (+1 for Crab)"
+      ranked: true
+      restriction: None
+    -
+      name: Ascetic
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: None
+    -
+      name: Bad Eyesight
+      subtype: Physical
+      cost: "3"
+      ranked: false
+      restriction: None
+    -
+      name: Bad Fortune
+      subtype: Spiritual
+      cost: "3"
+      ranked: false
+      restriction: [descriptor, note]
