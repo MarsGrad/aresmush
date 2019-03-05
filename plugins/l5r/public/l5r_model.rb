@@ -2,6 +2,7 @@ module AresMUSH
   class Character < Ohm::Model
     collection :l5r_skills, "AresMUSH::L5rSkill"
     collection :l5r_advantages, "AresMUSH::L5rAdvantage"
+    collection :l5r_disadvantages, "AresMUSH::L5rDisadvantage"
     collection :l5r_spells, "AresMUSH::L5rSpell"
     collection :l5r_traits, "AresMUSH::L5rTrait"
     collection :l5r_techniques, "AresMUSH::L5rTechnique"
@@ -22,8 +23,9 @@ module AresMUSH
     attribute :l5r_xp_log, :type => DataType::Array, :default => []
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
-    attribute :l5r_honor, :type => DataType::Integer
-    attribute :l5r_glory, :type => DataType::Integer
+    attribute :l5r_honor, :type => DataType::Float
+    attribute :l5r_glory, :type => DataType::Float, :default => 1.0
+    attribute :l5r_status, :type => DataType::Float, :default => 1.0
 
     before_delete :delete_l5r_abilities
 
@@ -62,7 +64,16 @@ module AresMUSH
       attribute :name
       attribute :descriptor
       attribute :rank, :type => DataType::Integer
-      attribute :disadvantage?, :type => DataType::Boolean
+      reference :character, "AresMUSH::Character"
+      index :name
+    end
+
+    class L5rDisadvantage < Ohm::Model
+      include ObjectModel
+
+      attribute :name
+      attribute :descriptor
+      attribute :rank, :type => DataType::Integer
       reference :character, "AresMUSH::Character"
       index :name
     end

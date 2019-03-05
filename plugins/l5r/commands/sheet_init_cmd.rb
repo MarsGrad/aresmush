@@ -91,6 +91,9 @@ module AresMUSH
 
         enactor.update(l5r_void_ring: 2)
         enactor.update(l5r_void_pool: 2)
+        enactor.update(l5r_glory: 1.0)
+        enactor.update(l5r_status: 1.0)
+        enactor.update(l5r_honor: 1.0)
         enactor.update(l5r_old_insight_rank: 1)
         enactor.update(l5r_current_insight_rank: 1)
         enactor.update(l5r_sheet_type: nil)

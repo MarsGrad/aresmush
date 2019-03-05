@@ -50,6 +50,7 @@ module AresMUSH
           trait_bonus = school_config['trait_bonus']
           skills = school_config['skills']
           skill_choice = school_config['skill_choice']
+          spell_choice = school_config['spell_choice']
           shugenja = school_config['shugenja']
           affinity = school_config['affinity']
           deficiency = school_config['deficiency']
@@ -127,6 +128,9 @@ module AresMUSH
           L5rSchool.create(name: school_name.titlecase, rank: 1, character: model)
           client.emit_success t('l5r.school_set', :school => school_name.titlecase)
           client.emit_success t('l5r.school_skill_choice', :skill_choice => skill_choice)
+          if spell_choice
+            client.emit_success t('l5r.school_spell_choice', :spell_choice => spell_choice)
+          end
         end
       end
     end

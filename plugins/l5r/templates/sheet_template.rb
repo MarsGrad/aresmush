@@ -97,6 +97,34 @@ module AresMUSH
             end
       end
 
+      def advantages
+        char.l5r_advantages.to_a.sort_by { |a| a.name }
+          .map do |a|
+            title = "%xh#{a.name}%xn"
+            rank = "#{a.rank}"
+            display = "#{title}: "
+            if a.descriptor
+              descriptor = "#{a.descriptor}"
+              display << "(#{descriptor})"
+            end
+            "#{display}"
+          end
+      end
+
+      def disadvantages
+        char.l5r_disadvantages.to_a.sort_by { |d| a.name }
+          .map do |d|
+            title = "%xh#{d.name}%xn"
+            rank = "#{d.rank}"
+            display = "#{title}: "
+            if d.descriptor
+              descriptor = "#{d.descriptor}"
+              display << "(#{descriptor})"
+            end
+            "#{display}"
+          end
+      end
+
       def fire_air_ring_title
         fire_air = "Fire Ring: #{L5R.calc_l5r_ring(char, 'fire')} ]-----------------------[ Air Ring: #{L5R.calc_l5r_ring(char, 'air')}"
         fire_air

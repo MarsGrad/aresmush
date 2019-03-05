@@ -59,6 +59,11 @@ module AresMUSH
         when "add"
           return AdvAddCmd
         end
+      when "disadv"
+        case cmd.switch
+        when "add"
+          return DisadvAddCmd
+        end
       when "sheet"
         case cmd.switch
         when "init"

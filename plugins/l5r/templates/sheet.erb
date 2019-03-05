@@ -56,5 +56,12 @@
 <%= s -%>
 <% end %>
 <% end %>
-
+<%= line_with_text t('l5r.advantage_title') %>
+<% advantages.each do |a| %>
+<%= a %>
+<% end %>
+<%= line_with_text t('l5r.disadvantage_title') %>
+<% disadvantages.each do |d| %>
+<%= d %>
+<% end %>
 %lf
