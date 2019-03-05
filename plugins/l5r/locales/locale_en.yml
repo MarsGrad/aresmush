@@ -70,6 +70,11 @@ en:
     def_roll_vs_difficulty_fail: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xrFAIL"
     def_roll_vs_difficulty_success: "%xw%{name}%xc rolls %xw%{roll_str}%xc + %xr%{modifier}%xc with deficiency vs difficulty %xr%{difficulty}%xc and keeps %xg%{keep}%xc, getting:%r%xw[ %{dice} (%{total}) ] %xcSUCCESS"
 
+    pool_minimum: "That would take you below your minimum!"
+    pool_maximum: "That would take you below your maximum!"
+    void_pool_burn: "%{character} burns %{amount} Void Point(s)."
+    void_pool_recover: "%{character} recovers %{amount} Void Point(s)."
+
     school_list_title: "Schools"
 
     rings_title: "Rings"
