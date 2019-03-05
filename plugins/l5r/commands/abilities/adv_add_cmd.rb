@@ -36,6 +36,8 @@ module AresMUSH
           is_disadvantage = adv_config['disadvantage']
           max_rank = adv_config['max_rank']
 
+          client.emit_ooc is_ranked
+
           if restriction.include?("descriptor")
             if (!self.descriptor)
               client.emit_failure t('l5r.needs_descriptor')
