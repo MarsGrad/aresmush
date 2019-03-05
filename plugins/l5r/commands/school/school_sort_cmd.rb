@@ -16,6 +16,10 @@ module AresMUSH
       def handle
         school_list = Global.read_config('l5r', 'schools')
         school_list = school_list.select { |s| s['clan'].downcase == self.clan_name }
+        if (school_list.empty?)
+          client.emit_failure t('l5r.invalid_clan')
+          return
+        end
         school_names = school_list.map { |s| "#{s['name']} -- #{s['clan']}" }
 
         list = school_names.each_with_index.map do |a, i|

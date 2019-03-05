@@ -35,6 +35,7 @@ en:
     skill_raised: "You raised their %{skill} by 1."
     insight_rank_up: "Insight Rank Up! %{character} is likely now entitled to a new school technique or new spells!"
     invalid_skill: "That's not a valid skill name."
+    invalid_clan: "That's not a valid clan name."
     not_shugenja: "Target isn't a Shugenja."
     already_have_spell: "Target already has that spell."
     spell_added: "Spell added."
