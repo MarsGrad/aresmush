@@ -36,6 +36,11 @@ module AresMUSH
         else
           school_config = L5R.find_school_config(self.school_name)
 
+          if (!school_config)
+            client.emit_failure t('l5r.invalid_school')
+            return
+          end
+
           template = SchoolDisplay.new(school_config)
           client.emit template.render
         end
