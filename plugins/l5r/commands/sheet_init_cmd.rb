@@ -53,6 +53,11 @@ module AresMUSH
           spells.each { |s| s.delete }
         end
 
+        adv = enactor.l5r_advantages
+        if (adv)
+          adv.each { |a| a.delete }
+        end
+
         kata = enactor.l5r_kata
         if (kata)
           kata.each { |k| k.delete }
