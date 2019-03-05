@@ -13,8 +13,14 @@ module AresMUSH
 
       def handle
         school_list = Global.read_config('l5r', 'schools')
-        school_names = school_list.map { |s| s['name'] }
-        template = BorderedPagedListTemplate.new(school_names, cmd.page, 10, t('l5r.school_list_title'))
+        school_names = school_list.map { |s| "#{s['name']} -- #{s['clan']}" }
+
+        school_names.each_with_index.map! do |a, i|
+              linebreak = i % 2 == 0 ? "\n" : ""
+              "#{linebreak}#{a}"
+              end
+
+        template = BorderedPagedListTemplate.new(school_names, cmd.page, 10, t("l5r.school_list_title"))
         client.emit template.render
       end
     end
