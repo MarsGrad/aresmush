@@ -6,6 +6,7 @@ l5r:
       subtype: Social
       cost: "2/4 (+1 for Crab)"
       ranked: true
+      max_rank: 2
       restriction: None
     -
       name: Ascetic

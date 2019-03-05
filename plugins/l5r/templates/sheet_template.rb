@@ -112,7 +112,7 @@ module AresMUSH
       end
 
       def disadvantages
-        char.l5r_disadvantages.to_a.sort_by { |d| a.name }
+        char.l5r_disadvantages.to_a.sort_by { |d| d.name }
           .map do |d|
             title = "%xh#{d.name}%xn"
             rank = "#{d.rank}"
