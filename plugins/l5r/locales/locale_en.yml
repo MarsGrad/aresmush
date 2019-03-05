@@ -56,6 +56,7 @@ en:
     ability_added: "Ability added."
     needs_note: "Make sure they have a note set explaining this ability."
     at_max_rank: "That ability is already at the max rank!"
+    invalid_ring: "That's not a valid ring."
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
@@ -72,6 +73,8 @@ en:
 
     pool_minimum: "That would take you below your minimum!"
     pool_maximum: "That would take you above your maximum!"
+    spell_pool_burn: "%{character} burns %{amount} %{pool} Spell Slot(s)."
+    spell_pool_recover: "%{character} recovers %{amount} %{pool} Spell Slot(s)."
     void_pool_burn: "%{character} burns %{amount} Void Point(s)."
     void_pool_recover: "%{character} recovers %{amount} Void Point(s)."
 
