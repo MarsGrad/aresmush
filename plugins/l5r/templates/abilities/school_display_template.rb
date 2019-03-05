@@ -37,12 +37,13 @@ module AresMUSH
 
       def techniques
         techs = school_config['techniques']
-        first = techs.shift(3)
+        first = techs.first(3)
+        last = techs.last(2)
 
         display = "%xyTechniques:%xn "
         display << first.join(", ")
         display << "%r"
-        display << techs.join(", ")
+        display << last.join(", ")
 
         display
       end
