@@ -10,13 +10,13 @@ module AresMUSH
 
       def handle
         if (self.amount)
-          new_total = char.l5r_void_pool - self.amount
+          new_total = enactor.l5r_void_pool - self.amount
           if new_total < 0
             client.emit_failure t('l5r.pool_minimum')
             return
           end
         else
-          new_total = char.l5r_void_pool - 1
+          new_total = enactor.l5r_void_pool - 1
           if new_total < 0
             client.emit_failure t('l5r.pool_minimum')
             return
