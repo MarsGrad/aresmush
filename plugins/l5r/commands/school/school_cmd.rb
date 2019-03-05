@@ -41,7 +41,7 @@ module AresMUSH
             return
           end
 
-          template = SchoolDisplay.new(school_config)
+          template = SchoolDisplayTemplate.new(school_config)
           client.emit template.render
         end
       end
