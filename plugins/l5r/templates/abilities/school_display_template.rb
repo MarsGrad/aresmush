@@ -1,10 +1,11 @@
 module AresMUSH
   module L5R
     class SchoolDisplayTemplate < ErbTemplateRenderer
-      attr_accessor :school_config
+      attr_accessor :school_name, :school_config
 
-      def initialize(school_config)
-        @school_config = school_config
+      def initialize(school_name)
+        @school_name = school_name
+        @school_config = L5R.find_school_config(school_name)
         super File.dirname(__FILE__) + "/school_display.erb"
       end
 
