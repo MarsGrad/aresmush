@@ -29,13 +29,13 @@ module AresMUSH
       end
 
       def handle
-        sheet_type = model.l5r_sheet_type
+        sheet_type = enactor.l5r_sheet_type
         if sheet_type != "bonge" || sheet_type != "geisha"
           client.emit_failure t('l5r.invalid_sheet_type')
           return
         end
-        
-        current_clan = model.l5r_clan
+
+        current_clan = enactor.l5r_clan
         if (current_clan)
           client.emit_failure t('l5r.remove_clan_first')
           return
@@ -51,38 +51,38 @@ module AresMUSH
         non_emp_skills = skills.reject { |e| e =~ /\//}
 
         non_emp_skills.each do |s|
-          skill = L5R.find_skill(model, s)
+          skill = L5R.find_skill(enactor, s)
           if (skill)
             skill.update(rank: skill.rank + 1)
           else
-            L5rSkill.create(name: s, rank: 1, character: model)
+            L5rSkill.create(name: s, rank: 1, character: enactor)
           end
         end
 
         emp_skills.each do |s|
           skill_name = s.partition("/").first
           emp = s.partition("/").last
-          skill = L5R.find_skill(model, skill_name)
+          skill = L5R.find_skill(enactor, skill_name)
 
           if (skill)
             skill.update(rank: skill.rank + 1)
           else
-            L5rSkill.create(name: skill_name, rank: 1, character: model)
+            L5rSkill.create(name: skill_name, rank: 1, character: enactor)
           end
 
-          skill = L5R.find_skill(model, skill_name)
+          skill = L5R.find_skill(enactor, skill_name)
           if (skill && !skill.emphases.include?(emp))
             skill.update(emphases: skill.emphases << emp)
           end
         end
 
-        trait = L5R.find_trait(model, trait_bonus)
+        trait = L5R.find_trait(enactor, trait_bonus)
         trait.update(rank: trait.rank + 1)
 
-        current_insight = L5R.calc_l5r_insight(model)
-        model.update(l5r_current_insight_rank: current_insight)
+        current_insight = L5R.calc_l5r_insight(enactor)
+        enactor.update(l5r_current_insight_rank: current_insight)
 
-        model.update(l5r_clan: name)
+        enactor.update(l5r_clan: name)
         client.emit_success t('l5r.clan_set', :clan => name.titlecase)
       end
     end
