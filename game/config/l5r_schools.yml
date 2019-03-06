@@ -89,7 +89,7 @@ l5r:
           clan: None
           trait_bonus: Intelligence
           skills: [Calligraphy, "Lore: Theology", Meditation, Spellcraft]
-          skills_display: Calligraphy, Lore: Theology, Meditation, Spellcraft
+          skills_display: Calligraphy, "Lore: Theology", Meditation, Spellcraft
           skill_choice: "Any 2 skills and Any Lore"
           shugenja: true
           affinity: "Any non-Void"
