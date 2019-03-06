@@ -29,7 +29,7 @@ module AresMUSH
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
 
           sheet_type = model.l5r_sheet_type
-          if sheet_type != "bonge" || sheet_type != "geisha"
+          if sheet_type != "bonge" && sheet_type != "geisha"
             client.emit_failure t('l5r.invalid_sheet_type')
             return
           end

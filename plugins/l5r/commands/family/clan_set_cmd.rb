@@ -30,7 +30,7 @@ module AresMUSH
 
       def handle
         sheet_type = enactor.l5r_sheet_type
-        if sheet_type != "bonge" || sheet_type != "geisha"
+        if sheet_type != "bonge" && sheet_type != "geisha"
           client.emit_failure t('l5r.invalid_sheet_type')
           return
         end
