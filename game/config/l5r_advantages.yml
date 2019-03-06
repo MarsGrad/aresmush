@@ -216,12 +216,16 @@ l5r:
       subtype: Spiritual
       cost: '1-5'
       restriction: descriptor
+      ranked: true
+      max_rank: 5
       pg: Core pg. 151
     -
       name: Languages
       subtype: Mental
       cost: '1 or 3'
       restriction: descriptor
+      ranked: true
+      max_rank: 2
       pg: Core pg. 151
     -
       name: Large
@@ -240,12 +244,16 @@ l5r:
       subtype: Spiritual
       cost: '3/6/9'
       restriction: None
+      ranked: true
+      max_rank: 3
       pg: Core pg. 151
     -
       name: Magic Resistance
       subtype: Spiritual
       cost: '2/4/6'
       restriction: None
+      ranked: true
+      max_rank: 3
       pg: Core pg. 151
     -
       name: Multiple Schools
@@ -386,6 +394,7 @@ l5r:
       name: Wealthy
       subtype: Material
       cost: '1/rank'
+      ranked: true
       max_rank: 3
       restriction: None
       pg: Core pg. 155
