@@ -30,7 +30,7 @@ module AresMUSH
 
       def check_valid_sheet
         return t('l5r.must_set_sheet') if enactor.l5r_sheet_type.empty?
-        return t('l5r.invalid_sheet_type') if enactor.l5r_sheet_type != "bonge" || enactor.sheet_type != "geisha"
+        return t('l5r.invalid_sheet_type') if enactor.l5r_sheet_type != "bonge" || enactor.l5R_sheet_type != "geisha"
         return nil
       end
 
