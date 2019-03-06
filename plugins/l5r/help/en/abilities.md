@@ -1,6 +1,6 @@
 ---
 toc: L5R
-summary: Viewing available abilities
+summary: Viewing and setting available abilities
 aliases:
 - spells
 - spell
