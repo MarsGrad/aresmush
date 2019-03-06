@@ -18,7 +18,7 @@ module AresMUSH
 
       def mastery
         mastery = kata_config['mastery']
-        display = "%xyMastery: #{mastery}"
+        display = "%xyMastery:%xn #{mastery}"
         display
       end
 
