@@ -89,7 +89,7 @@ l5r:
           clan: None
           trait_bonus: Intelligence
           skills: [Calligraphy, "Lore: Theology", Meditation, Spellcraft]
-          skills_display: Calligraphy, "Lore: Theology", Meditation, Spellcraft
+          skills_display: 'Calligraphy, "Lore: Theology", Meditation, Spellcraft'
           skill_choice: "Any 2 skills and Any Lore"
           shugenja: true
           affinity: "Any non-Void"
@@ -104,7 +104,7 @@ l5r:
           clan: None
           trait_bonus: Awareness
           skills: [Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft]
-          skills_display: Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft
+          skills_display: 'Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft'
           skill_choice: Any skill and Any Lore
           shugenja: true
           affinity: "Air"
