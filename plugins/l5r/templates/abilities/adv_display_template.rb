@@ -30,7 +30,7 @@ module AresMUSH
 
       def restriction
         restriction = adv_config['restriction']
-        if (restriction.class? == Array)
+        if (restriction.class == Array)
           restriction = restriction.join(", ")
         end
         display = "%xyRestriction:%xn #{restriction.titlecase}"
