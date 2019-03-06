@@ -66,6 +66,12 @@ module AresMUSH
         display = "%xyStarting Spells:%xn #{spells}"
         display
       end
+
+      def page
+        page = school_config['pg']
+        display = "%xyBook:%xn #{page}"
+        display
+      end
     end
   end
 end
