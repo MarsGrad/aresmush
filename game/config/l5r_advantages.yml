@@ -304,7 +304,6 @@ l5r:
       subtype: Mental
       cost: '4'
       restriction: None
-      ranked: false
       pg: Core pg. 152
     -
       name: Sacred Weapon
