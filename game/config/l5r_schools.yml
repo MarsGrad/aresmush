@@ -77,8 +77,8 @@ l5r:
           skills_display: "Athletics, Hunting, Meditation, Spellcraft"
           skill_choice: "Any 3 non-High"
           shugenja: true
-          affinity: "Any non-Void"
-          deficiency: "Opposing Element and 1 Choice"
+          affinity: Any non-Void
+          deficiency: Opposing Element and 1 Choice
           aff_def_choice: true
           spells: Universal and any five you can cast. None can be for an element you have a deficiency in.
           spell_choice: Any 5 non-Deficiency
