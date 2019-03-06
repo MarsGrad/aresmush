@@ -41,7 +41,7 @@ module AresMUSH
             return
           end
 
-          template = TechDisplayTemplate.new(tech_config)
+          template = TechDisplayTemplate.new(tech_config, "Techniques")
           client.emit template.render
         end
       end
