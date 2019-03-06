@@ -5,24 +5,39 @@ l5r:
       name: Sense
       ring: All
       mastery: 1
+      range: Personal
+      aoe: "50' radius from caster"
+      duration: Instantaneous
       pg: Core pg. 164
     -
       name: Summon
       ring: All
       mastery: 1
+      range: "30'"
+      aoe: 1 cubic foot of summoned material
+      duration: Permanent
       pg: Core pg. 165
     -
       name: Commune
       ring: All
       mastery: 1
+      range: "20'"
+      aoe: Self
+      duration: Concentration
       pg: Core pg. 165
     -
       name: Blessed Wind
       ring: Air
       mastery: 1
+      range: Personal
+      aoe: "10' radius around caster"
+      duration: Concentration
       pg: Core pg. 167
     -
       name: Benten's Touch
       ring: Air
       mastery: 2
+      range: "Personal/Touch"
+      aoe: Target Individual (May be caster)
+      duration: 1 hour
       pg: Core pg. 167
