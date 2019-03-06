@@ -14,7 +14,7 @@ module AresMUSH
       def handle
         if (!self.tech_name)
           tech_list = Global.read_config('l5r', 'techniques')
-          tech_names = tech_list.map { |t| "#{t['name']} -- #{s['school']}"}
+          tech_names = tech_list.map { |t| "#{t['name']} -- #{t['school']}"}
 
           list = tech_names.each_with_index.map do |a, i|
             linebreak = i % 2 == 0 ? "\n" : ""
