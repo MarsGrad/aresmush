@@ -32,7 +32,7 @@ module AresMUSH
 
       def specialties
         specs = skill_config['specialties']
-        display = "%xyExample specialties:%xn #{specs}"
+        display = "%xyExample Specialties:%xn #{specs}"
         display
       end
 
