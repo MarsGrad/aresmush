@@ -1,0 +1,35 @@
+---
+l5r:
+  clans:
+    -
+      name: Crab
+      trait_bonus: Stamina
+      skills: ["Lore: Shadowlands", Medicine/Wound Treatment, Athletics, Stealth]
+    -
+      name: Crane
+      trait_bonus: Awareness
+      skills: [Etiquette, Commerce, Temptation, "Craft: Farming"]
+    -
+      name: Dragon
+      trait_bonus: Perception
+      skills: [Meditation, "Lore: Omens", Athletics, Stealth]
+    -
+      name: Lion
+      trait_bonus: Strength
+      skills: [Staves, Athletics, Intimidation, "Lore: War"]
+    -
+      name: Mantis
+      trait_bonus: Reflexes
+      skills: [Sailing, "Craft: Fishing", Athletics, "Craft: Shipbuilding"]
+    -
+      name: Phoenix
+      trait_bonus: Intelligence
+      skills: ["Lore: Shugenja", "Lore: History", Meditation, Commerce]
+    -
+      name: Scorpion
+      trait_bonus: Willpower
+      skills: [Stealth, Sleight of Hand, Forgery, Sincerity]
+    -
+      name: Unicorn
+      trait_bonus: Agility
+      skills: [Horsemanship, Animal Handling, Staves, Hunting]
