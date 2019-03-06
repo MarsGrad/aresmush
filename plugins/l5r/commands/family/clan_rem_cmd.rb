@@ -53,6 +53,8 @@ module AresMUSH
             L5R.set_l5r_trait(model, 'strength', 2)
             L5R.set_l5r_trait(model, 'willpower', 2)
 
+            model.l5r_skills.each { |s| s.delete }
+
             client.emit_success t('l5r.clan_removed')
             return
           else
