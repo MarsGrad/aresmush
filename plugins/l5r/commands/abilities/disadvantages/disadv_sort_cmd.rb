@@ -24,13 +24,8 @@ module AresMUSH
 
         list = disadv_names.each_with_index.map do |a, i|
           linebreak = i % 2 == 0 ? "\n" : ""
-          if i == 0
-            "#{a}"
-          else
-            "#{linebreak}#{a}"
-          end
+          "#{linebreak}#{a}"
         end
-
         paginator = Paginator.paginate(list, cmd.page, 10)
 
         if (paginator.out_of_bounds?)
