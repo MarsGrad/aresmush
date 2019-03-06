@@ -28,13 +28,13 @@ module AresMUSH
         Chargen.check_chargen_locked(enactor)
       end
 
-      def check_valid_sheet
-        return t('l5r.must_set_sheet') if enactor.l5r_sheet_type.empty?
-        return t('l5r.invalid_sheet_type') if enactor.l5r_sheet_type != "bonge" || enactor.l5R_sheet_type != "geisha"
-        return nil
-      end
-
       def handle
+        sheet_type = model.l5r_sheet_type
+        if sheet_type != "bonge" || sheet_type != "geisha"
+          client.emit_failure t('l5r.invalid_sheet_type')
+          return
+        end
+        
         current_clan = model.l5r_clan
         if (current_clan)
           client.emit_failure t('l5r.remove_clan_first')
