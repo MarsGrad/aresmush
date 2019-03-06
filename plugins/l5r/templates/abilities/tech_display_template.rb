@@ -11,7 +11,7 @@ module AresMUSH
       def name_school
         name = tech_config['name']
         school = tech_config['school']
-        display = left("%xyName:%xn #{name}", 30)
+        display = left("%xyName:%xn #{name}", 45)
         display << "%xySchool:%xn #{school}"
         display
       end
