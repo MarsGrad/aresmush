@@ -84,6 +84,8 @@ module AresMUSH
             model.update(l5r_is_shugenja: true)
             if (aff_def_choice)
               client.emit_ooc t('l5r.aff_def_choice')
+              model.update(l5r_affinity: affinity)
+              model.update(l5r_deficiency: deficiency)
             else
               model.update(l5r_affinity: affinity)
               model.update(l5r_deficiency: deficiency)
