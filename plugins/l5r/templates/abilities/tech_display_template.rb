@@ -18,7 +18,7 @@ module AresMUSH
 
       def rank
         rank = tech_config['rank']
-        display = "%xyRank: #{rank}"
+        display = "%xyRank:%xn #{rank}"
         display
       end
 
