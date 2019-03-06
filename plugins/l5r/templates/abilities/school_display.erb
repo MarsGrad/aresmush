@@ -9,6 +9,8 @@
 <% if school_config['shugenja'] == true %>
 <%= spells %>
 <%= starting_tech %>
+<% elsif school_config['clan'] == "None" %>
+<%= starting_tech %>
 <% else %>
 <%= techniques %>
 <% end %>

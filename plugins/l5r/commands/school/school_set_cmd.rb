@@ -57,6 +57,7 @@ module AresMUSH
           shugenja = school_config['shugenja']
           affinity = school_config['affinity']
           deficiency = school_config['deficiency']
+          aff_def_choice = school_config['aff_def_choice']
           honor = school_config['honor']
           first_tech = school_config['starting_technique']
 
@@ -72,7 +73,7 @@ module AresMUSH
           if (!current_clan && model.l5r_family != "None")
             client.emit_failure t('l5r.set_family_first')
             return
-          elsif current_clan != clan && model.l5r_family != "None"
+          elsif (current_clan != clan && model.l5r_family != "None")
             client.emit_failure t('l5r.wrong_clan', :clan => current_clan.titlecase)
           elsif current_clan != clan && model.l5r_family == "None"
             client.emit_failure t('l5r.ronin_wrong_clan')
@@ -81,8 +82,8 @@ module AresMUSH
 
           if (shugenja == true)
             model.update(l5r_is_shugenja: true)
-            if (school_name == "Isawa Shugenja")
-              client.emit_ooc t('l5r.isawa_shugenja')
+            if (aff_def_choice)
+              client.emit_ooc t('l5r.aff_def_choice')
             else
               model.update(l5r_affinity: affinity)
               model.update(l5r_deficiency: deficiency)

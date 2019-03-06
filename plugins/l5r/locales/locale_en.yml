@@ -43,7 +43,7 @@ en:
     not_shugenja: "Target isn't a Shugenja."
     already_have_spell: "Target already has that spell."
     spell_added: "Spell added."
-    isawa_shugenja: "The Isawa Shugenja School allows you to choose your own affinity and deficiency. Inform Staff of your decision on your app job."
+    aff_def_choice: "Your Shugenja School allows you to choose your own affinity and deficiency. Inform Staff of your decision on your app job."
     affinity_deficiency_set: "You've set their affinity to %{affinity} and deficiency to %{deficiency}."
     sheet_already_set: "You've already set your sheet type. Use sheet/init to reset before choosing a different type."
     must_set_sheet: "You must set your sheet type first."

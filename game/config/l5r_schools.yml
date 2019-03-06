@@ -7,7 +7,7 @@ l5r:
           trait_bonus: Stamina
           skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, "Lore: Shadowlands"]
           skills_display: "Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, Lore: Shadowlands"
-          skill_choice: "Any:Bugei"
+          skill_choice: "Any Bugei"
           shugenja: false
           honor: 3.5
           starting_technique: The Way of the Crab
@@ -18,7 +18,7 @@ l5r:
           trait_bonus: Willpower
           skills: [Calligraphy/Cipher, Defense, "Lore: Shadowlands", "Lore: Shadowlands", "Lore: Theology", Spellcraft]
           skills_display: "Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Theology, Spellcraft"
-          skill_choice: "Any:Weapon"
+          skill_choice: "Any Weapon"
           shugenja: true
           affinity: Earth
           deficiency: Air
@@ -32,7 +32,7 @@ l5r:
           trait_bonus: Perception
           skills: [Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit]
           skills_display: "Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit"
-          skill_choice: "Any:Merchant"
+          skill_choice: "Any Merchant"
           shugenja: false
           honor: 2.5
           starting_technique: The Way of the Carp
@@ -43,7 +43,7 @@ l5r:
           trait_bonus: Willpower
           skills: [Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, "Lore: Shadowlands", Stealth]
           skills_display: "Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, Lore: Shadowlands, Stealth"
-          skill_choice: "Any:Skill"
+          skill_choice: "Any"
           shugenja: false
           honor: 4.5
           starting_technique: "Torch's Flame Flickers"
@@ -54,7 +54,62 @@ l5r:
           trait_bonus: Reflexes
           skills: [Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony]
           skills_display: "Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony"
-          skill_choice: "Any:Bugei or High"
+          skill_choice: "Any Bugei or High"
+          shugenja: false
           honor: 6.5
           starting_technique: The Way of the Crane
           techniques: ['"The Way of the Crane"', '"Speed of Lightning"', '"First and Last Strike"', '"One Strike, Two Cuts"', '"Strike With No Thoughts"']
+        -
+          name: Disciples of Sun Tao
+          clan: None
+          trait_bonus: Reflexes
+          skills: [Athletics, Defense, Hunting, Iaijutsu, Kenjutsu]
+          skills_display: "Athletics, Defense, Hunting, Iaijutsu, Kenjutsu"
+          skill_choice: "Any 2"
+          shugenja: false
+          honor: 4.5
+          starting_technique: The Gaze of Sun Tao
+        -
+          name: Self-Taught Shugenja
+          clan: None
+          trait_bonus: Willpower
+          skills: [Athletics, Hunting, Meditation, Spellcraft]
+          skills_display: "Athletics, Hunting, Meditation, Spellcraft"
+          skill_choice: "Any 3 non-High"
+          shugenja: true
+          affinity: "Any non-Void"
+          deficiency: "Opposing Element and 1 Choice"
+          aff_def_choice: true
+          spells: Universal and any five you can cast. None can be for an element you have a deficiency in.
+          spell_choice: Any 5 non-Deficiency
+          honor: 4.0
+          starting_technique: "The Kami's Gift"
+        -
+          name: Dutiful Disciple Shugenja
+          clan: None
+          trait_bonus: Intelligence
+          skills: [Calligraphy, "Lore: Theology", Meditation, Spellcraft]
+          skills_display: Calligraphy, Lore: Theology, Meditation, Spellcraft
+          skill_choice: "Any 2 skills and Any Lore"
+          shugenja: true
+          affinity: "Any non-Void"
+          deficiency: "Opposing Element"
+          aff_def_choice: true
+          spells: Universal, 3 Affinity, 2 non-Deficiency, and 1 different non-Deficiency.
+          spell_choice: 3 Affinity, 2 non-Deficiency, 1 different non-Deficiency
+          honor: 4.0
+          starting_technique: Soul of Study
+        -
+          name: Ronin Order Shugenja
+          clan: None
+          trait_bonus: Awareness
+          skills: [Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft]
+          skills_display: Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft
+          skill_choice: Any skill and Any Lore
+          shugenja: true
+          affinity: "Air"
+          deficiency: "Earth"
+          spells: Universal, 3 Air, 2 Water, and 1 Fire
+          spell_choice: 3 Air, 2 Water, 1 Fire
+          honor: 5.0
+          starting_technique: The Path of Discipline
