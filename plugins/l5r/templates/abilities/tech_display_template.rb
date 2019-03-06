@@ -27,3 +27,6 @@ module AresMUSH
         display = "%xyBook:%xn #{page}"
         display
       end
+    end
+  end
+end
