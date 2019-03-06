@@ -31,16 +31,16 @@ module AresMUSH
         Chargen.check_chargen_locked(enactor)
       end
 
-      def check_is_approved
-        return nil if !enactor.is_approved?
-        return t('l5r.already_approved')
-      end
-
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           current_schools = model.l5r_schools
           if (!current_schools)
             client.emit_failure t('l5r.no_school')
+            return
+          end
+
+          if model.is_approved?
+            client.emit_failure t('l5r.already_approved')
             return
           end
 

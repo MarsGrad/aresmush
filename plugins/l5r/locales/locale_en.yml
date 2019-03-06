@@ -6,6 +6,7 @@ en:
     init_success: "Sheet initialized."
     must_set_clan: 'In order to set your family, you must first set your Clan.'
     family_added: "Your family has been set to %{family} and your Clan to %{clan}."
+    family_none_added: "Your family has been set to 'None'. You are a True Ronin."
     school_set: "Your school has been set to %{school} School."
     invalid_family: "That's not a valid family name!"
     invalid_school: "That's not a valid school!"
@@ -21,6 +22,7 @@ en:
     remove_school_first: "You have to remove the current school first!"
     remove_schools_first: "You have to remove all schools first!"
     remove_family_first: "You have to remove the current family first!"
+    remove_clan_first: "You have to remove the current clan first!"
     school_not_found: "Couldn't find a school with that name!"
     invalid_difficulty: "Difficulty must be a number higher than 0."
     invalid_ability_name: "That's not a valid ability name."
@@ -57,6 +59,9 @@ en:
     needs_note: "Make sure they have a note set explaining this ability."
     at_max_rank: "That ability is already at the max rank!"
     invalid_ring: "That's not a valid ring."
+    clan_set: "Your Clan has been set to %{clan}."
+    clan_removed: "Clan removed."
+    no_clan: "There's no Clan to remove!"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"

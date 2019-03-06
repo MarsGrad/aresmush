@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class FamilyRemCmd
+    class ClanRemCmd
       include CommandHandler
 
       attr_accessor :target_name
@@ -27,11 +27,10 @@ module AresMUSH
 
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
-          current_family = model.l5r_family
 
-          current_schools = model.l5r_schools.any?
-          if (current_schools)
-            client.emit_failure t('l5r.remove_schools_first')
+          sheet_type = model.l5r_sheet_type
+          if sheet_type != "bonge" || sheet_type != "geisha"
+            client.emit_failure t('l5r.invalid_sheet_type')
             return
           end
 
@@ -40,8 +39,9 @@ module AresMUSH
             return
           end
 
-          if (current_family)
-            model.update(l5r_family: nil)
+          current_clan = model.l5r_clan
+
+          if (current_clan)
             model.update(l5r_clan: nil)
 
             L5R.set_l5r_trait(model, 'agility', 2)
@@ -53,10 +53,10 @@ module AresMUSH
             L5R.set_l5r_trait(model, 'strength', 2)
             L5R.set_l5r_trait(model, 'willpower', 2)
 
-            client.emit_success t('l5r.family_removed')
+            client.emit_success t('l5r.clan_removed')
             return
           else
-            client.emit_failure t('l5r.no_family')
+            client.emit_failure t('l5r.no_clan')
             return
           end
         end

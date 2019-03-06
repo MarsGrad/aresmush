@@ -41,6 +41,9 @@ module AresMUSH
           if (!sheet_type)
             client.emit_failure t('l5r.must_set_sheet')
             return
+          elsif sheet_type == "bonge" || sheet_type == "geisha"
+            client.emit_failure t('l5r.invalid_sheet_type')
+            return
           end
 
           school_config = L5R.find_school_config(self.school_name)

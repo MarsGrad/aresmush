@@ -169,6 +169,12 @@ module AresMUSH
       families.select { |f| f['name'].downcase == family_name.downcase }.first
     end
 
+    def self.find_clan_config(clan_name)
+      return nil if !clan_name
+      clans = Global.read_config('l5r', 'clans')
+      clans.select { |c| c['name'].downcase == clan_name.downcase }.first
+    end
+
     def self.find_school_config(school_name)
       return nil if !school_name
       schools = Global.read_config('l5r', 'schools')

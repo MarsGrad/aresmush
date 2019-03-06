@@ -156,6 +156,17 @@ module AresMUSH
             return FamilyCmd
           end
         end
+      when "clan"
+        case cmd.switch
+        when "set"
+          return ClanSetCmd
+        when "rem"
+          return ClanRemCmd
+        else
+          if (!cmd.switch)
+            return ClanCmd
+          end
+        end
       end
 
       return nil

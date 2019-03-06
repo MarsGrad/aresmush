@@ -21,7 +21,7 @@ module AresMUSH
       end
 
       def check_valid_family
-        return t('l5r.invalid_family') if !L5R.is_valid_family?(self.family_name)
+        return t('l5r.invalid_family') if !L5R.is_valid_family?(self.family_name) && self.family_name != "None"
         return nil
       end
 
@@ -29,11 +29,6 @@ module AresMUSH
         return nil if enactor_name == self.target_name
         return nil if L5R.can_manage_abilities?(enactor)
         return t('dispatcher.not_allowed')
-      end
-
-      def check_is_approved
-        return nil if !enactor.is_approved?
-        return t('l5r.already_approved')
       end
 
       def check_chargen_locked
@@ -49,9 +44,24 @@ module AresMUSH
               return
             end
 
+            if model.is_approved?
+              client.emit_failure t('l5r.already_approved')
+              return
+            end
+
             sheet_type = model.l5r_sheet_type
             if (!sheet_type)
               client.emit_failure t('l5r.must_set_sheet')
+              return
+            elsif sheet_type == "bonge" || sheet_type == "geisha"
+              client.emit_failure t('l5r.invalid_sheet_type')
+              return
+            elsif self.family_name == "None" && sheet_type == "ronin"
+              model.update(l5r_family: "None")
+              client.emit_success t('l5r.family_none_added')
+              return
+            elsif self.family_name == "None" && sheet_type != "ronin"
+              client.emit_failure t('l5r.invalid_family')
               return
             end
 
