@@ -48,6 +48,7 @@ module AresMUSH
           enactor.update(l5r_void_ring: 3)
           enactor.update(l5r_void_pool: 3)
           enactor.update(l5r_sheet_type: sheet_type)
+          enactor.update(l5r_clan: "monk")
           enactor.update(l5r_status: 0.0)
           enactor.update(l5r_glory: 1.0)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)

@@ -6,8 +6,8 @@ l5r:
           clan: Crab
           trait_bonus: Stamina
           skills: [Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, "Lore: Shadowlands"]
-          skills_display: "Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, Lore: Shadowlands"
-          skill_choice: "Any Bugei"
+          skills_display: "Athletics, Defense, Heavy Weapons/Tetsubo, Intimidation, Kenjutsu, Lore: Shadowlands, and Any Bugei skill"
+          skill_choice: "Any Bugei skill"
           shugenja: false
           honor: 3.5
           starting_technique: The Way of the Crab
@@ -17,8 +17,8 @@ l5r:
           clan: Crab
           trait_bonus: Willpower
           skills: [Calligraphy/Cipher, Defense, "Lore: Shadowlands", "Lore: Shadowlands", "Lore: Theology", Spellcraft]
-          skills_display: "Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Theology, Spellcraft"
-          skill_choice: "Any Weapon"
+          skills_display: "Calligraphy/Cipher, Defense, Lore: Shadowlands, Lore: Theology, Spellcraft, and Any Weapon skill"
+          skill_choice: "Any Weapon skill"
           shugenja: true
           affinity: Earth
           deficiency: Air
@@ -31,8 +31,8 @@ l5r:
           clan: Crab
           trait_bonus: Perception
           skills: [Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit]
-          skills_display: "Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit"
-          skill_choice: "Any Merchant"
+          skills_display: "Commerce/Appraisal, Courtier, Defense, Etiquette, Intimidation, Sincerity/Deceit, and Any Merchant skill"
+          skill_choice: "Any Merchant skill"
           shugenja: false
           honor: 2.5
           starting_technique: The Way of the Carp
@@ -42,8 +42,8 @@ l5r:
           clan: Crab
           trait_bonus: Willpower
           skills: [Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, "Lore: Shadowlands", Stealth]
-          skills_display: "Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, Lore: Shadowlands, Stealth"
-          skill_choice: "Any"
+          skills_display: "Athletics, Hunting, Kenjutsu/Katana, Kyujutsu, Lore: Shadowlands, Stealth, and Any skill"
+          skill_choice: "Any skill"
           shugenja: false
           honor: 4.5
           starting_technique: "Torch's Flame Flickers"
@@ -53,8 +53,8 @@ l5r:
           clan: Crane
           trait_bonus: Reflexes
           skills: [Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony]
-          skills_display: "Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony"
-          skill_choice: "Any Bugei or High"
+          skills_display: "Etiquette, Iaijutsu/Focus, Kenjutsu, Kyujutsu, Sincerity, Tea Ceremony, and Any Bugei or High skill"
+          skill_choice: "Any Bugei or High skill"
           shugenja: false
           honor: 6.5
           starting_technique: The Way of the Crane
@@ -64,8 +64,8 @@ l5r:
           clan: None
           trait_bonus: Reflexes
           skills: [Athletics, Defense, Hunting, Iaijutsu, Kenjutsu]
-          skills_display: "Athletics, Defense, Hunting, Iaijutsu, Kenjutsu"
-          skill_choice: "Any 2"
+          skills_display: "Athletics, Defense, Hunting, Iaijutsu, Kenjutsu, Any 2 skills"
+          skill_choice: "Any 2 skills"
           shugenja: false
           honor: 4.5
           starting_technique: The Gaze of Sun Tao
@@ -74,8 +74,8 @@ l5r:
           clan: None
           trait_bonus: Willpower
           skills: [Athletics, Hunting, Meditation, Spellcraft]
-          skills_display: "Athletics, Hunting, Meditation, Spellcraft"
-          skill_choice: "Any 3 non-High"
+          skills_display: "Athletics, Hunting, Meditation, Spellcraft, and Any 3 non-High skills"
+          skill_choice: "Any 3 non-High skills"
           shugenja: true
           affinity: Any non-Void
           deficiency: Opposing Element and 1 Choice
@@ -89,8 +89,8 @@ l5r:
           clan: None
           trait_bonus: Intelligence
           skills: [Calligraphy, "Lore: Theology", Meditation, Spellcraft]
-          skills_display: 'Calligraphy, "Lore: Theology", Meditation, Spellcraft'
-          skill_choice: "Any 2 skills and Any Lore"
+          skills_display: 'Calligraphy, "Lore: Theology", Meditation, Spellcraft, Any 2 skills, and Any Lore skill'
+          skill_choice: "Any 2 skills and Any Lore skill"
           shugenja: true
           affinity: "Any non-Void"
           deficiency: "Opposing Element"
@@ -104,8 +104,8 @@ l5r:
           clan: None
           trait_bonus: Awareness
           skills: [Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft]
-          skills_display: 'Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft'
-          skill_choice: Any skill and Any Lore
+          skills_display: 'Calligraphy/Cipher, Divination, "Lore: Theology", Meditation, Spellcraft, Any skill, and Any Lore skill'
+          skill_choice: "Any skill and Any Lore skill"
           shugenja: true
           affinity: "Air"
           deficiency: "Earth"
@@ -113,3 +113,23 @@ l5r:
           spell_choice: 3 Air, 2 Water, 1 Fire
           honor: 5.0
           starting_technique: The Path of Discipline
+        -
+          name: Four Temples
+          clan: Monk
+          trait_bonus: Awareness
+          skills: [Courtier, Etiquette, Jiujutsu, "Lore: Theology/Shintao", Meditation]
+          skills_display: 'Courter, Etiquette, Jiujutsu, "Lore: Theology/Shintao", Meditation, Any 2 skills'
+          skill_choice: "Any 2 skills"
+          shugenja: false
+          honor: 6.5
+          starting_technique: Soul of Civility
+        -
+          name: The Order of Heroes
+          clan: Monk
+          trait_bonus: Perception
+          skills: [Athletics, Defense, Jiujutsu, "Lore: Theology", Meditation]
+          skills_display: 'Athletics, Defense, Jiujutsu, "Lore: Theology/Pick One", Meditation, and Any 2 skills'
+          skill_choice: 'Any 2 skills and Any Emphasis for "Lore: Theology"'
+          shugenja: false
+          honor: 4.5
+          starting_technique: Destiny's Hand

@@ -32,7 +32,7 @@ en:
     already_have_ability: "They already have this ability!"
     tech_added: "Technique added."
     wrong_school_command: "You're not allowed to do that. You might be looking for school/set."
-    school_skill_choice: "Your school allows you to choose: %xw%{skill_choice} skill%xg. Inform Staff of your decision on your app job."
+    school_skill_choice: "Your school allows you to choose: %xw%{skill_choice}%xg. Inform Staff of your decision on your app job."
     school_spell_choice: "Your school allows you to choose the following spells: %xw%{spell_choice}%xg. Inform Staff of your decision on your app job."
     shugenja_mismatch: "You can't have a shugenja school and a non-shugenja school at the same time."
     trait_raised: "You raised their %{trait} by 1."
