@@ -69,11 +69,14 @@ module AresMUSH
           end
 
           current_clan = model.l5r_clan
-          if (!current_clan && model.l5r_sheet_type != "ronin")
+          if (!current_clan && model.l5r_family != "None")
             client.emit_failure t('l5r.set_family_first')
             return
-          elsif current_clan != clan
+          elsif current_clan != clan && model.l5r_family != "None"
             client.emit_failure t('l5r.wrong_clan', :clan => current_clan.titlecase)
+          elsif current_clan != clan && model.l5r_family == "None"
+            client.emit_failure t('l5r.ronin_wrong_clan')
+            return
           end
 
           if (shugenja == true)

@@ -15,6 +15,7 @@ en:
     already_have_school: "They already belong to this school!"
     set_family_first: "You must set your family before your school!"
     wrong_clan: "Be aware: That's not a valid school for the %{clan} Clan. Your app may be denied unless you also take the 'Different School' advantage."
+    ronin_wrong_clan: "True Ronin don't have the opportunity to learn from a Clan School."
     family_removed: "Family removed."
     school_removed: "School removed."
     no_family: "There's no family to remove!"
