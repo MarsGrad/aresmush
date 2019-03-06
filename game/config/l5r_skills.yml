@@ -3,7 +3,7 @@ l5r:
   skills:
         -
           name: Acting
-          level: High Skill
+          level: High
           subtypes: Social, Perform
           default_trait: Awareness
           emphases: Clan, Gender, Profession
@@ -11,7 +11,7 @@ l5r:
           pg: Core pg. 135
         -
           name: Artisan
-          level: High Skill
+          level: High
           subtypes: Macro
           specialties: Bonsai, Gardening, Ikebana, Origami, Painting, Poetry, Sculpture, Tattooing
           default_trait: Awareness
@@ -20,7 +20,7 @@ l5r:
           pg: Core pg. 135
         -
           name: Calligraphy
-          level: High Skill
+          level: High
           subtypes: Artisan
           default_trait: Intelligence
           emphases: Cipher, High Rokugani
@@ -28,7 +28,7 @@ l5r:
           pg: Core pg. 135
         -
           name: Courtier
-          level: High Skill
+          level: High
           subtypes: Social
           default_trait: Awareness
           emphases: Gossip, Manipulation, Rhetoric
@@ -36,7 +36,7 @@ l5r:
           pg: Core pg. 135
         -
           name: Divination
-          level: High Skill
+          level: High
           subtypes: None
           default_trait: Intelligence
           emphases: Astrology, Kawaru
@@ -44,7 +44,7 @@ l5r:
           pg: Core pg. 135
         -
           name: Etiquette
-          level: High Skill
+          level: High
           subtypes: Social
           default_trait: Awareness
           emphases: Bureaucracy, Conversation, Courtesy
@@ -52,7 +52,7 @@ l5r:
           pg: Core pg. 136
         -
           name: Games
-          level: High Skill
+          level: High
           subtypes: Macro
           specialties: Fortunes and Winds, Go, Kemari, Letters, Sadane, Shogi
           default_trait: Awareness
@@ -61,7 +61,7 @@ l5r:
           pg: Core pg. 136
         -
           name: Investigation
-          level: High Skill
+          level: High
           subtypes: None
           default_trait: Perception
           emphases: Interrogation, Notice, Search
@@ -69,7 +69,7 @@ l5r:
           pg: Core pg. 136
         -
           name: Lore
-          level: High Skill (certain specialties are considered Low Skills)
+          level: High
           subtypes: Macro
           default_trait: Intelligence
           emphases: Varies by specialty
@@ -78,7 +78,7 @@ l5r:
           pg: Core pg. 137
         -
           name: Medicine
-          level: High Skill
+          level: High
           subtypes: None
           default_trait: Intelligence
           emphases: Antidotes, Disease, Herbalism, Non-Humans, Wound Treatment
@@ -86,7 +86,7 @@ l5r:
           pg: Core pg. 137
         -
           name: Meditation
-          level: High Skill
+          level: High
           subtypes: None
           default_trait: Void
           emphases: Fasting, Void Recovery
@@ -94,7 +94,7 @@ l5r:
           pg: Core pg. 137
         -
           name: Perform
-          level: High Skill
+          level: High
           subtypes: Macro, Social
           default_trait: Varies
           emphases: Varies by specialty
@@ -103,7 +103,7 @@ l5r:
           pg: Core pg. 137
         -
           name: Sincerity
-          level: High Skill
+          level: High
           subtypes: Social
           default_trait: Awareness
           emphases: Honesty, Deceit (the use of the deceit emphasis is considered a Low Skill)
@@ -111,7 +111,7 @@ l5r:
           pg: Core pg. 138
         -
           name: Spellcraft
-          level: High Skill
+          level: High
           subtypes: Use of the Importune emphasis is considered a Social skill
           default_trait: Intelligence
           emphases: Importune, Spell Research
@@ -119,7 +119,7 @@ l5r:
           pg: Core pg. 138
         -
           name: Tea Ceremony
-          level: High Skill
+          level: High
           subtypes: None
           default_trait: Void
           emphases: None
@@ -127,7 +127,7 @@ l5r:
           pg: Core pg. 139
         -
           name: Athletics
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Strength
           emphases: Climbing, Running, Swimming, Throwing
@@ -135,7 +135,7 @@ l5r:
           pg: Core pg. 139
         -
           name: Battle
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Perception
           emphases: Mass Combat, Skirmish
@@ -143,7 +143,7 @@ l5r:
           pg: Core pg. 139
         -
           name: Defense
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Reflexes
           emphases: None
@@ -151,7 +151,7 @@ l5r:
           pg: Core pg. 139
         -
           name: Horsemanship
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Agility
           emphases: Gaijin Riding Horse, Rokugani Pony, Utaku Steed
@@ -159,7 +159,7 @@ l5r:
           pg: Core pg. 139
         -
           name: Hunting
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Perception
           emphases: Survival, Tracking, Trailblazing
@@ -167,7 +167,7 @@ l5r:
           pg: Core pg. 140
         -
           name: Iaijutsu
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Reflexes
           emphases: Assessment, Focus
@@ -175,7 +175,7 @@ l5r:
           pg: Core pg. 140
         -
           name: Jiujutsu
-          level: Bugei Skill
+          level: Bugei
           subtypes: None
           default_trait: Agility
           emphases: Grappling, Improvised Weapons, Martial Arts
@@ -183,7 +183,7 @@ l5r:
           pg: Core pg. 140
         -
           name: Chain Weapons
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Kusarigama, Kyoketsu-shogi, Manrikikusari
@@ -191,7 +191,7 @@ l5r:
           pg: Core pg. 141
         -
           name: Heavy Weapons
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Dai Tsuchi, Masakari, Ono, Tetsubo
@@ -199,7 +199,7 @@ l5r:
           pg: Core pg. 141
         -
           name: Kenjutsu
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Katana, Ninja-to, No-dachi, Parangu, Scimitar, Wakizashi
@@ -207,7 +207,7 @@ l5r:
           pg: Core pg. 141
         -
           name: Knives
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Aiguchi, Jitte, Kama, Sai, Tanto
@@ -215,7 +215,7 @@ l5r:
           pg: Core pg. 141
         -
           name: Kyujutsu
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Reflexes
           emphases: Dai-kyu, Han-kyu, Yumi
@@ -223,7 +223,7 @@ l5r:
           pg: Core pg. 142
         -
           name: Ninjutsu
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon (Considered a Low Skill)
           default_trait: Agility or Reflexes
           emphases: Blowgun, Shuriken, Tsubute
@@ -231,7 +231,7 @@ l5r:
           pg: Core pg. 142
         -
           name: Polearms
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Bisento, Nagamaki, Naginata, Sasumata, Sodegarami
@@ -239,7 +239,7 @@ l5r:
           pg: Core pg. 142
         -
           name: Spears
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Mai Chong, Kumade, Lance, Nage-yari, Yari
@@ -247,7 +247,7 @@ l5r:
           pg: Core pg. 142
         -
           name: Staves
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: Bo, Jo, Machi-kanshisha, Nunchaku, Sang Kauw, Tonfa
@@ -255,7 +255,7 @@ l5r:
           pg: Core pg. 142
         -
           name: War Fan
-          level: Bugei Skill
+          level: Bugei
           subtypes: Weapon
           default_trait: Agility
           emphases: None
@@ -263,7 +263,7 @@ l5r:
           pg: Core pg. 142
         -
           name: Animal Handling
-          level: Merchant Skill
+          level: Merchant
           subtypes: None
           default_trait: Awareness
           emphases: By animal (Dogs, Horses, and Falcons are most common)
@@ -271,7 +271,7 @@ l5r:
           pg: Core pg. 143
         -
           name: Commerce
-          level: Merchant Skill
+          level: Merchant
           subtypes: None
           default_trait: Intelligence
           emphases: Appraisal, Mathematics
@@ -279,7 +279,7 @@ l5r:
           pg: Core pg. 143
         -
           name: Craft
-          level: Merchant Skill
+          level: Merchant
           subtypes: Macro
           default_trait: Varies
           emphases: Varies by specialty
@@ -288,7 +288,7 @@ l5r:
           pg: Core pg. 143
         -
           name: Engineering
-          level: Merchant Skill
+          level: Merchant
           subtypes: Craft
           default_trait: Intelligence
           emphases: Construction, Siege
@@ -296,7 +296,7 @@ l5r:
           pg: Core pg. 143
         -
           name: Sailing
-          level: Merchant Skill
+          level: Merchant
           subtypes: Craft
           default_trait: Agility or Intelligence
           emphases: Knot-work, Navigation
@@ -304,7 +304,7 @@ l5r:
           pg: Core pg. 144
         -
           name: Forgery
-          level: Low Skill
+          level: Low
           subtypes: Craft
           default_trait: Agility
           emphases: By type of item being forged (Artwork, Documents, Personal Seals, etc.)
@@ -312,7 +312,7 @@ l5r:
           pg: Core pg. 144
         -
           name: Intimidation
-          level: Low Skill
+          level: Low
           subtypes: Social
           default_trait: Awareness
           emphases: Bullying, Control, Torture
@@ -320,7 +320,7 @@ l5r:
           pg: Core pg. 144
         -
           name: Sleight of Hand
-          level: Low Skill
+          level: Low
           subtypes: None
           default_trait: Agility
           emphases: Conceal, Escape, Pick Pocket, Prestidigitation
@@ -328,7 +328,7 @@ l5r:
           pg: Core pg. 145
         -
           name: Stealth
-          level: Low Skill
+          level: Low
           subtypes: None
           default_trait: Agility
           emphases: Ambush, Shadowing, Sneaking, Spell Casting
@@ -336,7 +336,7 @@ l5r:
           pg: Core pg. 145
         -
           name: Temptation
-          level: Low Skill
+          level: Low
           subtypes: Social
           default_trait: Awareness
           emphases: Bribery, Seduction
