@@ -69,7 +69,7 @@ module AresMUSH
             return
           end
 
-          current_clan = model.l5r_clan
+          current_clan = model.l5r_clan.downcase
           if (!current_clan && model.l5r_family != "None")
             client.emit_failure t('l5r.set_family_first')
             return
