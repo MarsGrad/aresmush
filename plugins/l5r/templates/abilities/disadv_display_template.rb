@@ -4,7 +4,7 @@ module AresMUSH
       attr_accessor :disadv_config
 
       def initialize(disadv_config)
-        @adv_config = disadv_config
+        @disadv_config = disadv_config
         super File.dirname(__FILE__) + "/disadv_display.erb"
       end
 
