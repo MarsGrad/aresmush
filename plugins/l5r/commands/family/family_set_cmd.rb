@@ -58,6 +58,7 @@ module AresMUSH
               return
             elsif self.family_name == "None" && sheet_type == "ronin"
               model.update(l5r_family: "None")
+              model.update(l5r_clan: "None")
               client.emit_success t('l5r.family_none_added')
               return
             elsif self.family_name == "None" && sheet_type != "ronin"
