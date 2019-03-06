@@ -85,7 +85,7 @@ en:
     void_pool_burn: "%{character} burns %{amount} Void Point(s)."
     void_pool_recover: "%{character} recovers %{amount} Void Point(s)."
 
-    school_list_title: "Schools"
+    options_title: "Available Options"
 
     rings_title: "Rings"
     spells_title: "Spells"
