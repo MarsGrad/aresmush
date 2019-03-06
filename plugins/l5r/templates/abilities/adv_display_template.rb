@@ -19,7 +19,7 @@ module AresMUSH
       def ranked
         ranked = adv_config['ranked'].to_s.titlecase
         if ranked.empty?
-          ranked = "True"
+          ranked = "False"
         end
         display = "%xyRanked:%xn #{ranked}"
         display
