@@ -11,7 +11,7 @@ module AresMUSH
       def name_clan
         name = school_config['name']
         clan = school_config['clan']
-        display = left("%xyName:%xn #{name}", 30)
+        display = left("%xyName:%xn #{name}", 45)
         display << "%xyClan:%xn #{clan}"
         display
       end
