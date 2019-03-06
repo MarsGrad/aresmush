@@ -53,7 +53,7 @@ module AresMUSH
             if (!sheet_type)
               client.emit_failure t('l5r.must_set_sheet')
               return
-            elsif sheet_type != "ronin" || sheet_type != "samurai"
+            elsif sheet_type != "ronin" && sheet_type != "samurai"
               client.emit_failure t('l5r.invalid_sheet_type')
               return
             elsif self.family_name == "None" && sheet_type == "ronin"

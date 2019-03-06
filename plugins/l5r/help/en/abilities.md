@@ -2,10 +2,6 @@
 toc: L5R
 summary: Viewing available abilities
 aliases:
-- schools
-- school
-- families
-- family
 - spells
 - spell
 - kata
@@ -16,10 +12,6 @@ aliases:
 
 Some characters (Samurai and Monks) will have abilities above and beyond
 the norm. School techniques, Spells, Kata, and Kiho can be listed with the following:
-
-`schools` - Lists available schools
-`schools/sort <clan>` - Lists available schools by Great Clan
-`school <school name>` - Displays more detail about a given school
 
 `techs` - Lists all available techniques
 `techs/sort <school>` - Lists the techniques for a particular school
