@@ -55,21 +55,53 @@ module AresMUSH
         case cmd.switch
         when "raise"
           return TraitRaiseCmd
+        when "lower"
+          return TraitLowerCmd
+        when "sort"
+          return TraitSortCmd
+        else
+          if (!cmd.switch)
+            return TraitCmd
+          end
         end
       when "skill"
         case cmd.switch
         when "raise"
           return SkillRaiseCmd
+        when "lower"
+          return SkillLowerCmd
+        when "sort"
+          return SkillSortCmd
+        else
+          if (!cmd.switch)
+            return SkillCmd
+          end
         end
       when "adv"
         case cmd.switch
         when "add"
           return AdvAddCmd
+        when "rem"
+          return AdvRemCmd
+        when "sort"
+          return AdvSortCmd
+        else
+          if (!cmd.switch)
+            return AdvCmd
+          end
         end
       when "disadv"
         case cmd.switch
         when "add"
           return DisadvAddCmd
+        when "rem"
+          return DisadvRemCmd
+        when "sort"
+          return DisadvSortCmd
+        else
+          if (!cmd.switch)
+            return DisadvCmd
+          end
         end
       when "sheet"
         case cmd.switch
@@ -103,6 +135,8 @@ module AresMUSH
           return TechAddCmd
         when "rem"
           return TechRemCmd
+        when "sort"
+          return TechSortCmd
         else
           if (!cmd.switch)
             return TechCmd
@@ -118,6 +152,8 @@ module AresMUSH
           return SpellBurnCmd
         when "recover"
           return SpellRecoverCmd
+        when "sort"
+          return SpellSortCmd
         else
           if (!cmd.switch)
             return SpellCmd
@@ -129,6 +165,8 @@ module AresMUSH
           return KataAddCmd
         when "rem"
           return KataRemCmd
+        when "sort"
+          return KataSortCmd
         else
           if (!cmd.switch)
             return KataCmd
@@ -140,6 +178,8 @@ module AresMUSH
           return KihoAddCmd
         when "rem"
           return KihoRemCmd
+        when "sort"
+          return KihoSortCmd
         else
           if (!cmd.switch)
             return KihoCmd
@@ -151,6 +191,8 @@ module AresMUSH
           return FamilySetCmd
         when "rem"
           return FamilyRemCmd
+        when "sort"
+          return FamilySortCmd
         else
           if (!cmd.switch)
             return FamilyCmd
@@ -162,6 +204,8 @@ module AresMUSH
           return ClanSetCmd
         when "rem"
           return ClanRemCmd
+        when "sort"
+          return ClanSortCmd
         else
           if (!cmd.switch)
             return ClanCmd
