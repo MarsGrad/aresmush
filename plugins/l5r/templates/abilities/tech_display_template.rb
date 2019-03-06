@@ -12,7 +12,7 @@ module AresMUSH
         name = tech_config['name']
         school = tech_config['school']
         display = left("%xyName:%xn #{name}", 30)
-        display << "%xySchool:%xn #{clan}"
+        display << "%xySchool:%xn #{school}"
         display
       end
 
