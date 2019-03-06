@@ -24,7 +24,7 @@ module AresMUSH
 
       def schools
         schools = kata_config['schools'].join(", ")
-        display = "%xySchools:%xn #{display}"
+        display = "%xySchools:%xn #{schools}"
         display
       end
 
