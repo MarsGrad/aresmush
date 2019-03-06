@@ -78,6 +78,16 @@ module AresMUSH
           enactor.update(l5r_is_shugenja: false)
         end
 
+        affinity = enactor.l5r_affinity
+        if (affinity)
+          enactor.update(l5r_affinity: nil)
+        end
+
+        deficiency = enactor.l5r_deficiency
+        if (deficiency)
+          enactor.update(l5r_deficiency: nil)
+        end
+
         L5R.set_l5r_trait(enactor, 'agility', 2)
 
         L5R.set_l5r_trait(enactor, 'awareness', 2)
