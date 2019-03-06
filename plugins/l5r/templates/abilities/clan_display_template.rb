@@ -9,25 +9,25 @@ module AresMUSH
       end
 
       def name
-        name = clan_display['name']
+        name = clan_config['name']
         display = "%xyName:%xn #{name}"
         display
       end
 
       def trait
-        trait = clan_display['trait_bonus']
+        trait = clan_config['trait_bonus']
         display = "%xyBonge/Geisha Trait Bonus:%xn #{trait}"
         display
       end
 
       def skills
-        skills = clan_display['skills'].join(", ")
+        skills = clan_config['skills'].join(", ")
         display = "%xyBonge/Geisha Skills:%xn #{display}"
         display
       end
 
       def page
-        page = clan_display['pg']
+        page = clan_config['pg']
         display = "%xyBook:%xn #{page}"
         display
       end
