@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class KataSortCmd
+    class SpellSortCmd
       include CommandHandler
 
       attr_accessor :ring_name
@@ -14,15 +14,15 @@ module AresMUSH
       end
 
       def handle
-        kata_list = Global.read_config('l5r', 'kata')
-        kata_list = kata_list.select { |a| a['ring'].downcase == self.ring_name }
-        if (kata_list.empty?)
+        spell_list = Global.read_config('l5r', 'spells')
+        spell_list = spell_list.select { |a| a['ring'].downcase == self.subtype_name }
+        if (spell_list.empty?)
           client.emit_failure t('l5r.invalid_ability_name')
           return
         end
-        kata_names = kata_list.map { |a| "#{a['name']} -- #{a['ring']}/#{t['mastery']}"}
+        spell_names = spell_list.map { |a| "#{a['name']} -- #{a['ring']}/#{a['mastery']}"}
 
-        list = kata_names.each_with_index.map do |a, i|
+        list = spell_names.each_with_index.map do |a, i|
           linebreak = i % 2 == 0 ? "\n" : ""
           "#{linebreak}#{a}"
         end

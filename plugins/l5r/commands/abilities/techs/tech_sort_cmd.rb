@@ -1,28 +1,28 @@
 module AresMUSH
   module L5R
-    class KataSortCmd
+    class TechSortCmd
       include CommandHandler
 
-      attr_accessor :ring_name
+      attr_accessor :school_name
 
       def parse_args
-        self.ring_name = downcase_arg(cmd.args)
+        self.school_name = downcase_arg(cmd.args)
       end
 
       def required_args
-        [self.ring_name]
+        [self.school_name]
       end
 
       def handle
-        kata_list = Global.read_config('l5r', 'kata')
-        kata_list = kata_list.select { |a| a['ring'].downcase == self.ring_name }
-        if (kata_list.empty?)
+        tech_list = Global.read_config('l5r', 'techniques')
+        tech_list = tech_list.select { |a| a['school'].downcase == self.school_name }
+        if (tech_list.empty?)
           client.emit_failure t('l5r.invalid_ability_name')
           return
         end
-        kata_names = kata_list.map { |a| "#{a['name']} -- #{a['ring']}/#{t['mastery']}"}
+        tech_names = tech_list.map { |a| "#{a['name']} -- #{a['school']}/#{a['rank']}" }
 
-        list = kata_names.each_with_index.map do |a, i|
+        list = spell_names.each_with_index.map do |a, i|
           linebreak = i % 2 == 0 ? "\n" : ""
           "#{linebreak}#{a}"
         end

@@ -1,22 +1,22 @@
 module AresMUSH
   module L5R
-    class TechCmd
+    class ClanCmd
       include CommandHandler
 
-      attr_accessor :tech_name
+      attr_accessor :clan_name
 
       def parse_args
         if (cmd.args)
-          self.tech_name = downcase_arg(cmd.args)
+          self.clan_name = downcase_arg(cmd.args)
         end
       end
 
       def handle
-        if (!self.tech_name)
-          tech_list = Global.read_config('l5r', 'techniques')
-          tech_names = tech_list.map { |t| "#{t['name']} -- #{t['school']}/#{t['rank']}"}
+        if (!self.clan_name)
+          clan_list = Global.read_config('l5r', 'clans')
+          clan_names = clan_list.map { |t| "#{t['name']}"}
 
-          list = tech_names.each_with_index.map do |a, i|
+          list = clan_names.each_with_index.map do |a, i|
             linebreak = i % 2 == 0 ? "\n" : ""
             "#{linebreak}#{a}"
           end
@@ -30,14 +30,14 @@ module AresMUSH
             client.emit template.render
           end
         else
-          tech_config = L5R.find_tech_config(self.tech_name)
+          clan_config = L5R.find_clan_config(self.clan_name)
 
-          if (!tech_config)
+          if (!clan_config)
             client.emit_failure t('l5r.invalid_ability_name')
             return
           end
 
-          template = TechDisplayTemplate.new(tech_config)
+          template = ClanDisplayTemplate.new(clan_config)
           client.emit template.render
         end
       end

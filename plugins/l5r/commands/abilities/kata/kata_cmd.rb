@@ -14,7 +14,7 @@ module AresMUSH
       def handle
         if (!self.kata_name)
           kata_list = Global.read_config('l5r', 'kata')
-          kata_names = kata_list.map { |t| "#{t['name']} -- #{t['ring']}"}
+          kata_names = kata_list.map { |t| "#{t['name']} -- #{t['ring']}/#{t['mastery']}"}
 
           list = kata_names.each_with_index.map do |a, i|
             linebreak = i % 2 == 0 ? "\n" : ""

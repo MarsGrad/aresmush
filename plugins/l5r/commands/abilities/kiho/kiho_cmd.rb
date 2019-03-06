@@ -14,7 +14,7 @@ module AresMUSH
       def handle
         if (!self.kiho_name)
           kiho_list = Global.read_config('l5r', 'kiho')
-          kiho_names = kiho_list.map { |t| "#{t['name']} -- #{t['ring']}"}
+          kiho_names = kiho_list.map { |t| "#{t['name']} -- #{t['ring']}/#{t['mastery']}"}
 
           list = kiho_names.each_with_index.map do |a, i|
             linebreak = i % 2 == 0 ? "\n" : ""

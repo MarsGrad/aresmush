@@ -14,7 +14,7 @@ module AresMUSH
       def handle
         if (!self.spell_name)
           spell_list = Global.read_config('l5r', 'spells')
-          spell_names = spell_list.map { |t| "#{t['name']} -- #{t['ring']}"}
+          spell_names = spell_list.map { |t| "#{t['name']} -- #{t['ring']}/#{t['mastery']}"}
 
           list = spell_names.each_with_index.map do |a, i|
             linebreak = i % 2 == 0 ? "\n" : ""
