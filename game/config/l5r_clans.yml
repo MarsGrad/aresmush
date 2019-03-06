@@ -5,31 +5,39 @@ l5r:
       name: Crab
       trait_bonus: Stamina
       skills: ["Lore: Shadowlands", Medicine/Wound Treatment, Athletics, Stealth]
+      pg: Core pg. 105
     -
       name: Crane
       trait_bonus: Awareness
       skills: [Etiquette, Commerce, Temptation, "Craft: Farming"]
+      pg: Core pg. 109
     -
       name: Dragon
       trait_bonus: Perception
       skills: [Meditation, "Lore: Omens", Athletics, Stealth]
+      pg: Core pg. 112
     -
       name: Lion
       trait_bonus: Strength
       skills: [Staves, Athletics, Intimidation, "Lore: War"]
+      pg: Core pg. 116
     -
       name: Mantis
       trait_bonus: Reflexes
       skills: [Sailing, "Craft: Fishing", Athletics, "Craft: Shipbuilding"]
+      pg: Core pg. 120
     -
       name: Phoenix
       trait_bonus: Intelligence
       skills: ["Lore: Shugenja", "Lore: History", Meditation, Commerce]
+      pg: Core pg. 123
     -
       name: Scorpion
       trait_bonus: Willpower
       skills: [Stealth, Sleight of Hand, Forgery, Sincerity]
+      pg: Core pg. 126
     -
       name: Unicorn
       trait_bonus: Agility
       skills: [Horsemanship, Animal Handling, Staves, Hunting]
+      pg: Core pg. 129

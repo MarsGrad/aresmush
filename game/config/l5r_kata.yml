@@ -6,23 +6,28 @@ l5r:
       ring: Air
       mastery: 3
       schools: ["Any"]
+      pg: Core pg. 259
     -
       name: Striking as Earth
       ring: Earth
       mastery: 3
       schools: ["Any"]
+      pg: Core pg. 259
     -
       name: Striking as Fire
       ring: Fire
       mastery: 3
       schools: ["Any"]
+      pg: Core pg. 259
     -
       name: Striking as Water
       ring: Water
       mastery: 4
       schools: ["Any"]
+      pg: Core pg. 259
     -
       name: Striking as Void
       ring: Void
       mastery: 3
       schools: ["Any"]
+      pg: Core pg. 259

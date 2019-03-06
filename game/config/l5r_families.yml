@@ -5,143 +5,179 @@ l5r:
         name: Hida
         clan: Crab
         trait_bonus: Strength
+        pg: Core pg. 105
     -
         name: Hiruma
         clan: Crab
         trait_bonus: Agility
+        pg: Core pg. 105
     -
         name: Kaiu
         clan: Crab
         trait_bonus: Intelligence
+        pg: Core pg. 105
     -
         name: Kuni
         clan: Crab
         trait_bonus: Intelligence
+        pg: Core pg. 105
     -
         name: Toritaka
         clan: Crab
         trait_bonus: Perception
+        pg: Core pg. 106
     -
         name: Yasuki
         clan: Crab
         trait_bonus: Awareness
+        pg: Core pg. 106
     -
         name: Asahina
         clan: Crane
         trait_bonus: Intelligence
+        pg: Core pg. 109
     -
         name: Daidoji
         clan: Crane
         trait_bonus: Stamina
+        pg: Core pg. 109
     -
         name: Doji
         clan: Crane
         trait_bonus: Awareness
+        pg: Core pg. 109
     -
         name: Kakita
         clan: Crane
         trait_bonus: Agility
+        pg: Core pg. 109
     -
         name: Kitsuki
         clan: Dragon
         trait_bonus: Awareness
+        pg: Core pg. 112
     -
         name: Mirumoto
         clan: Dragon
         trait_bonus: Agility
+        pg: Core pg. 112
     -
         name: Tamori
         clan: Dragon
         trait_bonus: Willpower
+        pg: Core pg. 112
     -
         name: Togashi
         clan: Dragon
         trait_bonus: Reflexes
+        pg: Core pg. 112
     -
         name: Akodo
         clan: Lion
         trait_bonus: Agility
+        pg: Core pg. 116
     -
         name: Ikoma
         clan: Lion
         trait_bonus: Awareness
+        pg: Core pg. 116
     -
         name: Kitsu
         clan: Lion
         trait_bonus: Intelligence
+        pg: Core pg. 116
     -
         name: Matsu
         clan: Lion
         trait_bonus: Strength
+        pg: Core pg. 116
     -
         name: Kitsune
         clan: Mantis
         trait_bonus: Intelligence
+        pg: Core pg. 120
     -
         name: Moshi
         clan: Mantis
         trait_bonus: Intelligence
+        pg: Core pg. 120
     -
         name: Tsuruchi
         clan: Mantis
         trait_bonus: Perception
+        pg: Core pg. 120
     -
         name: Yoritomo
         clan: Mantis
         trait_bonus: Stamina
+        pg: Core pg. 120
     -
         name: Agasha
         clan: Phoenix
         trait_bonus: Perception
+        pg: Core pg. 123
     -
         name: Asako
         clan: Phoenix
         trait_bonus: Awareness
+        pg: Core pg. 123
     -
         name: Isawa
         clan: Phoenix
         trait_bonus: Willpower
+        pg: Core pg. 123
     -
         name: Shiba
         clan: Phoenix
         trait_bonus: Perception
+        pg: Core pg. 123
     -
         name: Bayushi
         clan: Scorpion
         trait_bonus: Agility
+        pg: Core pg. 126
     -
         name: Shosuro
         clan: Scorpion
         trait_bonus: Awareness
+        pg: Core pg. 126
     -
         name: Soshi
         clan: Scorpion
         trait_bonus: Intelligence
+        pg: Core pg. 126
     -
         name: Yogo
         clan: Scorpion
         trait_bonus: Willpower
+        pg: Core pg. 126
     -
         name: Horiuchi
         clan: Unicorn
         trait_bonus: Willpower
+        pg: Core pg. 129
     -
         name: Ide
         clan: Unicorn
         trait_bonus: Perception
+        pg: Core pg. 129
     -
         name: Iuchi
         clan: Unicorn
         trait_bonus: Intelligence
+        pg: Core pg. 129
     -
         name: Moto
         clan: Unicorn
         trait_bonus: Agility
+        pg: Core pg. 130
     -
         name: Shinjo
         clan: Unicorn
         trait_bonus: Reflexes
+        pg: Core pg. 130
     -
         name: Utaku
         clan: Unicorn
         trait_bonus: Stamina
+        pg: Core pg. 130

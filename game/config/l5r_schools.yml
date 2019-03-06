@@ -12,6 +12,7 @@ l5r:
           honor: 3.5
           starting_technique: The Way of the Crab
           techniques: ['"The Way of the Crab"', '"The Mountain Does Not Move"', '"Two Pincers, One Mind"', '"Devastating Blow"', '"The Mountain Does Not Fall"']
+          pg: Core pg. 106
         -
           name: Kuni Shugenja
           clan: Crab
@@ -26,6 +27,7 @@ l5r:
           spell_choice: "3 Earth, 2 Fire, 1 Water"
           honor: 2.5
           starting_technique: Gaze into Shadow
+          pg: Core pg. 107
         -
           name: Yasuki Courtier
           clan: Crab
@@ -37,6 +39,7 @@ l5r:
           honor: 2.5
           starting_technique: The Way of the Carp
           techniques: ['"The Way of the Carp"', '"Do As We Say"', '"Treasures of the Carp"', '"Wiles of the Carp"', '"What is Yours is Mine"']
+          pg: Core pg. 107
         -
           name: Hiruma Bushi
           clan: Crab
@@ -48,6 +51,7 @@ l5r:
           honor: 4.5
           starting_technique: "Torch's Flame Flickers"
           techniques: ["'Torch's Flame Flickers'", "'Wolf's Little Lesson'", '"Hummingbird Wings"', '"Shark Smells Blood"', '"Daylight Wastes No Movement"']
+          pg: Core pg. 108
         -
           name: Kakita Bushi
           clan: Crane
@@ -59,6 +63,7 @@ l5r:
           honor: 6.5
           starting_technique: The Way of the Crane
           techniques: ['"The Way of the Crane"', '"Speed of Lightning"', '"First and Last Strike"', '"One Strike, Two Cuts"', '"Strike With No Thoughts"']
+          pg: Core pg. 109
         -
           name: Disciples of Sun Tao
           clan: None
@@ -69,6 +74,7 @@ l5r:
           shugenja: false
           honor: 4.5
           starting_technique: The Gaze of Sun Tao
+          pg: Core pg. 234
         -
           name: Self-Taught Shugenja
           clan: None
@@ -84,6 +90,7 @@ l5r:
           spell_choice: Any 5 non-Deficiency
           honor: 4.0
           starting_technique: "The Kami's Gift"
+          pg: EotE pg. 205
         -
           name: Dutiful Disciple Shugenja
           clan: None
@@ -99,6 +106,7 @@ l5r:
           spell_choice: 3 Affinity, 2 non-Deficiency, 1 different non-Deficiency
           honor: 4.0
           starting_technique: Soul of Study
+          pg: EotE pg. 205
         -
           name: Ronin Order Shugenja
           clan: None
@@ -113,6 +121,7 @@ l5r:
           spell_choice: 3 Air, 2 Water, 1 Fire
           honor: 5.0
           starting_technique: The Path of Discipline
+          pg: EotE pg. 205
         -
           name: Four Temples
           clan: Monk
@@ -123,6 +132,7 @@ l5r:
           shugenja: false
           honor: 6.5
           starting_technique: Soul of Civility
+          pg: Core pg. 231
         -
           name: The Order of Heroes
           clan: Monk
@@ -133,3 +143,4 @@ l5r:
           shugenja: false
           honor: 4.5
           starting_technique: Destiny's Hand
+          pg: Core pg. 232

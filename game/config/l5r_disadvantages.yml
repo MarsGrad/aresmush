@@ -8,21 +8,25 @@ l5r:
       ranked: true
       max_rank: 2
       restriction: None
+      pg: Core pg. 156
     -
       name: Ascetic
       subtype: Mental
       cost: "2"
       ranked: false
       restriction: None
+      pg: Core pg. 156
     -
       name: Bad Eyesight
       subtype: Physical
       cost: "3"
       ranked: false
       restriction: None
+      pg: Core pg. 156
     -
       name: Bad Fortune
       subtype: Spiritual
       cost: "3"
       ranked: false
       restriction: [descriptor, note]
+      pg: Core pg. 156

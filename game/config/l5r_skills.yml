@@ -8,6 +8,7 @@ l5r:
           default_trait: Awareness
           emphases: Clan, Gender, Profession
           description: "A measure of an individual's ability to convincingly pass himself off as someone else."
+          pg: Core pg. 135
         -
           name: Artisan
           level: High Skill
@@ -16,6 +17,7 @@ l5r:
           default_trait: Awareness
           emphases: Varies by specialty
           description: "A macro skill that represents one's ability in various artistic arts. Requires a specialty."
+          pg: Core pg. 135
         -
           name: Calligraphy
           level: High Skill
@@ -23,6 +25,7 @@ l5r:
           default_trait: Intelligence
           emphases: Cipher, High Rokugani
           description: "The art of fluid, masterful script and code writing."
+          pg: Core pg. 135
         -
           name: Courtier
           level: High Skill
@@ -30,6 +33,7 @@ l5r:
           default_trait: Awareness
           emphases: Gossip, Manipulation, Rhetoric
           description: "A measure of a character's ability to participate in Rokugani courts."
+          pg: Core pg. 135
         -
           name: Divination
           level: High Skill
@@ -37,6 +41,7 @@ l5r:
           default_trait: Intelligence
           emphases: Astrology, Kawaru
           description: "The measure of one's ability to divine the future."
+          pg: Core pg. 135
         -
           name: Etiquette
           level: High Skill
@@ -44,6 +49,7 @@ l5r:
           default_trait: Awareness
           emphases: Bureaucracy, Conversation, Courtesy
           description: "A character's knowledge of Rokugani etiquette and the Imperial political system."
+          pg: Core pg. 136
         -
           name: Games
           level: High Skill
@@ -52,6 +58,7 @@ l5r:
           default_trait: Awareness
           emphases: Varies by specialty
           description: "A macro skill that represents one's ability to play various games. Requires a specialty."
+          pg: Core pg. 136
         -
           name: Investigation
           level: High Skill
@@ -59,6 +66,7 @@ l5r:
           default_trait: Perception
           emphases: Interrogation, Notice, Search
           description: "Represents your ability to assess your surroundings and gather information."
+          pg: Core pg. 136
         -
           name: Lore
           level: High Skill (certain specialties are considered Low Skills)
@@ -67,6 +75,7 @@ l5r:
           emphases: Varies by specialty
           specialties: Lore has too many specialties to list here. Check pg. 137 for the full list.
           description: "A macro skill that represents a breadth of knowledge in a specific subject."
+          pg: Core pg. 137
         -
           name: Medicine
           level: High Skill
@@ -74,6 +83,7 @@ l5r:
           default_trait: Intelligence
           emphases: Antidotes, Disease, Herbalism, Non-Humans, Wound Treatment
           description: "Used to treat many different injuries and ailments."
+          pg: Core pg. 137
         -
           name: Meditation
           level: High Skill
@@ -81,6 +91,7 @@ l5r:
           default_trait: Void
           emphases: Fasting, Void Recovery
           description: "A measure of one's ability to achieve a meaningful state of meditation."
+          pg: Core pg. 137
         -
           name: Perform
           level: High Skill
@@ -89,6 +100,7 @@ l5r:
           emphases: Varies by specialty
           specialties: Biwa, Dance, Drums, Flute, Oratory, Puppeteer, Samisen, Song, Storytelling
           description: "A character's ability to entertain and perform."
+          pg: Core pg. 137
         -
           name: Sincerity
           level: High Skill
@@ -96,6 +108,7 @@ l5r:
           default_trait: Awareness
           emphases: Honesty, Deceit (the use of the deceit emphasis is considered a Low Skill)
           description: "One's ability to speak the truth (or a lie) convincingly."
+          pg: Core pg. 138
         -
           name: Spellcraft
           level: High Skill
@@ -103,6 +116,7 @@ l5r:
           default_trait: Intelligence
           emphases: Importune, Spell Research
           description: "A measure of one's ability to commune with the kami to cast a spell."
+          pg: Core pg. 138
         -
           name: Tea Ceremony
           level: High Skill
@@ -110,6 +124,7 @@ l5r:
           default_trait: Void
           emphases: None
           description: "A character's ability to perform a formal tea ceremony."
+          pg: Core pg. 139
         -
           name: Athletics
           level: Bugei Skill
@@ -117,6 +132,7 @@ l5r:
           default_trait: Strength
           emphases: Climbing, Running, Swimming, Throwing
           description: "The ability to perform various physical activities."
+          pg: Core pg. 139
         -
           name: Battle
           level: Bugei Skill
@@ -124,6 +140,7 @@ l5r:
           default_trait: Perception
           emphases: Mass Combat, Skirmish
           description: "The study of war and the practical application therein."
+          pg: Core pg. 139
         -
           name: Defense
           level: Bugei Skill
@@ -131,6 +148,7 @@ l5r:
           default_trait: Reflexes
           emphases: None
           description: "Represents one's ability to defend themselves in combat. Necessary to use Defense and Full Defense stances."
+          pg: Core pg. 139
         -
           name: Horsemanship
           level: Bugei Skill
@@ -138,6 +156,7 @@ l5r:
           default_trait: Agility
           emphases: Gaijin Riding Horse, Rokugani Pony, Utaku Steed
           description: "The ability to use a mount, particularly in combat."
+          pg: Core pg. 139
         -
           name: Hunting
           level: Bugei Skill
@@ -145,6 +164,7 @@ l5r:
           default_trait: Perception
           emphases: Survival, Tracking, Trailblazing
           description: "The ability to hunt, track, and survive in the wild."
+          pg: Core pg. 140
         -
           name: Iaijutsu
           level: Bugei Skill
@@ -152,6 +172,7 @@ l5r:
           default_trait: Reflexes
           emphases: Assessment, Focus
           description: "One's ability in the formal dueling system of Rokugan."
+          pg: Core pg. 140
         -
           name: Jiujutsu
           level: Bugei Skill
@@ -159,6 +180,7 @@ l5r:
           default_trait: Agility
           emphases: Grappling, Improvised Weapons, Martial Arts
           description: "The art of unarmed combat."
+          pg: Core pg. 140
         -
           name: Chain Weapons
           level: Bugei Skill
@@ -166,6 +188,7 @@ l5r:
           default_trait: Agility
           emphases: Kusarigama, Kyoketsu-shogi, Manrikikusari
           description: "A character's ability to use chain weapons in combat."
+          pg: Core pg. 141
         -
           name: Heavy Weapons
           level: Bugei Skill
@@ -173,6 +196,7 @@ l5r:
           default_trait: Agility
           emphases: Dai Tsuchi, Masakari, Ono, Tetsubo
           description: "A character's ability to use heavy weapons in combat."
+          pg: Core pg. 141
         -
           name: Kenjutsu
           level: Bugei Skill
@@ -180,6 +204,7 @@ l5r:
           default_trait: Agility
           emphases: Katana, Ninja-to, No-dachi, Parangu, Scimitar, Wakizashi
           description: "A character's ability to use swords in combat."
+          pg: Core pg. 141
         -
           name: Knives
           level: Bugei Skill
@@ -187,6 +212,7 @@ l5r:
           default_trait: Agility
           emphases: Aiguchi, Jitte, Kama, Sai, Tanto
           description: "A character's ability to use knives in combat."
+          pg: Core pg. 141
         -
           name: Kyujutsu
           level: Bugei Skill
@@ -194,6 +220,7 @@ l5r:
           default_trait: Reflexes
           emphases: Dai-kyu, Han-kyu, Yumi
           description: "A character's ability to use a bow in combat."
+          pg: Core pg. 142
         -
           name: Ninjutsu
           level: Bugei Skill
@@ -201,6 +228,7 @@ l5r:
           default_trait: Agility or Reflexes
           emphases: Blowgun, Shuriken, Tsubute
           description: "A character's ability to use the weapons of assassination."
+          pg: Core pg. 142
         -
           name: Polearms
           level: Bugei Skill
@@ -208,6 +236,7 @@ l5r:
           default_trait: Agility
           emphases: Bisento, Nagamaki, Naginata, Sasumata, Sodegarami
           description: "A character's ability to use polearms in combat."
+          pg: Core pg. 142
         -
           name: Spears
           level: Bugei Skill
@@ -215,6 +244,7 @@ l5r:
           default_trait: Agility
           emphases: Mai Chong, Kumade, Lance, Nage-yari, Yari
           description: "A character's ability to use spears in combat."
+          pg: Core pg. 142
         -
           name: Staves
           level: Bugei Skill
@@ -222,6 +252,7 @@ l5r:
           default_trait: Agility
           emphases: Bo, Jo, Machi-kanshisha, Nunchaku, Sang Kauw, Tonfa
           description: "A character's ability to use staves in combat."
+          pg: Core pg. 142
         -
           name: War Fan
           level: Bugei Skill
@@ -229,6 +260,7 @@ l5r:
           default_trait: Agility
           emphases: None
           description: "A character's ability to use a War Fan in combat."
+          pg: Core pg. 142
         -
           name: Animal Handling
           level: Merchant Skill
@@ -236,6 +268,7 @@ l5r:
           default_trait: Awareness
           emphases: By animal (Dogs, Horses, and Falcons are most common)
           description: "A representation of one's ability to train and command animals."
+          pg: Core pg. 143
         -
           name: Commerce
           level: Merchant Skill
@@ -243,6 +276,7 @@ l5r:
           default_trait: Intelligence
           emphases: Appraisal, Mathematics
           description: "One's knowledge and ability in the trading and appraising of products."
+          pg: Core pg. 143
         -
           name: Craft
           level: Merchant Skill
@@ -251,6 +285,7 @@ l5r:
           emphases: Varies by specialty
           specialties: Craft has too many specialties to list here. Please check pg. 143 of the core book.
           description: "A macro skill that represents one's ability to produce products and useful items. Requires a specialty."
+          pg: Core pg. 143
         -
           name: Engineering
           level: Merchant Skill
@@ -258,6 +293,7 @@ l5r:
           default_trait: Intelligence
           emphases: Construction, Siege
           description: "One's knowledge of and ability to build large scale projects."
+          pg: Core pg. 143
         -
           name: Sailing
           level: Merchant Skill
@@ -265,6 +301,7 @@ l5r:
           default_trait: Agility or Intelligence
           emphases: Knot-work, Navigation
           description: "A character's ability to pilot or contribute to the sailing of a vessel."
+          pg: Core pg. 144
         -
           name: Forgery
           level: Low Skill
@@ -272,6 +309,7 @@ l5r:
           default_trait: Agility
           emphases: By type of item being forged (Artwork, Documents, Personal Seals, etc.)
           description: "The ability to falsify papers or other items."
+          pg: Core pg. 144
         -
           name: Intimidation
           level: Low Skill
@@ -279,6 +317,7 @@ l5r:
           default_trait: Awareness
           emphases: Bullying, Control, Torture
           description: "A character's ability to manipulate others through the use of threats."
+          pg: Core pg. 144
         -
           name: Sleight of Hand
           level: Low Skill
@@ -286,6 +325,7 @@ l5r:
           default_trait: Agility
           emphases: Conceal, Escape, Pick Pocket, Prestidigitation
           description: "The manipulation of small objects for the purpose of misdirection or concealment."
+          pg: Core pg. 145
         -
           name: Stealth
           level: Low Skill
@@ -293,6 +333,7 @@ l5r:
           default_trait: Agility
           emphases: Ambush, Shadowing, Sneaking, Spell Casting
           description: "The ability to remain out of sight while moving or acting."
+          pg: Core pg. 145
         -
           name: Temptation
           level: Low Skill
@@ -300,3 +341,4 @@ l5r:
           default_trait: Awareness
           emphases: Bribery, Seduction
           description: "The art of manipulating others by offering them something they desire."
+          pg: Core pg. 145

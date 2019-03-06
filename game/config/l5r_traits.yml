@@ -5,31 +5,39 @@ l5r:
       name: Reflexes
       ring: Air
       description: "Represents a character's ability to instantly react to events around him."
+      pg: Core pg. 76
     -
       name: Awareness
       ring: Air
       description: "Represents a character's intuition and general ability to empathize with others."
+      pg: Core pg. 76
     -
       name: Willpower
       ring: Earth
       description: "Determines a character's ability to focus on the task before him and resist manipulation."
+      pg: Core pg. 77
     -
       name: Stamina
       ring: Earth
       description: "Determines a character's ability to endure constant physical activity and recover from wounds."
+      pg: Core pg. 77
     -
       name: Intelligence
       ring: Fire
       description: "Measures a character's ability to gain new knowledge and put it to use."
+      pg: Core pg. 77
     -
       name: Agility
       ring: Fire
       description: "Represents a character's hand-eye coordination and general physical athleticism."
+      pg: Core pg. 77
     -
       name: Perception
       ring: Water
       description: "Represents a character's attention to events unfolding around him."
+      pg: Core pg. 78
     -
       name: Strength
       ring: Water
       description: "Represents a character's pure physical power."
+      pg: Core pg. 78

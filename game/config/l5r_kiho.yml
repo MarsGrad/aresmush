@@ -7,27 +7,32 @@ l5r:
       mastery: 3
       atemi: false
       type: Internal
+      pg: Core pg. 262
     -
       name: Flee the Darkness
       ring: Air
       mastery: 6
       atemi: false
       type: Kharmic
+      pg: Core pg. 262
     -
       name: The Great Silence
       ring: Air
       mastery: 4
       atemi: true
       type: Mystical
+      pg: Core pg. 262
     -
       name: Harmony of the Mind
       ring: Air
       mastery: 5
       atemi: false
       type: Mystical
+      pg: Core pg. 262
     -
       name: Riding the Clouds
       ring: Air
       mastery: 4
       atemi: false
       type: Mystical
+      pg: Core pg. 262
