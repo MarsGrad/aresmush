@@ -16,3 +16,17 @@ l5r:
     minute:
     - 25
   periodic_xp: 2
+  shortcuts:
+    families: family
+    schools: school
+    traits: trait
+    skills: skill
+    advs: adv
+    disadvs: disadv
+    technique: tech
+    techniques: tech
+    techs: tech
+    spells: spell
+    clans: clan
+    health: wounds
+    wound: wounds
