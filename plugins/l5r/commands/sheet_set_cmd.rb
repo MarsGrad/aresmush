@@ -38,11 +38,13 @@ module AresMUSH
           enactor.update(l5r_sheet_type: sheet_type)
           enactor.update(l5r_glory: 0.0)
           enactor.update(l5r_status: 0.0)
+          Demographics.set_group(model, "vocation", sheet_type)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "geisha"
           enactor.update(l5r_void_ring: 1)
           enactor.update(l5r_void_pool: 1)
           enactor.update(l5r_sheet_type: sheet_type)
+          Demographics.set_group(model, "vocation", sheet_type)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "monk"
           enactor.update(l5r_void_ring: 3)
@@ -51,12 +53,15 @@ module AresMUSH
           enactor.update(l5r_clan: "monk")
           enactor.update(l5r_status: 0.0)
           enactor.update(l5r_glory: 1.0)
+          Demographics.set_group(model, "vocation", sheet_type)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "ronin"
           enactor.update(l5r_sheet_type: sheet_type)
+          Demographics.set_group(model, "vocation", sheet_type)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         elsif sheet_type == "samurai"
           enactor.update(l5r_sheet_type: sheet_type)
+          Demographics.set_group(model, "vocation", sheet_type)
           client.emit_success t('l5r.sheet_type_set', :sheet_type => sheet_type.titlecase)
         else
           client.emit_failure t('l5r.invalid_sheet_type')
