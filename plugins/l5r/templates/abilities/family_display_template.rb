@@ -12,7 +12,7 @@ module AresMUSH
         name = family_config['name']
         clan = family_config['clan']
         display = left("%xyName:%xn #{name}", 45)
-        display << "%xyClan:%n #{clan}"
+        display << "%xyClan:%xn #{clan}"
         display
       end
 
