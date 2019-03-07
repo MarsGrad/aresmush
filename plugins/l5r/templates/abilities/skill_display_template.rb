@@ -38,7 +38,7 @@ module AresMUSH
 
       def desc
         desc = skill_config['description']
-        display = "%xyDescription:%xn #{desc}"
+        display = "%xyDescription:%xn %x46#{desc}%xn"
         display
       end
 
