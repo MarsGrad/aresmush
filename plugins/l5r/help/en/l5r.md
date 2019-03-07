@@ -8,5 +8,4 @@ order: 1
 This game uses the Legend of the Five Rings 4th Edition system.
 You can pick up a copy of the core book here: https://www.drivethrurpg.com/product/83945/Legend-of-the-Five-Rings-4th-Edition
 
-The Character Generation room will walk you through the steps of creating a character in L5R,
-and you can reference further information with the `ref` command. (help ref).
+The Character Generation room will walk you through the steps of creating a character in L5R.

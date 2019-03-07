@@ -23,7 +23,6 @@ the norm. School techniques, Spells, Kata, and Kiho can be listed with the follo
 
 `kata` - Lists all available kata
 `kata/sort <ring>` - Lists available kata for a particular ring
-`kata/sort <school>` - Lists kata by school. 'Any' returns universal kata.
 `kata <kata name>` - Displays more detail about a given kata
 
 `kiho` - Lists all available kiho

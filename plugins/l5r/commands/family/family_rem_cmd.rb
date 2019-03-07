@@ -17,7 +17,7 @@ module AresMUSH
       def check_can_rem
         return nil if enactor_name == self.target_name
         return nil if L5R.can_manage_abilities?(enactor)
-        return t('dispatcher.not_allowed')
+        return t('l5r.not_allowed_family')
       end
 
       def check_chargen_locked
