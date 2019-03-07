@@ -58,7 +58,7 @@ module AresMUSH
           trait = L5R.find_trait(model, trait_bonus)
           school = L5R.find_school(model, self.school_name)
 
-          if (school)
+          if (school && school != "togashi tattooed order")
             school.delete
             trait.update(rank: trait.rank - 1)
             model.l5r_skills.each { |s| s.delete }
@@ -72,6 +72,18 @@ module AresMUSH
               model.l5r_is_shugenja = false
               model.l5r_affinity = nil
               model.l5r_deficiency = nil
+            end
+
+            client.emit_success t('l5r.school_removed')
+            return
+          elsif (school && school == "togashi tattooed order")
+            school.delete
+            model.update(l5r_void_ring: model.l5r_void_ring - 1)
+            model.l5r_skills.each { |s| s.delete }
+            model.l5r_techniques.each do |t|
+              if t.name == first_tech
+                t.delete
+              end
             end
 
             client.emit_success t('l5r.school_removed')
