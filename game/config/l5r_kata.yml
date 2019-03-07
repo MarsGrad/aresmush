@@ -20,14 +20,87 @@ l5r:
       schools: ["Any"]
       pg: Core pg. 259
     -
+      name: Striking as Void
+      ring: Void
+      mastery: 3
+      schools: ["Any"]
+      pg: Core pg. 259
+
+    -
       name: Striking as Water
       ring: Water
       mastery: 4
       schools: ["Any"]
       pg: Core pg. 259
     -
-      name: Striking as Void
+      name: Balance the Elements Style
       ring: Void
       mastery: 3
-      schools: ["Any"]
+      schools: ["Mirumoto Bushi", "Shiba Bushi"]
       pg: Core pg. 259
+    -
+      name: Breath of Wind Style
+      ring: Air
+      mastery: 3
+      schools: ["Kakita Bushi", "Bayushi Bushi"]
+      pg: Core pg. 259
+    -
+      name: Disappearing World Style
+      ring: Fire
+      mastery: 4
+      schools: ["Akodo Bushi", "Kakita Bushi"]
+      pg: Core pg. 259
+    -
+      name: Hidden Blade Style
+      ring: Air
+      mastery: 4
+      schools: ["Bayushi Bushi", "Yoritomo Bushi"]
+      pg: Core pg. 259
+    -
+      name: Indomitable Warrior Style
+      ring: Earth
+      mastery: 4
+      schools: ["Daigotsu Bushi", "Hida Bushi", "Ichiro Bushi", "Moto Bushi"]
+      pg: Core pg. 260
+    -
+      name: Iron Forest Style
+      ring: Air
+      mastery: 4
+      schools: ["Daidoji Iron Warrior", "Heichi Bushi", "Shiba Bushi"]
+      pg: Core pg. 260
+    -
+      name: Iron in the Mountains Style
+      ring: Earth
+      mastery: 3
+      schools: ["Daidoji Iron Warrior", "Hida Bushi"]
+      pg: Core pg. 260
+    -
+      name: Reckless Abandon Style
+      ring: Fire
+      mastery: 4
+      schools: ["Daigotsu Bushi", "Matsu Berserker", "Usagi Bushi"]
+      pg: Core pg. 260
+    -
+      name: Strength in Arms Style
+      ring: Water
+      mastery: 4
+      schools: ["Hida Bushi", "Ichiro Bushi", "Moto Bushi"]
+      pg: Core pg. 260
+    -
+      name: Strength of Purity Style
+      ring: Void
+      mastery: 4
+      schools: ["Akodo Bushi", "Kakita Bushi", "Matsu Berserker", "Utaku Battle Maiden"]
+      pg: Core pg. 260
+    -
+      name: Spinning Blades Style
+      ring: Fire
+      mastery: 5
+      schools: ["Mirumoto Bushi", "Yoritomo Bushi"]
+      pg: Core pg. 260
+    -
+      name: Veiled Menace Style
+      ring: Air
+      mastery: 4
+      schools: ["Bayushi Bushi", "Hiruma Bushi", "Tsuruchi Archer", "Yoritomo Bushi"]
+      pg: Core pg. 260
