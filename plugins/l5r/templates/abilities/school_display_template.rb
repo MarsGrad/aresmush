@@ -56,7 +56,7 @@ module AresMUSH
       def affinity_deficiency
         affinity = school_config['affinity']
         deficiency = school_config['deficiency']
-        display = left("%xyAffinity:%xn #{affinity}", 30)
+        display = left("%xyAffinity:%xn #{affinity}", 45)
         display << "%xyDeficiency:%xn #{deficiency}"
         display
       end
