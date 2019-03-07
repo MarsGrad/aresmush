@@ -114,8 +114,8 @@ module AresMUSH
         enactor.update(l5r_sheet_type: nil)
         enactor.update(l5r_stance: "attack")
         enactor.update(l5r_current_wounds: 0)
-        Demographics.set_group(model, "clan", "")
-        Demographics.set_group(model, "vocation", "")
+        Demographics.set_group(enactor, "clan", "")
+        Demographics.set_group(enactor, "vocation", "")
 
         client.emit_success t('l5r.init_success')
       end
