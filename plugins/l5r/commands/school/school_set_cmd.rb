@@ -130,7 +130,7 @@ module AresMUSH
           end
 
           if school_name == "togashi tattooed order"
-            model.update(l5r_void_rank: model.l5r_void_rank + 1)
+            model.update(l5r_void_ring: model.l5r_void_rank + 1)
           else
             trait = L5R.find_trait(model, trait_bonus)
             trait.update(rank: trait.rank + 1)
