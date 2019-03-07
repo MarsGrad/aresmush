@@ -360,6 +360,126 @@ l5r:
       restriction: None
       pg: Core pg. 154
     -
+      name: "Tattoo: Balance"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tatooed Order
+      pg: Core pg. 114
+    -
+      name: "Tatoo: Bamboo"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Blaze"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Centipede"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Crab"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Crane"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Dragon"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Hawk"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Ki-Rin"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Lion"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Mantis"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Mountain"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Ocean"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 114
+    -
+      name: "Tattoo: Phoenix"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Scorpion"
+      subtype: Physical        
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Spider"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Storm"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Void"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Wind"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
+      name: "Tattoo: Wolf"
+      subtype: Physical
+      cost: 'None'
+      restriction: Togashi Tattooed Order
+      pg: Core pg. 115
+    -
       name: Touch of the Spirit Realms
       subtype: Spiritual
       cost: '5'

@@ -80,7 +80,7 @@ module AresMUSH
             client.emit_failure t('l5r.wrong_clan', :clan => current_clan.titlecase)
           elsif current_clan.downcase != clan && model.l5r_family == "None"
             client.emit_failure t('l5r.ronin_wrong_clan')
-            return            
+            return
           end
 
           if (shugenja == true)
@@ -129,8 +129,12 @@ module AresMUSH
             end
           end
 
-          trait = L5R.find_trait(model, trait_bonus)
-          trait.update(rank: trait.rank + 1)
+          if school_name == "togashi tattooed order"
+            model.update(l5r_void_rank: model.l5r_void_rank + 1)
+          else
+            trait = L5R.find_trait(model, trait_bonus)
+            trait.update(rank: trait.rank + 1)
+          end
 
           current_insight = L5R.calc_l5r_insight(model)
           model.update(l5r_current_insight_rank: current_insight)

@@ -227,6 +227,36 @@ module AresMUSH
         void_spell_pool
       end
 
+      def honor
+        honor = char.l5r_honor
+        display = "Honor: #{honor}"
+        display
+      end
+
+      def glory
+        glory = char.l5r_glory
+        display = "Glory: #{glory}"
+        display
+      end
+
+      def status
+        status = char.l5r_status
+        display = "Status: #{status}"
+        display
+      end
+
+      def armor
+        armor = L5R.calc_l5r_armor(char)
+        display = "Armor TN: #{armor}"
+        display
+      end
+
+      def stance
+        stance = char.l5r_stance
+        display = "Stance: #{stance}"
+        display
+      end
+
       def format_bar(current, max)
         current = current || 0
         max = max || 10
@@ -244,6 +274,48 @@ module AresMUSH
               rating = left(a.rank, 20)
               "#{linebreak}%xh#{title}%xn #{rating}"
             end
+      end
+
+      def health
+        status = L5R.calc_l5r_wound_status(char)
+        if status == "Healthy"
+          display = left("%xgWounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%xgHealthy: No TN Penalties -- Largely Undamaged%xn"
+        elsif status == "Nicked"
+          display = left("%x47Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x47Nicked: TNs +3 -- Mild but distracting injury%xn"
+        elsif status == "Grazed"
+          display = left("%x120Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x120Grazed: TN +5 -- Injured, but still able to function without tremendous difficulty%xn"
+        elsif status == "Hurt"
+          display = left("%x136Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x136Hurt: TN +10 -- Begun to suffer noticeably from injuries%xn"
+        elsif status == "Injured"
+          display = left("%x166Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x166Injured: TN +15 -- Difficulty focusing attention on the task at hand%xn"
+        elsif status == "Crippled"
+          display = left("%x203Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x203Crippled:TN +20 -- Can barely stand, much less move. Move actions increase in action step (Free becomes Simple, etc.)%xn"
+        elsif status == "Down"
+          display = left("%x197Wounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%x197Down: TN +40 -- Virtually incapacitated. May speak only in whisper, only take Free Actions (costs a Void point), and can't move.%xn"
+        elsif status == "Out"
+          display = left("%xrWounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%xrOut: Actions unavailable -- Immobile, unconscious, and likely dying. Any damage above this level means death%xn"
+        elsif status == "Dead"
+          display = left("%xh%xxWounds:%xn ", 14)
+          display << format_bar(char.l5r_current_wounds, L5R.calc_l5r_max_wounds(char))
+          display << "%r%xh%xxDead: Your character has likely died. You may be entitled to a final Dramatic Moment.%xn"
+        end
+        display
       end
     end
   end

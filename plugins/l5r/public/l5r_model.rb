@@ -18,11 +18,13 @@ module AresMUSH
     attribute :l5r_affinity
     attribute :l5r_deficiency
     attribute :l5r_sheet_type
+    attribute :l5r_stance
     attribute :l5r_is_shugenja, :type => DataType::Boolean
     attribute :l5r_xp, :type => DataType::Float, :default => 0
     attribute :l5r_xp_log, :type => DataType::Array, :default => []
     attribute :l5r_void_ring, :type => DataType::Integer
     attribute :l5r_void_pool, :type => DataType::Integer
+    attribute :l5r_current_wounds, :type => DataType::Integer, :default => 0
     attribute :l5r_honor, :type => DataType::Float
     attribute :l5r_glory, :type => DataType::Float, :default => 1.0
     attribute :l5r_status, :type => DataType::Float, :default => 1.0

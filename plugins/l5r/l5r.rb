@@ -203,6 +203,28 @@ module AresMUSH
             return ClanCmd
           end
         end
+      when "stance"
+        return StanceCmd
+      when "prove"
+        case cmd.switch
+        when "to"
+          return ProveToCmd
+        else
+          if (!cmd.switch)
+            return ProveCmd
+          end
+        end
+      when "wounds"
+        case cmd.switch
+        when "add"
+          return WoundsAddCmd
+        when "heal"
+          return WoundsHealCmd
+        else
+          if (!cmd.switch)
+            return WoundsCmd
+          end
+        end
       end
 
       return nil

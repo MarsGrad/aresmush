@@ -64,6 +64,8 @@ en:
     clan_removed: "Clan removed."
     no_clan: "There's no Clan to remove!"
     not_monk: "That's a monk order and you're not set as a monk!"
+    invalid_stance: "That's not a valid stance."
+    stance_change: "%{character} changes their stance to: %xr%{stance}!%xn"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
@@ -98,5 +100,7 @@ en:
     disadvantage_title: "Disadvantages"
     kata_title: "Kata"
     kiho_title: "Kiho"
+    health_title: "Health"
+    derived_title: "Derived Attributes"
     xp_title: "%{name}'s Total XP"
     xp_last_five_title: "Last Five Spends/Awards for %{name}"

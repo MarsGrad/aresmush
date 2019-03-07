@@ -65,6 +65,144 @@ l5r:
           techniques: ['"The Way of the Crane"', '"Speed of Lightning"', '"First and Last Strike"', '"One Strike, Two Cuts"', '"Strike With No Thoughts"']
           pg: Core pg. 109
         -
+          name: Asahina Shugenja
+          clan: Crane
+          trait_bonus: Awareness
+          skills: [Calligraphy/Cipher, Etiquette, "Lore: Theology", Meditation, Spellcraft]
+          skills_display: "Calligraphy/Cipher, Etiquette, 'Lore: Theology', Meditation, Spellcraft, Any Artisan Skill, and Any High Skill"
+          skill_choice: "Any Artisan and Any High skill"
+          shugenja: true
+          affinity: Air
+          deficiency: Fire
+          spells: 3 Air, 2 Water, 1 Earth
+          honor: 6.5
+          starting_technique: "The Soul's Grace"
+          pg: Core pg. 110
+        -
+          name: Doji Courtier
+          clan: Crane
+          trait_bonus: Awareness
+          skills: [Calligraphy, Courtier/Manipulation, Etiquette/Courtesy, "Perform: Storytelling", Sincerity, Tea Ceremony]
+          skills_display: "Calligraphy, Courtier/Manipulation, Etiquette/Courtesy, 'Perform: Storytelling', Sincerity, Tea Ceremony, and Any Artisan or Perform Skill"
+          skill_choice: "Any Artisan or Perform skill"
+          shugenja: false
+          honor: 6.5
+          starting_technique: The Soul of Honor
+          techniques: ['"The Soul of Honor"', '"Speaking in Silence"', '"The Perfect Gift"', '"Voice of Honor"', '"The Gift of the Lady"']
+          pg: Core pg. 110
+        -
+          name: Daidoji Iron Warriors
+          clan: Crane
+          trait_bonus: Agility
+          skills: [Battle, Defense, Defense, Iaijutsu, Kenjutsu/Katana, Kyujutsu]
+          skills_display: "Battle, Defense 2, Iaijutsu, Kenjutsu/Katana, Kyujutsu, and Any one Skill"
+          skill_choice: "Any one skill"
+          shugenja: false
+          honor: 6.5
+          starting_technique: The Force of Honor
+          techniques: ['"The Force of Honor"', '"The Shield of Faith"', '"Strike Beneath the Veil"', '"Vigilance of Mind"', '"To Tread on the Sword"']
+          pg: Core pg. 111
+        -
+          name: Mirumoto Bushi
+          clan: Dragon
+          trait_bonus: Stamina
+          skills: [Defense, Iaijutsu, Kenjutsu/Katana, "Lore: Shugenja", Meditation, "Lore: Theology"]
+          skills_display: "Defense, Iaijutsu, Kenjutsu/Katana, 'Lore: Shugenja', 'Lore: Theology', Meditation, and Any one Bugei or High Skill"
+          skill_choice: "Any one Bugei or High skill"
+          shugenja: false
+          honor: 4.5
+          starting_technique: Way of the Dragon
+          techniques: ['"Way of the Dragon"', '"The Calm in Midst of Thunder"', '"Strong and Swift"', '"Furious Retaliation"', '"Heart of the Dragon"']
+          pg: Core pg. 113
+        -
+          name: Tamori Shugenja
+          clan: Dragon
+          trait_bonus: Stamina
+          skills: [Athletics, Calligraphy/Cipher, Defense, Divination, "Lore: Theology", Medicine, Spellcraft]
+          skills_display: "Athletics, Calligraphy/Cipher, Defense, Divination, 'Lore: Theology', Medicine, Spellcraft"
+          skill_choice: None
+          shugenja: true
+          affinity: Earth
+          deficiency: Air
+          spells: 3 Earth, 2 Fire, 1 Water
+          honor: 4.5
+          starting_technique: Flesh of the Elements
+          pg: Core pg. 113
+        -
+          name: Kitsuki Investigator
+          clan: Dragon
+          trait_bonus: Perception
+          skills: [Courtier, Etiquette/Courtesy, Investigation/Interrogation, Kenjutsu, Meditation, Sincerity]
+          skills_display: "Courtier, Etiquette/Courtesy, Investigation/Interrogation, Kenjutsu, Meditation, Sincerity, and Any Lore skill"
+          skill_choice: "Any one Lore skill"
+          shugenja: false
+          honor: 5.5
+          starting_technique: "Kitsuki's Method"
+          techniques: ["'Kitsuki's Method'", '"Wisdom the Wind Brings"', '"Know the Rhythm of the Heart"', '"Finding the Path"', '"The Eyes Betray the Heart"']
+          pg: Core pg. 114
+        -
+          name: Togashi Tattooed Order
+          clan: Dragon
+          trait_bonus: Void
+          skills: [Athletics, Defense, "Craft: Tattooing", Jiujutsu, Meditation]
+          skills_display: "Athletics, Defense, 'Craft: Tattooing', Jiujutsu, Meditation, Any one Lore skill, and Any one non-Low skill"
+          skill_choice: "Any one Lore and any one non-Low skill"
+          shugenja: false
+          honor: 4.5
+          starting_technique: Blood of the Kami
+          techniques: ['"Blood of the Kami"', '"Body of Stone"', '"Blessing of the Kami"', '"Will of Stone"', '"Touch of the Kami"']
+          pg: Core pg. 114
+        -
+          name: Akodo Bushi
+          clan: Lion
+          trait_bonus: Perception
+          skills: [Battle/Mass Combat, Defense, Kenjutsu, Kyujutsu, "Lore: History", Sincerity]
+          skills_display: "Battle/Mass Combat, Defense, Kenjutsu, Kyujutsu, 'Lore: History', Sincerity, and Any one Bugei or High Skill"
+          skill_choice: "Any one Bugei or High skill"
+          shugenja: false
+          honor: 6.5
+          starting_technique: The Way of the Lion
+          techniques: ['"The Way of the Lion"', '"Strength of Purity"', '"Strength of My Ancestors"', '"Triumph Before Battle"', "'Akodo's Final Lesson'"]
+          pg: Core pg. 116
+        -
+          name: Kitsu Shugenja
+          clan: Lion
+          trait_bonus: Perception
+          skills: [Battle, Calligraphy/Cipher, Etiquette, "Lore: History", "Lore: Theology", Spellcraft]
+          skills_display: "Battle, Calligraphy/Cipher, Etiquette, 'Lore: History', 'Lore: Theology', Spellcraft, and Any one High or Bugei Skill"
+          skill_choice: Any one High or Bugei skill
+          shugenja: true
+          affinity: Water
+          deficiency: Fire
+          spells: 3 Water, 2 Air, 1 Earth
+          honor: 6.5
+          starting_technique: Eyes of the Ancestors
+          pg: Core pg. 117
+        -
+          name: Ikoma Bard
+          clan: Lion
+          trait_bonus: Intelligence
+          skills: [Courtier, Etiquette, "Lore: History/Lion Clan", "Perform: Storytelling", Sincerity/Honesty]
+          skills_display: "Courtier, Etiquette, 'Lore: History/Lion Clan', 'Perform: Storytelling', Sincerity/Honesty, Any one High Skill, and Any one Bugei Skill"
+          skill_choice: Any one High and Any one Bugei skill
+          shugenja: false
+          honor: 6.5
+          starting_technique: The Herald of Glory
+          techniques: ['"The Herald of Glory"', '"The Heart of the Lion"', '"The Voice of the Ancestors"', '"The Strength of Tradition"', '"Every Lion is Your Brother"']
+          pg: Core pg. 118
+        -
+          name: Matsu Berserker
+          clan: Lion
+          trait_bonus: Strength
+          skills: [Battle, Jiujutsu, Kenjutsu/Katana, Kyujutsu, "Lore: History"]
+          skills_display: "Battle, Jiujutsu, Kenjutsu/Katana, Kyujutsu, 'Lore: History', and Any 2 Bugei Skills"
+          skill_choice: "Any 2 Bugei skills"
+          shugenja: false
+          honor: 6.5
+          starting_technique: "The Lion's Roar"
+          techniques: ["'The Lion's Roar'", "'Matsu's Fury'", "'The Lion's Charge'", "'Matsu's Courage'", "'The Lion's Victory'"]
+          pg: Core pg. 119
+        -
           name: Disciples of Sun Tao
           clan: None
           trait_bonus: Reflexes

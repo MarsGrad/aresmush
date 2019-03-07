@@ -55,6 +55,58 @@ module AresMUSH
       return rank
     end
 
+    def self.calc_l5r_wound_status(char)
+      earth = L5R.calc_l5r_ring(char, "earth")
+      wounds = char.l5r_current_wounds
+
+      if (wounds <= earth * 5)
+        return "Healthy"
+      elsif (wounds <= (earth * 5) + (earth * 2))
+        return "Nicked"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 2))
+        return "Grazed"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 3))
+        return "Hurt"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 4))
+        return "Injured"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 5))
+        return "Crippled"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 6))
+        return "Down"
+      elsif (wounds <= (earth * 5) + ((earth * 2) * 7))
+        return "Out"
+      elsif (wounds > (earth * 5) + ((earth * 2) * 7))
+        return "Dead"
+      end
+    end
+
+    def self.calc_l5r_max_wounds(char)
+      earth = L5R.calc_l5r_ring(char, "earth")
+      max_wounds = (earth * 5) + ((earth * 2) * 7)
+      return max_wounds
+    end
+
+    def self.calc_l5r_armor(char)
+      reflexes = L5R.find_trait(char, "reflexes")
+      reflexes = reflexes.rank
+      tn = (reflexes * 5) + 5
+      if (char.l5r_stance == "full attack")
+        tn = tn - 10
+      elsif (char.l5r_stance == "defense")
+        defense = L5R.find_skill(char, "defense")
+        if (defense)
+          defense = defense.rank
+        else
+          defense = 0
+        end
+        tn = tn + defense + L5R.calc_l5r_ring(char, "air")
+      elsif (char.l5r_stance == "full defense")
+        tn = tn.to_s
+        tn << " + half Defense / Reflexes roll (rounding up) until next turn."
+      end
+      return tn
+    end   
+
     def self.can_manage_abilities?(actor)
       return false if !actor
       actor.has_permission?("manage_apps")

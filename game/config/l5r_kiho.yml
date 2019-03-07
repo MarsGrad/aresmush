@@ -36,3 +36,276 @@ l5r:
       atemi: false
       type: Mystical
       pg: Core pg. 262
+    -
+      name: Soul of the Four Winds
+      ring: Air
+      mastery: 4
+      atemi: false
+      type: Internal
+      pg: Core pg. 262
+    -
+      name: Stain Upon the Soul
+      ring: Air
+      mastery: 3
+      atemi: true
+      type: Martial
+      pg: Core pg. 262
+    -
+      name: Steal the Air Dragon
+      ring: Air
+      mastery: 7
+      atemi: false
+      type: Kharmic
+      pg: Core pg. 263
+    -
+      name: Way of the Willow
+      ring: Air
+      mastery: 5
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: Cleansing Spirit
+      ring: Earth
+      mastery: 4
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: Earthen Fist
+      ring: Earth
+      mastery: 3
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: Earth Needs No Eyes
+      ring: Earth
+      mastery: 3
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: Embrace the Stone
+      ring: Earth
+      mastery: 5
+      atemi: false
+      type: Mystical
+      pg: Core pg. 263
+    -
+      name: Grasp the Earth Dragon
+      ring: Earth
+      mastery: 5
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: "Rest, My Brother"
+      ring: Earth
+      mastery: 5
+      atemi: true
+      type: Martial
+      pg: Core pg. 263
+    -
+      name: Root the Mountain
+      ring: Earth
+      mastery: 5
+      atemi: false
+      type: Internal
+      pg: Core pg. 263
+    -
+      name: Speed of the Mountains
+      ring: Earth
+      mastery: 4
+      atemi: true
+      type: Kharmic
+      pg: Core pg. 264
+    -
+      name: Way of the Earth
+      ring: Earth
+      mastery: 4
+      atemi: false
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: The Body is an Anvil
+      ring: Fire
+      mastery: 4
+      atemi: false
+      type: Mystical
+      pg: Core pg. 264
+    -
+      name: Break Blow
+      ring: Fire
+      mastery: 3
+      atemi: false
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: Channel the Fire Dragon
+      ring: Fire
+      mastery: 6
+      atemi: false
+      type: Internal
+      pg: Core pg. 264
+    -
+      name: Dance of the Flames
+      ring: Fire
+      mastery: 6
+      atemi: false
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: "Destiny's Strike"
+      ring: Fire
+      mastery: 4
+      atemi: false
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: Falling Star Strike
+      ring: Fire
+      mastery: 7
+      atemi: true
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: "Fire's Fleeting Speed"
+      ring: Fire
+      mastery: 4
+      atemi: false
+      type: Kharmic
+      pg: Core pg. 264
+    -
+      name: Flame Fist
+      ring: Fire
+      mastery: 3
+      atemi: true
+      type: Martial
+      pg: Core pg. 264
+    -
+      name: Unbalance the Mind
+      ring: Fire
+      mastery: 5
+      atemi: true
+      type: Mystical
+      pg: Core pg. 265
+    -
+      name: As the Breakers
+      ring: Water
+      mastery: 5
+      atemi: true
+      type: Kharmic
+      pg: Core pg. 265
+    -
+      name: Buoyed by the Kami
+      ring: Water
+      mastery: 3
+      atemi: false
+      type: Mystical
+      pg: Core pg. 265
+    -
+      name: Chi Protection
+      ring: Water
+      mastery: 4
+      atemi: true
+      type: Martial
+      pg: Core pg. 265
+    -
+      name: Freezing the Lifeblood
+      ring: Water
+      mastery: 7
+      atemi: true
+      type: Martial
+      pg: Core pg. 265
+    -
+      name: Partaking the Waves
+      ring: Water
+      mastery: 6
+      atemi: false
+      type: Internal
+      pg: Core pg. 265
+    -
+      name: Ride the Water Dragon
+      ring: Water
+      mastery: 3
+      atemi: false
+      type: Kharmic
+      pg: Core pg. 265
+    -
+      name: Slap the Wave
+      ring: Water
+      mastery: 7
+      atemi: false
+      type: Mystical
+      pg: Core pg. 265
+    -
+      name: Waves in All Things
+      ring: Water
+      mastery: 4
+      atemi: false
+      type: Mystical
+      pg: Core pg. 265
+    -
+      name: Banish All Shadows
+      ring: Void
+      mastery: 4
+      atemi: true
+      type: Kharmic
+      pg: Core pg. 265
+    -
+      name: Death Touch
+      ring: Void
+      mastery: 7
+      atemi: true
+      type: Mystical
+      pg: Core pg. 266
+    -
+      name: Eight Directions Awareness
+      ring: Void
+      mastery: 5
+      atemi: false
+      type: Mystical
+      pg: Core pg. 266
+    -
+      name: Silent Solace
+      ring: Void
+      mastery: 5
+      atemi: true
+      type: Kharmic
+      pg: Core pg. 266
+    -
+      name: Song of the World
+      ring: Void
+      mastery: 3
+      atemi: false
+      type: Kharmic
+      pg: Core pg. 266
+    -
+      name: Spin the Kharmic Wheel
+      ring: Void
+      mastery: 8
+      atemi: true
+      type: Kharmic
+      pg: Core pg. 266
+    -
+      name: Touch the Void Dragon
+      ring: Void
+      mastery: 4
+      atemi: false
+      type: Internal
+      pg: Core pg. 267
+    -
+      name: To the Last Breath
+      ring: Void
+      mastery: 3
+      atemi: false
+      type: Kharmic
+      pg: Core pg. 267
+    -
+      name: Void Fist
+      ring: Void
+      mastery: 4
+      atemi: true
+      type: Martial
+      pg: Core pg. 267

@@ -112,6 +112,8 @@ module AresMUSH
         enactor.update(l5r_old_insight_rank: 1)
         enactor.update(l5r_current_insight_rank: 1)
         enactor.update(l5r_sheet_type: nil)
+        enactor.update(l5r_stance: "attack")
+        enactor.update(l5r_current_wounds: 0)
 
         client.emit_success t('l5r.init_success')
       end
