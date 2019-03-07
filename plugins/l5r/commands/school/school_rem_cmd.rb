@@ -45,6 +45,10 @@ module AresMUSH
           end
 
           school_config = L5R.find_school_config(self.school_name)
+          if (!school_config)
+            client.emit_failure t('l5r.invalid_school')
+            return
+          end
 
           trait_bonus = school_config['trait_bonus']
           first_tech = school_config['starting_technique']
