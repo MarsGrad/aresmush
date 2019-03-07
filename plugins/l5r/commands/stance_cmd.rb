@@ -21,7 +21,7 @@ module AresMUSH
         end
 
         enactor.update(l5r_stance: stance)
-        Room.emit_ooc_to_room enactor_room, t('l5r.stance_change', :character => enactor_name, :stance => stance.titlecase)
+        Rooms.emit_ooc_to_room enactor_room, t('l5r.stance_change', :character => enactor_name, :stance => stance.titlecase)
       end
     end
   end
