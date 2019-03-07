@@ -83,6 +83,7 @@ module AresMUSH
         enactor.update(l5r_current_insight_rank: current_insight)
 
         enactor.update(l5r_clan: name)
+        Demographics.set_group(enactor, "clan", name)
         client.emit_success t('l5r.clan_set', :clan => name.titlecase)
       end
     end
