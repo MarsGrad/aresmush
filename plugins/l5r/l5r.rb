@@ -57,12 +57,6 @@ module AresMUSH
           return TraitRaiseCmd
         when "lower"
           return TraitLowerCmd
-        when "sort"
-          return TraitSortCmd
-        else
-          if (!cmd.switch)
-            return TraitCmd
-          end
         end
       when "skill"
         case cmd.switch
@@ -204,8 +198,6 @@ module AresMUSH
           return ClanSetCmd
         when "rem"
           return ClanRemCmd
-        when "sort"
-          return ClanSortCmd
         else
           if (!cmd.switch)
             return ClanCmd
