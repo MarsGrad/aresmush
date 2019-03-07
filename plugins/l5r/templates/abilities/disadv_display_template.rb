@@ -27,7 +27,7 @@ module AresMUSH
 
       def cost
         cost = disadv_config['cost']
-        display = "%xyCost:%xn #{cost}"
+        display = "%xyWorth:%xn #{cost}"
         display
       end
 

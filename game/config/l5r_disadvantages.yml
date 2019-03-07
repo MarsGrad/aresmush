@@ -30,3 +30,408 @@ l5r:
       ranked: false
       restriction: [descriptor, note]
       pg: Core pg. 156
+    -
+      name: Bad Health
+      subtype: Physical
+      cost: "4"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 156
+    -
+      name: Bitter Betrothal
+      subtype: Social
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 156
+    -
+      name: Blackmailed
+      subtype: Social
+      cost: "Variable"
+      ranked: false
+      restriction: [descriptor, note]
+      pg: Core pg. 156
+    -
+      name: Black Sheep
+      subtype: Social
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 156
+    -
+      name: Blind
+      subtype: Physical
+      cost: "6"
+      ranked: false
+      restriction: None
+      pg: Core pg. 156
+    -
+      name: Brash
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 157
+    -
+      name: Can't Lie
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 157
+    -
+      name: Cast Out
+      subtype: Social
+      cost: "1/3"
+      ranked: true
+      max_rank: 2
+      restriction: [descriptor, note]
+      pg: Core pg. 157
+    -
+      name: Compulsion
+      subtype: Mental
+      cost: "2-4"
+      ranked: true
+      max_rank: 3
+      restriction: descriptor
+      pg: Core pg. 157
+    -
+      name: Consumed
+      subtype: Mental
+      cost: Varies
+      ranked: false
+      restriction: Yes
+      pg: Core pg. 157
+    -
+      name: Contrary
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 158
+    -
+      name: Cursed by the Realm
+      subtype: Spiritual
+      cost: "4"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 158
+    -
+      name: Dark Secret
+      subtype: Social
+      cost: "4"
+      ranked: false
+      restriction: note
+      pg: Core pg. 158
+    -
+      name: Dependent
+      subtype: Social
+      cost: "Varies"
+      ranked: false
+      restriction: note
+      pg: Core pg. 158
+    -
+      name: Dishonored
+      subtype: Social
+      cost: "5"
+      ranked: false
+      restriction: note
+      pg: Core pg. 158
+    -
+      name: Disbeliever
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 158
+    -
+      name: Disturbing Countenance
+      subtype: Physical
+      cost: "3"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 159
+    -
+      name: Doubt
+      subtype: Mental
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 159
+    -
+      name: Driven
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: note
+      pg: Core pg. 159
+    -
+      name: Elemental Imbalance
+      subtype: Spiritual
+      cost: "2/rank"
+      ranked: true
+      max_rank: 3
+      restriction: [descriptor, Shugenja]
+      pg: Core pg. 159
+    -
+      name: Epilepsy
+      subtype: Physical
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 159
+    -
+      name: Fascination
+      subtype: Mental
+      cost: "1"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 159
+    -
+      name: Failure of Bushido
+      subtype: Mental
+      cost: "Varies"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 159
+    -
+      name: Forced Retirement
+      subtype: Social
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 159
+    -
+      name: Frail Mind
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 159
+    -
+      name: Gaijin Name
+      subtype: Social
+      cost: "1"
+      ranked: false
+      restriction: None
+      pg: Core pg. 159
+    -
+      name: Greedy
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Gullible
+      subtype: Mental
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Haunted
+      subtype: Spiritual
+      cost: "3"
+      ranked: false
+      restriction: note
+      pg: Core pg. 160
+    -
+      name: Hostage
+      subtype: Social
+      cost: "3"
+      ranked: false
+      restriction: note
+      pg: Core pg. 160
+    -
+      name: Idealistic
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Infamous
+      subtype: Social
+      cost: "2"
+      ranked: false
+      restriction: note
+      pg: Core pg. 160
+    -
+      name: Insensitive
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Jealousy
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 160
+    -
+      name: Lame
+      subtype: Physical
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Lechery
+      subtype: Social
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Lost Love
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: note
+      pg: Core pg. 160
+    -
+      name: Low Pain Threshold
+      subtype: Physical
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 160
+    -
+      name: Missing Limb
+      subtype: Physical
+      cost: "6"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 161
+    -
+      name: Momoku
+      subtype: Spiritual
+      cost: "8"
+      ranked: false
+      restriction: None
+      pg: Core pg. 161
+    -
+      name: Obligation
+      subtype: Social
+      cost: "3/6"
+      ranked: true
+      max_rank: "2"
+      restriction: note
+      pg: Core pg. 161
+    -
+      name: Obtuse
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 161
+    -
+      name: Overconfident
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 161
+    -
+      name: Permanent Wound
+      subtype: Physical
+      cost: "4"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 161
+    -
+      name: Phobia
+      subtype: Mental
+      cost: "1-3"
+      ranked: true
+      max_rank: 3
+      restriction: descriptor
+      pg: Core pg. 161
+    -
+      name: Rumormonger
+      subtype: Social
+      cost: "4"
+      ranked: false
+      restriction: None
+      pg: Core pg. 161
+    -
+      name: Seven Fortunes' Curse
+      subtype: Spiritual
+      cost: "3"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 161
+    -
+      name: Shadowlands Taint
+      subtype: Spiritual
+      cost: "4"
+      ranked: false
+      restriction: Yes
+      pg: Core pg. 162
+    -
+      name: Small
+      subtype: Physical
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 162
+    -
+      name: Social Disadvantage
+      subtype: Social
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 162
+    -
+      name: Soft-Hearted
+      subtype: Mental
+      cost: "2"
+      ranked: false
+      restriction: None
+      pg: Core pg. 162
+    -
+      name: Sworn Enemy
+      subtype: Social
+      cost: "Varies"
+      ranked: false
+      restriction: [descriptor, note]
+      pg: Core pg. 162
+    -
+      name: Touch of the Void
+      subtype: Spiritual
+      cost: "3"
+      ranked: false
+      restriction: None
+      pg: Core pg. 162
+    -
+      name: True Love
+      subtype: Mental
+      cost: "3"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 162
+    -
+      name: Unlucky
+      subtype: Spiritual
+      cost: "2/rank"
+      ranked: true
+      max_rank: 3
+      restriction: None
+      pg: Core pg. 162
+    -
+      name: Weakness
+      subtype: Physical
+      cost: "6"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 162
+    -
+      name: Wrath of the Kami
+      subtype: Spiritual
+      cost: "3"
+      ranked: false
+      restriction: descriptor
+      pg: Core pg. 162
