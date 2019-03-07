@@ -75,7 +75,7 @@ module AresMUSH
             model.update(l5r_family: family)
             model.update(l5r_clan: clan)
 
-            Demographics.set_group(model, "clan", clan)
+            Demographics.set_group(model, "clan", clan.titlecase)
 
             trait = L5R.find_trait(model, trait_bonus)
             if (trait)
