@@ -17,6 +17,12 @@ module AresMUSH
 
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
+          check = L5R.find_trait(model, "strength")
+          if (!check)
+            client.emit_failure t('l5r.must_init_first')
+            return
+          end
+          
           template = SheetTemplate.new(model)
           client.emit template.render
         end
