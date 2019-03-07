@@ -82,7 +82,7 @@
 <% if !char.l5r_kata.to_a.empty? %>
 <%= line_with_text t('l5r.kata_title') %>
 <% kata.each do |k| %>
-%xh<%= left("#{k.name}:", 25) %>%xn <%= "#{k.ring}/#{k.mastery}" %>
+%xh<%= left("#{k.name}:", 32) %>%xn <%= "#{k.ring}/#{k.mastery}" %>
 <% end %>
 <% end %>
 %lf
