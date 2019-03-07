@@ -22,7 +22,7 @@ module AresMUSH
         end
         family_names = family_list.map { |a| "#{a['name']} -- #{a['clan']}"}
 
-        list = adv_names.each_with_index.map do |a, i|
+        list = family_names.each_with_index.map do |a, i|
           linebreak = i % 2 == 0 ? "\n" : ""
           "#{linebreak}#{a}"
         end
