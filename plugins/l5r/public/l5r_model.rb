@@ -13,6 +13,8 @@ module AresMUSH
     attribute :l5r_old_insight_rank
     attribute :l5r_current_insight_rank
     attribute :l5r_current_school
+    attribute :l5r_mastery_rank
+    attribute :l5r_insight_rank
     attribute :l5r_family
     attribute :l5r_clan
     attribute :l5r_affinity
@@ -90,6 +92,7 @@ module AresMUSH
 
       attribute :name
       attribute :ring
+      attribute :rank
       attribute :mastery, :type => DataType::Integer
       reference :character, "AresMUSH::Character"
       index :name
