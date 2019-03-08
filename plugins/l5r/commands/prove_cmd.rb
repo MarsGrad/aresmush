@@ -18,6 +18,15 @@ module AresMUSH
           found = list.select { |a| a.name.downcase == self.ability_name }.first
         end
 
+        if (found)
+          if (found.rank)
+            Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => found.name.titlecase, :rank => found.rank)
+          elsif (!found.rank)
+            Rooms.emit_ooc_to_room enactor.room, t('l5r.prove', :character => enactor_name, :ability => found.name.titlecase)
+          end
+          return
+        end
+
         case self.ability_name
         when "fire"
           found = L5R.calc_l5r_ring(enactor, 'fire')
@@ -37,11 +46,7 @@ module AresMUSH
           client.emit_failure t('l5r.invalid_ability_name')
           return
         else
-          if (found.rank)
-            Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => found.name.titlecase, :rank => found.rank)
-          elsif (!found.rank)
-            Rooms.emit_ooc_to_room enactor.room, t('l5r.prove', :character => enactor_name, :ability => found.name.titlecase)
-          end
+          Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => self.ability_name, :rank => found)
         end
       end
     end
