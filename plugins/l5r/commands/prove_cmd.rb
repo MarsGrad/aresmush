@@ -41,6 +41,7 @@ module AresMUSH
             Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => found.name.titlecase, :rank => found.rank)
           elsif (!found.rank)
             Rooms.emit_ooc_to_room enactor.room, t('l5r.prove', :character => enactor_name, :ability => found.name.titlecase)
+          end
         end
       end
     end
