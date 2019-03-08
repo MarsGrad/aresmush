@@ -17,7 +17,7 @@ module AresMUSH
       def handle
         school = enactor.l5r_current_school
         school_config = L5R.find_school_config(school)
-        skills = school_config['skill_display']
+        skills = school_config['skills_display']
         spells = school_config['spells']
         aff_def_choice = school_config['aff_def_choice']
         sheet_type = enactor.l5r_sheet_type
