@@ -43,3 +43,7 @@ module AresMUSH
           kiho.delete
           client.emit_success t('l5r.kiho_removed')
         end
+      end
+    end
+  end
+end
