@@ -105,7 +105,7 @@ module AresMUSH
         tn << " + half Defense / Reflexes roll (rounding up) until next turn."
       end
       return tn
-    end   
+    end
 
     def self.can_manage_abilities?(actor)
       return false if !actor
@@ -312,7 +312,7 @@ module AresMUSH
       if names.include?(name.downcase)
         !macro.include?(name.downcase)
       elsif !name.include?(name.downcase)
-        check = macro.map { |m| name.start_with?(m) }
+        check = macro.map { |m| name.downcase.start_with?(m) }
         if (check.include?(true))
           return true
         else
