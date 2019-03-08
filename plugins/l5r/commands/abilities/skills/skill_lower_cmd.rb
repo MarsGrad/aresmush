@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class SkillRaiseCmd
+    class SkillLowerCmd
       include CommandHandler
 
       attr_accessor :target_name, :skill_name
