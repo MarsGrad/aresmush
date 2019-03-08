@@ -33,7 +33,7 @@ module AresMUSH
           model.update(l5r_current_wounds: new_total)
           Global.logger.debug "L5R: #{enactor_name} has removed #{self.amount} wounds from #{self.target_name}."
           status = L5R.calc_l5r_wound_status(model)
-          Rooms.emit_ooc_to_room(self.target_name, t('l5r.wounds_healed', :actor => enactor_name, :character => self.target_name, :amount => amount, :status => status))
+          Rooms.emit_ooc_to_room model, t('l5r.wounds_healed', :actor => enactor_name, :character => self.target_name, :amount => amount, :status => status)
         end
       end
     end
