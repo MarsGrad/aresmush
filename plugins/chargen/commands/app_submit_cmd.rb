@@ -1,8 +1,8 @@
 module AresMUSH
   module Chargen
     class AppSubmitCmd
-      include CommandHandler
       include L5R
+      include CommandHandler
 
       attr_accessor :app_notes
 
