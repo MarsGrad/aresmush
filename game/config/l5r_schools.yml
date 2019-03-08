@@ -74,7 +74,8 @@ l5r:
           shugenja: true
           affinity: Air
           deficiency: Fire
-          spells: 3 Air, 2 Water, 1 Earth
+          spells: Universal, 3 Air, 2 Water, 1 Earth
+          spell_choice: 3 Air, 2 Water, 1 Earth
           honor: 6.5
           starting_technique: "The Soul's Grace"
           pg: Core pg. 110
@@ -124,7 +125,8 @@ l5r:
           shugenja: true
           affinity: Earth
           deficiency: Air
-          spells: 3 Earth, 2 Fire, 1 Water
+          spells: Universal, 3 Earth, 2 Fire, 1 Water
+          spell_choice: 3 Earth, 2 Fire, 1 Water
           honor: 4.5
           starting_technique: Flesh of the Elements
           pg: Core pg. 113
@@ -174,7 +176,8 @@ l5r:
           shugenja: true
           affinity: Water
           deficiency: Fire
-          spells: 3 Water, 2 Air, 1 Earth
+          spells: Universal, 3 Water, 2 Air, 1 Earth
+          spell_choice: 3 Water, 2 Air, 1 Earth
           honor: 6.5
           starting_technique: Eyes of the Ancestors
           pg: Core pg. 117

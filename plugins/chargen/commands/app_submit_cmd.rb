@@ -18,14 +18,18 @@ module AresMUSH
       def handle
         school = enactor.l5r_current_school
         school_config = L5R.find_school_config(school)
-        skill_choice = school_config['skill_choice']
-        spell_choice = school_config['spell_choice']
+        skills = school_config['skill_display']
+        spells = school_config['spells']
+        aff_def_choice = school_config['aff_def_choice']
         choice = ""
-        if (skill_choice)
-          choice << "Skill Choice: #{skill_choice}%r"
+        if (skills)
+          choice << "%r%xySkills%xn: #{skills}"
         end
-        if (spell_choice)
-          choice << "Spell Choice: #{spell_choice}%r"
+        if (spells)
+          choice << "%r%xySpells:%xn #{spells}"
+        end
+        if (aff_def_choice)
+          choice << "%r%xrNOTE:%xn Affinity and Deficiency need to be chosen."
         end
 
         if (cmd.switch_is?("confirm"))
