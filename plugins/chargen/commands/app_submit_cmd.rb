@@ -33,7 +33,7 @@ module AresMUSH
         end
         if (sheet_type == "monk")
           kiho_num = school_config['kiho_num']
-          choice << "%r%xrNumber of Kiho: #{kiho_num}"
+          choice << "%r%xrNumber of Kiho:%xn #{kiho_num}"
         end
 
         if (cmd.switch_is?("confirm"))
