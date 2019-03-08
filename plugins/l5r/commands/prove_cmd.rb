@@ -47,7 +47,7 @@ module AresMUSH
           client.emit_failure t('l5r.invalid_ability_name')
           return
         else
-          Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => "#{self.ability_name.titlecase} Ring", :rank => found)
+          Rooms.emit_ooc_to_room enactor.room, t('l5r.prove_ranked', :character => enactor_name, :ability => "#{self.ability_name.titlecase} Rank", :rank => found)
         end
       end
     end
