@@ -42,12 +42,16 @@ module AresMUSH
 
           skill = L5R.find_skill(model, self.skill_name)
           if (skill)
-            skill.update(rank: skill.rank + 1)
+            skill.update(rank: skill.rank - 1)
+            if skill.rank == 0
+              skill.delete
+            end
           else
-            L5rSkill.create(name: self.skill_name, rank: 1, character: model)
+            client.emit_failure t('l5r.no_skill')
+            return
           end
 
-          client.emit_success t('l5r.skill_raised', :skill => self.skill_name)
+          client.emit_success t('l5r.skill_lowered', :skill => self.skill_name)
 
           model.update(l5r_old_insight_rank: model.l5r_current_insight_rank)
           model.update(l5r_current_insight_rank: L5R.calc_l5r_insight(model))
@@ -59,11 +63,12 @@ module AresMUSH
 
           if "#{old}" == "#{current}"
             return
-          else
+          elsif "#{old}" > "#{current}"
             current_school = model.l5r_current_school
             school = L5R.find_school(model, current_school)
-            school.update(rank: school.rank + 1)
-            client.emit_success t('l5r.insight_rank_up', :character => name)
+            school.update(rank: school.rank - 1)
+            model.update (l5r_old_insight_rank: model.l5r_current_insight_rank)
+            client.emit_success t('l5r.insight_rank_down', :character => name)
           end
         end
       end
