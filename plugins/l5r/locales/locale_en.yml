@@ -76,7 +76,7 @@ en:
     no_ability: "They don't have that ability."
     skill_lowered: "You lowered %{skill} by 1."
     cant_set: "You don't have the right sheet type for that."
-    school_kiho_num: "Your school allows you to pick: %{kiho_num} kiho."
+    school_kiho_num: "Your school allows you to pick: %xw%{kiho_num} Kiho.%xn"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
