@@ -20,15 +20,20 @@ module AresMUSH
         skills = school_config['skill_display']
         spells = school_config['spells']
         aff_def_choice = school_config['aff_def_choice']
+        sheet_type = enactor.l5r_sheet_type
         choice = ""
         if (skills)
-          choice << "%r%xySkills%xn: #{skills}"
+          choice << "%r%xrSkills%xn: #{skills}"
         end
         if (spells)
-          choice << "%r%xySpells:%xn #{spells}"
+          choice << "%r%xrSpells:%xn #{spells}"
         end
         if (aff_def_choice)
           choice << "%r%xrNOTE:%xn Affinity and Deficiency need to be chosen."
+        end
+        if (sheet_type == "monk")
+          kiho_num = school_config['kiho_num']
+          choice << "%r%xrNumber of Kiho: #{kiho_num}"
         end
 
         if (cmd.switch_is?("confirm"))

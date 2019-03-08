@@ -1,6 +1,6 @@
 module AresMUSH
   module L5R
-    class KihoAddCmd
+    class KihoRemCmd
       include CommandHandler
 
       attr_accessor :target_name, :kiho_name
@@ -34,34 +34,12 @@ module AresMUSH
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
 
-          sheet_type = model.l5r_sheet_type
-          if (self.target_name == enactor_name && sheet_type != "monk")
-            client.emit_failure t('l5r.cant_set')
-            return
-          end
-
-          kiho_config = L5R.find_kiho_config(self.kiho_name)
-          if (!kiho_config)
-            client.emit_failure t('l5r.invalid_ability_name')
-            return
-          end
-
-          name = kiho_config['name']
-          ring = kiho_config['ring']
-          mastery = kiho_config['mastery']
-          atemi = kiho_config['atemi']
-          type = kiho_config['type']
-
           kiho = L5R.find_kiho(model, self.kiho_name)
-          if (kiho)
-            client.emit_failure t('l5r.already_have_ability')
+          if (!kiho)
+            client.emit_failure t('l5r.no_ability')
             return
           end
 
-          L5rKiho.create(name: name, ring: ring, mastery: mastery, type: type, atemi: atemi, character: model)
-          client.emit_success t('l5r.ability_added')
+          kiho.delete
+          client.emit_success t('l5r.kiho_removed')
         end
-      end
-    end
-  end
-end

@@ -273,9 +273,10 @@ l5r:
           shugenja: false
           honor: 6.5
           starting_technique: Soul of Civility
+          kiho_num: 3
           pg: Core pg. 231
         -
-          name: The Order of Heroes
+          name: Order of Heroes
           clan: Monk
           trait_bonus: Perception
           skills: [Athletics, Defense, Jiujutsu, "Lore: Theology", Meditation]
@@ -284,4 +285,17 @@ l5r:
           shugenja: false
           honor: 4.5
           starting_technique: Destiny's Hand
+          kiho_num: 3
           pg: Core pg. 232
+        -
+          name: Temple of the Thousand Fortunes
+          clan: Monk
+          trait_bonus: Agility
+          skills: [Jiujutsu, "Lore: History", "Lore: Theology/Fortunes", Meditation]
+          skills_display: 'Jiujutsu, "Lore: History", "Lore: Theology/Fortunes", Meditation, Any 1 Lore, and Any 2 skills'
+          skill_choice: 'Any 1 Lore and Any 2 skills'
+          shugenja: false
+          honor: 4.5
+          starting_technique: The Thousand Forms
+          kiho_num: 4
+          pg: Core pg. 233

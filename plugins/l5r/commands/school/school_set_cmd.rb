@@ -60,6 +60,7 @@ module AresMUSH
           aff_def_choice = school_config['aff_def_choice']
           honor = school_config['honor']
           first_tech = school_config['starting_technique']
+          kiho_num = school_config['kiho_num']
 
           model.update(l5r_honor: honor)
 
@@ -146,6 +147,9 @@ module AresMUSH
           client.emit_success t('l5r.school_skill_choice', :skill_choice => skill_choice)
           if spell_choice
             client.emit_success t('l5r.school_spell_choice', :spell_choice => spell_choice)
+          end
+          if kiho_num
+            client.emit_success t('l5r.school_kiho_num', :kiho_num => kiho_num)
           end
         end
       end
