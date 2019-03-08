@@ -3,37 +3,37 @@ module AresMUSH
     def self.is_enabled?
       !Global.plugin_manager.is_disabled?("chargen")
     end
-    
+
     def self.format_review_status(msg, error)
       "#{msg.ljust(50)} #{error}"
     end
-    
+
     def self.is_chargen_locked?(char)
       char.is_approved? || char.chargen_locked
     end
-    
+
     def self.check_chargen_locked(char)
       return false if char.is_admin?
       return t('chargen.cant_be_changed') if char.is_approved?
       return t('chargen.app_in_progress') if char.chargen_locked
       return nil
     end
-    
+
     def self.is_in_stage?(char, stage_name)
       Chargen.stage_name(char) == stage_name
     end
-    
+
     def self.hook_app_review(char)
       if !Global.read_config('chargen', 'hooks_required')
         return ""
       end
-        
+
       message = t('chargen.hook_review')
       status = char.rp_hooks.blank? ?  t('chargen.not_set') : t('chargen.ok')
-      
+
       Chargen.format_review_status(message, status)
     end
-    
+
     def self.approval_status(char)
       if (char.on_roster?)
         status = "%xb%xh#{t('chargen.rostered')}%xn"
@@ -45,45 +45,45 @@ module AresMUSH
         status = "%xr%xh#{t('chargen.unapproved')}%xn"
       else
         status = "%xg%xh#{t('chargen.approved')}%xn"
-      end        
+      end
       status
     end
-          
+
     def self.approval_job_notice(char)
       return nil if char.is_approved?
       char.approval_job ? t('chargen.approval_reminder') : nil
     end
-    
-    def self.submit_app(char, app_notes = nil)
+
+    def self.submit_app(char, app_notes = nil, choice = nil)
       job = char.approval_job
-      
+      choice = choice || t('global.none')
       app_notes = app_notes || t('global.none')
-      
+
       if (!job)
-        result = Jobs.create_job(Global.read_config("chargen", "app_category"), 
-          t('chargen.application_title', :name => char.name), 
-          t('chargen.app_job_submitted', :notes => app_notes), 
+        result = Jobs.create_job(Global.read_config("chargen", "app_category"),
+          t('chargen.application_title', :name => char.name),
+          t('chargen.app_job_submitted', :notes => app_notes, :choice => choice),
           char)
-      
+
         if (result[:error])
           raise "Problem submitting application: #{job[:error]}"
         end
         job = result[:job]
         char.update(chargen_locked: true)
         char.update(approval_job: job)
-        
+
         return t('chargen.app_submitted', :notes => app_notes)
       else
         char.update(chargen_locked: true)
         Jobs.change_job_status(char,
           job,
           Global.read_config("chargen", "app_resubmit_status"),
-          t('chargen.app_job_resubmitted', :notes => app_notes))
-          
+          t('chargen.app_job_resubmitted', :notes => app_notes, :choice => choice))
+
         return t('chargen.app_resubmitted')
       end
-    end    
-      
+    end
+
     def self.approved_chars
       Idle.active_chars.select { |c| c.is_approved? }
     end

@@ -30,3 +30,6 @@ l5r:
     clans: clan
     health: wounds
     wound: wounds
+    wound/rem: wounds/heal
+    wounds/rem: wounds/heal
+    health/rem: wounds/heal

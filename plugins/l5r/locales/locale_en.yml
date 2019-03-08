@@ -67,6 +67,8 @@ en:
     invalid_stance: "That's not a valid stance."
     stance_change: "%{character} changes their stance to: %xr%{stance}!%xn"
     not_allowed_family: "You're not allowed to do that! Try family/rem without arguments."
+    wounds_added: "%{actor} adds %{amount} wounds to %{character}! They are now: %{status}"
+    wounds_healed: "%{actor} heals %{amount} wounds on %{character}! They are now: %{status}"
 
     invalid_roll: "That's not a valid roll!"
     roll_open: "%{name} rolls %xw%{roll_str}%xc and keeps %xg%{keep}%xc, getting:%r%{dice} (%{total})"
