@@ -14,6 +14,10 @@ module AresMUSH
       end
 
       def handle
+        [ enactor.l5r_skills, enactor.l5r_traits, enactor.l5r_schools, enactor.l5r_kiho, enactor.l5r_kata, enactor.l5r_spells, enactor.l5r_advantages, enactor.l5r_disadvantages, enactor.l5r_techniques ].each do |list|
+          found = list.select { |a| a.name.downcase == self.ability_name }.first
+        end
+
         case self.ability_name
         when "fire"
           found = L5R.calc_l5r_ring(enactor, 'fire')
@@ -27,10 +31,6 @@ module AresMUSH
           found = enactor.l5r_void_ring
         when "insight"
           found = L5R.calc_l5r_insight(enactor)
-        end
-
-        [ enactor.l5r_skills, enactor.l5r_traits, enactor.l5r_schools, enactor.l5r_kiho, enactor.l5r_kata, enactor.l5r_spells, enactor.l5r_advantages, enactor.l5r_disadvantages, enactor.l5r_techniques ].each do |list|
-          found = list.select { |a| a.name.downcase == self.ability_name }.first
         end
 
         if (!found)
