@@ -18,7 +18,7 @@ module AresMUSH
 
       def check_can_set
         return nil if self.target_name == enactor_name
-        return nil if L5R.can_manage_abilities(enactor)
+        return nil if L5R.can_manage_abilities?(enactor)
         return t('dispatcher.not_allowed')
       end
 
