@@ -205,15 +205,6 @@ module AresMUSH
         end
       when "stance"
         return StanceCmd
-      when "prove"
-        case cmd.switch
-        when "to"
-          return ProveToCmd
-        else
-          if (!cmd.switch)
-            return ProveCmd
-          end
-        end
       when "wounds"
         case cmd.switch
         when "add"

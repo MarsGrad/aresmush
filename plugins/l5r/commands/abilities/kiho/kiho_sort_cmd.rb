@@ -22,9 +22,9 @@ module AresMUSH
           return
         end
         if (!kiho_ring_list.empty?)
-          kiho_names = kiho_ring_list.map { |a| "#{a['name']} -- #{a['ring']}/#{t['mastery']}"}
+          kiho_names = kiho_ring_list.map { |a| "#{a['name']} -- #{a['ring']}/#{a['mastery']}"}
         elsif (!kiho_type_list.empty?)
-          kiho_names = kiho_type_list.map { |a| "#{a['name']} -- #{a['type']}/#{t['mastery']}"}
+          kiho_names = kiho_type_list.map { |a| "#{a['name']} -- #{a['type']}/#{a['mastery']}"}
         end
 
         list = kiho_names.each_with_index.map do |a, i|
