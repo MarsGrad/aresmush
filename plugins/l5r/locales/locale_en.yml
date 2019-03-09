@@ -59,6 +59,7 @@ en:
     needs_descriptor: "That ability needs a descriptor."
     not_ranked: "They already have that ability."
     ability_added: "Ability added."
+    ability_removed: "Ability removed."
     needs_note: "Make sure they have a note set explaining this ability."
     at_max_rank: "That ability is already at the max rank!"
     invalid_ring: "That's not a valid ring."
